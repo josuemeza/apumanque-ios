@@ -1,0 +1,6 @@
+framework module Pods_Apumanque {
+  umbrella header "Pods-Apumanque-umbrella.h"
+
+  export *
+  module * { export * }
+}
