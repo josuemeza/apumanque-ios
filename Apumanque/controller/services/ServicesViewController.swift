@@ -26,7 +26,7 @@ class ServicesViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        let backButton = UIBarButtonItem(title: "Volver", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
 
         keeperView.roundOut(radious: 10)

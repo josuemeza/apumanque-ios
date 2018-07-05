@@ -39,12 +39,7 @@ class ServicesContainerViewController: UIPageViewController, UIPageViewControlle
         self.dataSource = self
         setViewControllers([subViewControllers[opciones!]], direction: .forward, animated: true, completion: nil)
         servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageCount: subViewControllers.count)
-        servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageIndex: 0)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageIndex: opciones!)
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
