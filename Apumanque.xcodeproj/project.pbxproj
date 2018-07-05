@@ -29,6 +29,7 @@
 		F206213620B66C9100D5BA3C /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F206211820B66C8600D5BA3C /* SF-Pro-Text-SemiboldItalic.otf */; };
 		F206213B20B675A900D5BA3C /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F206213A20B675A900D5BA3C /* Services.storyboard */; };
 		F21259F220EC69C800BF6422 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21259F120EC69C800BF6422 /* SearchMapViewController.swift */; };
+		F22D79CC20EDE88000FD326B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D79CB20EDE88000FD326B /* ServicesViewController.swift */; };
 		F251C81C20CCF02C00718811 /* Campaings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F251C81B20CCF02C00718811 /* Campaings.storyboard */; };
 		F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C81E20CCF43300718811 /* CampaingsViewController.swift */; };
 		F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */; };
@@ -118,6 +119,7 @@
 		F206211820B66C8600D5BA3C /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		F206213A20B675A900D5BA3C /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
 		F21259F120EC69C800BF6422 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
+		F22D79CB20EDE88000FD326B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		F251C81B20CCF02C00718811 /* Campaings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Campaings.storyboard; sourceTree = "<group>"; };
 		F251C81E20CCF43300718811 /* CampaingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaingsViewController.swift; sourceTree = "<group>"; };
 		F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInvoiceViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				F2CE050920C8BF83006565AC /* BikeViewController.swift */,
 				F2CE050B20C8BF92006565AC /* ParkingViewController.swift */,
 				F2CE050D20C8BFCC006565AC /* BabycarriageViewController.swift */,
+				F22D79CB20EDE88000FD326B /* ServicesViewController.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */,
 				FAF1AC3120ACD5AA00F01D59 /* LoadingViewController.swift in Sources */,
 				F2CE050820C8BF4D006565AC /* WheelchairViewController.swift in Sources */,
+				F22D79CC20EDE88000FD326B /* ServicesViewController.swift in Sources */,
 				F2CE050220C8BAEE006565AC /* ServicesMainViewController.swift in Sources */,
 				F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */,
 				FAF1AC2F20ACD3A100F01D59 /* ApplicationManager.swift in Sources */,

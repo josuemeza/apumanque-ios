@@ -124,9 +124,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHz-vo-MqU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
-                                                                <connections>
-                                                                    <action selector="parkingButtonTap:" destination="IuY-MK-NTz" eventType="touchUpInside" id="Qso-6j-Zh2"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_services" translatesAutoresizingMaskIntoConstraints="NO" id="x2A-aD-5Ft">
                                                                 <rect key="frame" x="332" y="25" width="8" height="13"/>
@@ -181,9 +178,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-BT-lZS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
-                                                                <connections>
-                                                                    <action selector="babycarriageButtonTap:" destination="IuY-MK-NTz" eventType="touchUpInside" id="hWF-UC-ned"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_services" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-0H-24L">
                                                                 <rect key="frame" x="332" y="25" width="8" height="13"/>
@@ -238,9 +232,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-x3-FVC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
-                                                                <connections>
-                                                                    <action selector="wheelchairButtonTap:" destination="IuY-MK-NTz" eventType="touchUpInside" id="YuA-M1-Ek3"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_services" translatesAutoresizingMaskIntoConstraints="NO" id="KgN-4h-6yU">
                                                                 <rect key="frame" x="332" y="25" width="8" height="13"/>
@@ -295,9 +286,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-kF-fYQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
-                                                                <connections>
-                                                                    <action selector="bikeButtonTap:" destination="IuY-MK-NTz" eventType="touchUpInside" id="Mhe-nL-0Ag"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_services" translatesAutoresizingMaskIntoConstraints="NO" id="1zK-GN-0Bp">
                                                                 <rect key="frame" x="332" y="25" width="8" height="13"/>
@@ -352,9 +340,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyw-eU-dff">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
-                                                                <connections>
-                                                                    <action selector="keeperButtonTap:" destination="IuY-MK-NTz" eventType="touchUpInside" id="S2q-LX-fx1"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_services" translatesAutoresizingMaskIntoConstraints="NO" id="myZ-dV-GvQ">
                                                                 <rect key="frame" x="332" y="25" width="8" height="13"/>
@@ -444,11 +429,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="rf8-r4-dm6"/>
                     <connections>
-                        <outlet property="babycarriageView" destination="jNN-mb-xRe" id="09n-Bj-g6A"/>
-                        <outlet property="bikeView" destination="C4c-4h-Boh" id="2pI-tC-J5k"/>
-                        <outlet property="keeperView" destination="OKI-MK-Dvv" id="v2O-QL-eCt"/>
-                        <outlet property="parkingView" destination="XUo-JX-X37" id="3yG-ti-5Rv"/>
-                        <outlet property="wheelchairView" destination="sAK-qN-zNp" id="hDL-uc-Dof"/>
                         <segue destination="4E3-dP-hDr" kind="show" identifier="services_show_segue" id="czY-em-5on"/>
                     </connections>
                 </viewController>
