@@ -41,7 +41,7 @@ class ServicesMainViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
     
-        /*keeperView.roundOut(radious: 10)
+        /*self.keeperView.roundOut(radious: 10)
         bikeView.roundOut(radious: 10)
         wheelchairView.roundOut(radious: 10)
         babycarriageView.roundOut(radious: 10)

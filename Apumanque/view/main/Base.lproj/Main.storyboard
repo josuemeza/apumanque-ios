@@ -233,7 +233,7 @@
                         <outlet property="searchTextField" destination="F4g-C1-cfg" id="JEa-DV-MvN"/>
                         <outlet property="tableView" destination="JLs-4q-vig" id="8wn-TW-Zgz"/>
                         <segue destination="qkh-eg-Zus" kind="show" identifier="home_to_stores_segue" id="3ft-9b-Qba"/>
-                        <segue destination="EgH-Ae-7iw" kind="show" identifier="home_to_services_segue" id="of0-WG-fxu"/>
+                        <segue destination="EgH-Ae-7iw" kind="presentation" identifier="home_to_services_segue" id="of0-WG-fxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
