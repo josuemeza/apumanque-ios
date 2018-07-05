@@ -37,9 +37,7 @@ class ServicesContainerViewController: UIPageViewController, UIPageViewControlle
         super.viewDidLoad()
         self.delegate = self
         self.dataSource = self
-        print("OPCIONES \(opciones)")
-        // Do any additional setup after loading the view.
-        setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
+        setViewControllers([subViewControllers[opciones!]], direction: .forward, animated: true, completion: nil)
         servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageCount: subViewControllers.count)
         servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageIndex: 0)
     }
@@ -72,15 +70,5 @@ class ServicesContainerViewController: UIPageViewController, UIPageViewControlle
         servicesDelegate?.servicesContainerViewController(servicesContainerViewController: self, didUpdatePageIndex: currentIndex)
         return subViewControllers[currentIndex+1]
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
