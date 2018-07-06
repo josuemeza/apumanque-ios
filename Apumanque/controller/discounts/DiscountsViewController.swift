@@ -199,6 +199,8 @@ extension DiscountsViewController: MenuViewControllerDelegate {
             tabBarController?.selectedIndex = 1
         case .featured:
             ()
+        case .services:
+            performSegue(withIdentifier: "home_to_services_segue", sender: nil)
         }
     }
     

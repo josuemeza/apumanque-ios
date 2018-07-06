@@ -11,7 +11,7 @@ import UIKit
 // MARK: -
 // MARK: - Enumerations
 enum MenuViewSelection {
-    case login, logout, editUser, contact, register, discounts, featured
+    case login, logout, editUser, contact, register, discounts, featured, services
 }
 
 // MARK: -
@@ -55,7 +55,7 @@ class MenuViewController: ViewController {
         MenuItemCellData(title: "Destacados", item: .featured),
         MenuItemCellData(title: "Locales", item: nil),
         MenuItemCellData(title: "Noticias", item: nil),
-        MenuItemCellData(title: "Servicios", item: nil),
+        MenuItemCellData(title: "Servicios", item: .services),
         MenuItemCellData(title: "Contacto", item: .contact)
     ]
     var loginCellData: MenuLoginCellData?

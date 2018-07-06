@@ -42,7 +42,7 @@
         <!--Services View Controller-->
         <scene sceneID="PRf-UJ-rUN">
             <objects>
-                <viewController storyboardIdentifier="ServicesController" id="IuY-MK-NTz" customClass="ServicesViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="services_view_controller" id="IuY-MK-NTz" customClass="ServicesViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="S4T-M7-x3O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,15 +415,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNA-mP-wF5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rf8-r4-dm6">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="KgF-3I-b7y">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SeR-aS-hu0">
-                                <rect key="frame" x="16" y="10" width="69" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title=" Volver" image="back_icon"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="rf8-r4-dm6"/>
                     <connections>
                         <outlet property="babycarriageView" destination="jNN-mb-xRe" id="UJs-0A-kga"/>
                         <outlet property="bikeView" destination="C4c-4h-Boh" id="oJv-lS-Vzt"/>
@@ -844,7 +836,6 @@ Para una mayor seguridad, contamos con lockers donde podrás guardar objetos de 
     <resources>
         <image name="arrow_services" width="8" height="13"/>
         <image name="babycarriage_background" width="375" height="667"/>
-        <image name="back_icon" width="13" height="24"/>
         <image name="bike_background" width="375" height="667"/>
         <image name="bike_icon" width="32" height="31"/>
         <image name="coche_icon" width="31" height="30"/>
