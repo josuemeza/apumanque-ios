@@ -148,6 +148,8 @@ extension HomeViewController: MenuViewControllerDelegate {
         case .featured:
             performSegue(withIdentifier: "home_to_featured_segue", sender: nil)
             return
+        case .services:
+            performSegue(withIdentifier: "home_to_services_segue", sender: nil)
         }
     }
     
