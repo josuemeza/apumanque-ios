@@ -15,5 +15,6 @@ class DiscountTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var valueLabelContainer: UIView!
 
 }

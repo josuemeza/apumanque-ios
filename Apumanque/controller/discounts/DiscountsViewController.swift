@@ -122,9 +122,23 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "discount_list_item_cell", for: indexPath) as! DiscountTableViewCell
         let discount = discounts[indexPath.row]
         cell.titleLabel.text = discount.resume ?? discount.title
-        cell.valueLabel.text = discount.valuePercent
         if let url = discount.imageUrl {
             cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
+        }
+        cell.valueLabelContainer.radious(34, on: [.bottomLeft, .topLeft])
+        if let value = discount.valuePercent, !value.isEmpty {
+            cell.valueLabel.text = value
+            switch value.lowercased() {
+            case "Dcto":
+                cell.valueLabelContainer.backgroundColor = UIColor(red: 30/255, green: 155/255, blue: 132/255, alpha: 1)
+            case "LE":
+                cell.valueLabelContainer.backgroundColor = UIColor(red: 244/255, green: 85/255, blue: 22/255, alpha: 1)
+            default:
+                cell.valueLabelContainer.backgroundColor = UIColor(red: 232/255, green: 0/255, blue: 58/255, alpha: 1)
+            }
+        } else {
+            cell.valueLabel.text = ""
+            cell.valueLabelContainer.backgroundColor = .clear
         }
         return cell
     }

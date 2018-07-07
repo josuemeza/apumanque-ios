@@ -72,8 +72,8 @@ extension StoreViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.storeNumberLabel.text = "Local \(store.number ?? "S/N")"
         cell.storeNameLabel.text = store.name
         if let value = discount.valuePercent, !value.isEmpty {
-            cell.valueLabel.text = discount.valuePercent
-            switch discount.valuePercent {
+            cell.valueLabel.text = value
+            switch value.lowercased() {
             case "Dcto":
                 cell.valueLabel.backgroundColor = UIColor(red: 30/255, green: 155/255, blue: 132/255, alpha: 1)
             case "LE":
