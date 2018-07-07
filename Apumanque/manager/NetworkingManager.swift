@@ -98,6 +98,7 @@ class NetworkingManager {
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
+                print("TOKEN \(SessionManager.singleton.token!)")
                 guard let storesJSON = JSON(value)["results"].array else { completion(nil) ; return }
                 var stores = [Store]()
                 for storeJSON in storesJSON {
