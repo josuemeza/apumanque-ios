@@ -39,15 +39,16 @@ class StoresViewController: BlurredViewController {
                 let storeCategories = segue.destination as! StoreCategoriesViewController
                 storeCategories.delegate = self
                 viewController = storeCategories
+            } else if segue.destination is StoreViewController {
+                let storeViewController = segue.destination as! StoreViewController
+                let indexPath = tableView.indexPathForSelectedRow!
+                let store = groupedStores[sectionNames[indexPath.section]]![indexPath.row]
+                storeViewController.store = store
+                viewController = storeViewController
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
             viewController.backgroundImage = backgroundImage
-        } else if segue.destination is StoreViewController {
-            let viewController = segue.destination as! StoreViewController
-            let indexPath = tableView.indexPathForSelectedRow!
-            let store = groupedStores[sectionNames[indexPath.section]]![indexPath.row]
-            viewController.store = store
         }
     }
     
@@ -97,6 +98,10 @@ extension StoresViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sectionNames.map { name in String(name) }
     }
     
 }
