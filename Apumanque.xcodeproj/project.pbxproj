@@ -54,6 +54,8 @@
 		FA11EAC920BE78E600AE07D5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */; };
 		FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C220BCFC0800B69D2B /* SessionManager.swift */; };
 		FA1E82C520BD175000B69D2B /* BlurredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C420BD175000B69D2B /* BlurredViewController.swift */; };
+		FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */; };
+		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
 		FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25BE20C0B3140067151E /* DiscountViewController.swift */; };
 		FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */; };
 		FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */; };
@@ -145,6 +147,8 @@
 		FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA1E82C220BCFC0800B69D2B /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		FA1E82C420BD175000B69D2B /* BlurredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredViewController.swift; sourceTree = "<group>"; };
+		FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
 		FA4E25BE20C0B3140067151E /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 				FAC36A3120BF62C1008BD508 /* DiscountTableViewCell.swift */,
 				FAC36A3320BF62D4008BD508 /* DiscountCategoryTableViewCell.swift */,
 				FAB20C0020C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift */,
+				FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */,
 			);
 			path = discounts;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				FAF1AC2120AC72FB00F01D59 /* UIButton.swift */,
 				FAA2154820ACFD8F0034A4B5 /* String.swift */,
 				FAA2154C20AD17020034A4B5 /* UIColor.swift */,
+				FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -709,10 +715,12 @@
 				FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */,
 				FAC36A3220BF62C1008BD508 /* DiscountTableViewCell.swift in Sources */,
 				FAF1AC1C20AC5E2500F01D59 /* UIView.swift in Sources */,
+				FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */,
 				FAA2154D20AD17020034A4B5 /* UIColor.swift in Sources */,
 				F20620C820AE97A200D5BA3C /* TutorialContentViewController.swift in Sources */,
 				FAF1AC2A20AC993600F01D59 /* ContactViewController.swift in Sources */,
 				FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */,
+				FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */,
 				F2CE050A20C8BF83006565AC /* BikeViewController.swift in Sources */,
 				FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */,
 				FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */,

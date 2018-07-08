@@ -119,28 +119,48 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "discount_list_item_cell", for: indexPath) as! DiscountTableViewCell
-        let discount = discounts[indexPath.row]
-        cell.titleLabel.text = discount.resume ?? discount.title
-        if let url = discount.imageUrl {
-            cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
-        }
-        cell.valueLabelContainer.radious(34, on: [.bottomLeft, .topLeft])
-        if let value = discount.valuePercent, !value.isEmpty {
-            cell.valueLabel.text = value
-            switch value.lowercased() {
-            case "Dcto":
-                cell.valueLabelContainer.backgroundColor = UIColor(red: 30/255, green: 155/255, blue: 132/255, alpha: 1)
-            case "LE":
-                cell.valueLabelContainer.backgroundColor = UIColor(red: 244/255, green: 85/255, blue: 22/255, alpha: 1)
-            default:
-                cell.valueLabelContainer.backgroundColor = UIColor(red: 232/255, green: 0/255, blue: 58/255, alpha: 1)
+        switch listSegmentedControl.selectedSegmentIndex {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "discount_list_item_cell", for: indexPath) as! DiscountTableViewCell
+            let discount = discounts[indexPath.row]
+            cell.titleLabel.text = discount.resume ?? discount.title
+            if let url = discount.imageUrl {
+                cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
             }
-        } else {
-            cell.valueLabel.text = ""
-            cell.valueLabelContainer.backgroundColor = .clear
+            cell.valueLabelContainer.radious(34, on: [.bottomLeft, .topLeft])
+            cell.valueLabel.text = discount.valueText
+            cell.valueLabelContainer.backgroundColor = discount.valueColor?.color ?? .clear
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "my_discount_list_item_cell", for: indexPath) as! MyDiscountTableViewCell
+            let discount = discounts[indexPath.row]
+            let expireDays: Int? = ({
+                guard let expireDate = discount.expireDate?.toDate else { return nil }
+                let now = Date()
+                let calendar = Calendar.current
+                let start = calendar.startOfDay(for: now)
+                let end = calendar.startOfDay(for: expireDate)
+                let components = calendar.dateComponents([.day], from: start, to: end)
+                return components.day
+            })()
+            let expireMessage: String = ({
+                if let expireDays = expireDays {
+                    if expireDays >= 0 {
+                        return "Quedan \(expireDays) días para canjear"
+                    } else {
+                        return "Cupón fuera de fecha"
+                    }
+                } else {
+                    return "Fecha pendiente de ingreso"
+                }
+            })()
+            cell.titleLabel.text = discount.resume ?? discount.title
+            cell.storeLabel.text = discount.store?.name
+            cell.expirationLabel.text = expireMessage
+            return cell
+        default:
+            return UITableViewCell()
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -158,7 +178,12 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        switch listSegmentedControl.selectedSegmentIndex {
+        case 0:
+            return 200
+        default:
+            return UITableViewAutomaticDimension
+        }
     }
     
 }
