@@ -14,6 +14,51 @@ import SwiftyEssentials
 @objc(Discount)
 public class Discount: NSManagedObject {
     
+    // MARK: - Enumerations
+    
+    enum ValueColor: String {
+        case red = "rojo", green = "verde", orange = "naranja"
+        var color: UIColor {
+            switch self {
+            case .red:
+                return UIColor(red: 232/255, green: 0/255, blue: 58/255, alpha: 1)
+            case .green:
+                return UIColor(red: 30/255, green: 155/255, blue: 132/255, alpha: 1)
+            case .orange:
+                return UIColor(red: 244/255, green: 85/255, blue: 22/255, alpha: 1)
+            }
+        }
+    }
+    
+    // MARK: - Attributes
+    
+    var valueColor: ValueColor? {
+        get {
+            guard let color = tagColor else { return nil }
+            return ValueColor(rawValue: color)
+        }
+        set {
+            tagColor = newValue?.rawValue
+        }
+    }
+    
+    var valueText: String? {
+        get {
+            guard let color = valueColor else { return nil }
+            switch color {
+            case .red:
+                guard let value = valuePercent else { return "S/N" }
+                return "\(value)%"
+            case .green:
+                return "Dcto"
+            case .orange:
+                return "LE"
+            }
+        }
+    }
+    
+    // MARK: - Methods
+    
     static func all(on context: NSManagedObjectContext) -> [Discount]? {
         let request: NSFetchRequest<Discount> = Discount.fetchRequest()
         return try? context.fetch(request)
@@ -24,6 +69,7 @@ public class Discount: NSManagedObject {
         id = String(json["id"].intValue)
         title = json["title"].string
         valuePercent = json["value_percent"].string
+        tagColor = json["tag_color"].string
         detail = json["description"].string
         code = json["code"].string
         resume = json["resume"].string

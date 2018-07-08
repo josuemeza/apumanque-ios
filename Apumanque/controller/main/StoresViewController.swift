@@ -17,16 +17,53 @@ class StoresViewController: BlurredViewController {
     
     // MARK: - Attributes
     
+    private var searchBar: UISearchBar!
     private(set) var stores = [Store]()
     private(set) var storeCategory: StoreCategory?
-    private var sectionNames = [Character]()
-    private var groupedStores = [Character: [Store]]()
+    
+    // MARK: - Attribute accessors
+    
+    private var sectionNames: [Character] {
+        get {
+            return groupedStores.keys.sorted()
+        }
+    }
+    private var groupedStores: [Character: [Store]] {
+        get {
+            let filtered: [Store] = stores.compactMap { store in
+                if let text = searchBar.text?.lowercased(), !text.isEmpty {
+                    if store.name?.lowercased().range(of: text) != nil {
+                        return store
+                    }
+                    return nil
+                } else {
+                    return store
+                }
+            }
+            var grouped = Dictionary(grouping: filtered, by: { store in store.name?.first ?? "-" })
+            grouped.forEach { (key, value) in
+                grouped[key] = value.sorted { left, right in left.name ?? "" < right.name ?? "" }
+            }
+            return grouped
+        }
+    }
     
     // MARK: - View controller methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         build(withOpaqueNavigationBar: true)
+        searchBar = ({
+            let searchBar = UISearchBar()
+            searchBar.delegate = self
+            searchBar.backgroundImage = UIColor.black.toImage()
+            searchBar.placeholder = "¿Qué buscas?"
+            searchBar.sizeToFit()
+            searchBar.textField?.textColor = .white
+            searchBar.textField?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+            tableView.tableHeaderView = searchBar
+            return searchBar
+        })()
         initData()
     }
     
@@ -62,9 +99,6 @@ class StoresViewController: BlurredViewController {
             titleLabel.text = "Locales"
             stores = Store.all(on: managedObjectContext) ?? []
         }
-        groupedStores = Dictionary(grouping: stores, by: { store in store.name?.first ?? "-" })
-        sectionNames = groupedStores.keys.sorted()
-        groupedStores.forEach { key, value in groupedStores[key] = value.sorted { left, right in left.name ?? "" < right.name ?? "" } }
         tableView.reloadData()
     }
 
@@ -102,6 +136,23 @@ extension StoresViewController: UITableViewDataSource, UITableViewDelegate {
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sectionNames.map { name in String(name) }
+    }
+    
+}
+
+extension StoresViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        tableView.reloadData()
+        searchBar.showsCancelButton = true
+        searchBar.cancelButton?.setTitle("Cancelar", for: .normal)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        tableView.reloadData()
+        searchBar.textField?.resignFirstResponder()
+        searchBar.showsCancelButton = false
     }
     
 }

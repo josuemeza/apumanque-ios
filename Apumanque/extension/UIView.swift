@@ -33,8 +33,21 @@ extension UIView {
      - Parameter radious: Radious value to apply.
      */
     func roundOut(radious: Float) {
-        self.layer.cornerRadius = CGFloat(radious)
-        self.clipsToBounds = true
+        layer.cornerRadius = CGFloat(radious)
+        clipsToBounds = true
+    }
+    
+    func radious(_ value: Int, on corners: UIRectCorner) {
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = frame
+        rectShape.position = center
+        rectShape.path = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: value, height: value)
+        ).cgPath
+        layer.backgroundColor = UIColor.green.cgColor
+        layer.mask = rectShape
     }
     
     /**

@@ -140,7 +140,7 @@ class NetworkingManager {
     
     func spetialSales(completion: @escaping Callback<[Discount]>) {
         guard let context = context else { completion(nil) ; return }
-        let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/?code=featuredProduct"
+        let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {

@@ -216,13 +216,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rPU-Qc-WTp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Abt-Nk-nlD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="oNJ-On-BmK">
-                            <connections>
-                                <segue destination="nfC-pb-7GP" kind="show" id="CT5-BU-qZG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Abt-Nk-nlD"/>
                     <connections>
                         <outlet property="container" destination="Q39-pj-72T" id="Vt2-XY-wfu"/>
                         <outlet property="containerLeadingConstraint" destination="WKv-eA-09c" id="09J-x8-MDc"/>
@@ -623,10 +617,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-Rc-dzP">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="986"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="1030"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAE-QS-REL">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="986"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1030"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-Bh-8Wh">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="975"/>
