@@ -8,17 +8,23 @@
 
 import UIKit
 
-class UploadInvoiceViewController: UIViewController {
+class UploadInvoiceViewController: ViewController {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var saveAndContinueButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var imageViewUploadInvoice: UIImageView!
+    
+    private var campaings: Campaing!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        campaings = Campaing.unitCampaing(on: managedObjectContext)
+        if let url = campaings.imageUrl {
+            imageViewUploadInvoice.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
+        }
 
-        // Do any additional setup after loading the view.
         contentView.roundOut(radious: 10)
         saveAndContinueButton.roundOut(radious: 28)
         

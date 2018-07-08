@@ -153,6 +153,7 @@
                                         </state>
                                         <connections>
                                             <action selector="seeCampaingsButtonTap:" destination="ePc-tD-MCh" eventType="touchUpInside" id="Nr9-jn-6Zg"/>
+                                            <segue destination="0un-yP-a6Z" kind="show" id="Wra-sa-8f7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -233,7 +234,7 @@
                 <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="HB4-aJ-XaI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIX-13-Har" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4263" y="59"/>
+            <point key="canvasLocation" x="-2550" y="-461"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="wkK-Ep-Jqo">
@@ -241,7 +242,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="menu_view_controller" id="eP1-Av-xIH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awm-1H-TKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3924" y="58"/>
+            <point key="canvasLocation" x="-2564" y="-523"/>
         </scene>
         <!--login_view_controller-->
         <scene sceneID="Qjf-vL-DFA">
@@ -249,7 +250,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="login_view_controller" id="h13-ej-xYi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJg-ya-pY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3594" y="58"/>
+            <point key="canvasLocation" x="-2566" y="-574"/>
         </scene>
         <!--register_view_controller-->
         <scene sceneID="8sA-zh-FDS">
@@ -257,7 +258,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="register_view_controller" id="DGB-Hi-sEV" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpL-b7-NX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3274" y="58"/>
+            <point key="canvasLocation" x="-2553" y="-640"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="kXc-cJ-SO4">
@@ -265,7 +266,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="PVt-4d-VvK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcd-BM-OmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2929" y="58"/>
+            <point key="canvasLocation" x="-2546" y="-694"/>
         </scene>
         <!--contact_view_controller-->
         <scene sceneID="XUZ-Z6-W7L">
@@ -273,7 +274,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="contact_view_controller" id="L4s-mx-cur" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCt-9W-iSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2579" y="58"/>
+            <point key="canvasLocation" x="-2554" y="-748"/>
         </scene>
         <!--Campaña vigente-->
         <scene sceneID="Nth-JX-0x1">
@@ -286,6 +287,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campaings_background" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-7r-g3f">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jCZ-cH-RHc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="V6s-HW-vhL"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h24-WC-etj">
+                                <rect key="frame" x="0.0" y="850" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10427726833976834" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-dt-Qyn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="786"/>
                                 <subviews>
@@ -314,7 +325,7 @@
                                                                 <blurEffect style="dark"/>
                                                             </visualEffectView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participa y gana" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79Y-6a-VHk">
-                                                                <rect key="frame" x="124" y="20" width="110.5" height="17"/>
+                                                                <rect key="frame" x="124.5" y="20" width="110.5" height="17"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -635,18 +646,30 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="1vj-38-v4r"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="bottom" secondItem="jY7-Nd-6Da" secondAttribute="bottom" id="6SI-Uq-B2D"/>
+                            <constraint firstItem="jCZ-cH-RHc" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="top" id="80Q-9J-Dq9"/>
+                            <constraint firstItem="jY7-Nd-6Da" firstAttribute="trailing" secondItem="jCZ-cH-RHc" secondAttribute="trailing" id="8Mj-10-yLJ"/>
+                            <constraint firstItem="jY7-Nd-6Da" firstAttribute="bottom" secondItem="h24-WC-etj" secondAttribute="bottom" id="NTL-kp-Sh8"/>
+                            <constraint firstItem="h24-WC-etj" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="OQk-3L-LQw"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="top" id="Q10-cg-MjZ"/>
+                            <constraint firstItem="jY7-Nd-6Da" firstAttribute="trailing" secondItem="h24-WC-etj" secondAttribute="trailing" id="Qd3-hy-kaV"/>
+                            <constraint firstItem="h24-WC-etj" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="bottom" id="Sdk-hP-nUw"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="WoE-dL-vG2"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="trailing" secondItem="jY7-Nd-6Da" secondAttribute="trailing" id="Xx3-pY-M7e"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="cGj-Bu-xGo"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="trailing" secondItem="jY7-Nd-6Da" secondAttribute="trailing" id="h8h-A2-4vC"/>
+                            <constraint firstItem="jCZ-cH-RHc" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="kFc-Cg-ib6"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="bottom" secondItem="jY7-Nd-6Da" secondAttribute="bottom" id="lPZ-O5-UO9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jY7-Nd-6Da"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jcv-7r-g3f"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Campaña vigente" id="H1u-VM-z0s">
                         <barButtonItem key="rightBarButtonItem" id="mro-8g-LKJ"/>
@@ -655,13 +678,180 @@
                     <connections>
                         <outlet property="contentView" destination="8LL-wM-S8A" id="A5P-K9-KHM"/>
                         <outlet property="helpButton" destination="Xar-LO-Vmx" id="Chk-Fc-jlV"/>
+                        <outlet property="imageViewUploadInvoice" destination="jCZ-cH-RHc" id="fD6-si-Uf1"/>
                         <outlet property="saveAndContinueButton" destination="mpO-DE-423" id="K1a-nI-iir"/>
                         <segue destination="iqr-Ui-FfU" kind="show" identifier="campaings_to_help_segue" id="8Vq-IE-grE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDr-qT-hon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1831" y="-461"/>
+            <point key="canvasLocation" x="-4055" y="549"/>
+        </scene>
+        <!--Valid Campaings View Controller-->
+        <scene sceneID="hp7-hy-47G">
+            <objects>
+                <viewController id="0un-yP-a6Z" customClass="ValidCampaingsViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8wA-qx-ZFR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K30-ez-iKj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-m4-Iki">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grn-Um-Sf8">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="934"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaña Vigente" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVt-U8-e4s">
+                                                        <rect key="frame" x="19" y="14" width="326" height="41"/>
+                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="34"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ve-9f-ARk">
+                                                        <rect key="frame" x="20" y="89" width="335" height="335"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JZI-Co-nae">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promoción &quot;Vuela en Capadocia&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-ru-nQK">
+                                                                <rect key="frame" x="8" y="140" width="319" height="79"/>
+                                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="33"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participa por cada $10.000 de compras" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-LI-tX0">
+                                                                <rect key="frame" x="60" y="236" width="215" height="43"/>
+                                                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="BfJ-ru-nQK" secondAttribute="trailing" constant="8" id="1xC-7E-YWB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JZI-Co-nae" secondAttribute="trailing" id="Enu-C4-nhJ"/>
+                                                            <constraint firstItem="TpI-LI-tX0" firstAttribute="top" secondItem="BfJ-ru-nQK" secondAttribute="bottom" constant="17" id="IVN-SR-agv"/>
+                                                            <constraint firstItem="BfJ-ru-nQK" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" constant="8" id="J7L-jg-5kG"/>
+                                                            <constraint firstItem="JZI-Co-nae" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="top" id="XsZ-eD-4LS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TpI-LI-tX0" secondAttribute="trailing" constant="60" id="dIq-nG-N81"/>
+                                                            <constraint firstItem="JZI-Co-nae" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" id="gbw-yG-rZ3"/>
+                                                            <constraint firstItem="BfJ-ru-nQK" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="top" constant="140" id="qRO-aN-biy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JZI-Co-nae" secondAttribute="bottom" id="t4g-vJ-HnD"/>
+                                                            <constraint firstAttribute="height" constant="335" id="uTa-2o-444"/>
+                                                            <constraint firstItem="TpI-LI-tX0" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" constant="60" id="wcU-gu-9SO"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZc-Ke-NfJ">
+                                                        <rect key="frame" x="29" y="449" width="317" height="234"/>
+                                                        <string key="text">Cliente Frecuente tiene una nueva promoción; "Vuela en Capadocia, Turquía". Premio que consiste en un viaje para dos personas a Turquía (valor máximo equivalente a $5.000.000).
+
+Para participar, el cliente debe registrar sus boletas de compras en los módulos de informaciones, donde obtendrá un cupón digital por cada $10.000. También podrá registrar sus boletas a través de la aplicación Apumanque, opción donde  obtendrá DOS CUPONES DIGITALES por el mismo monto.</string>
+                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Te gustaría saber más?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrk-Ci-jmg">
+                                                        <rect key="frame" x="29" y="741" width="317" height="29"/>
+                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luD-EZ-d7P">
+                                                        <rect key="frame" x="20" y="790" width="335" height="57"/>
+                                                        <color key="backgroundColor" red="0.90980392160000001" green="0.0" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="Yp0-mv-55V"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
+                                                        <state key="normal" title="Últimos ganadores">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="lastWinnersAction:" destination="0un-yP-a6Z" eventType="touchUpInside" id="7ba-2i-hBG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-19-WYr">
+                                                        <rect key="frame" x="20" y="857" width="335" height="57"/>
+                                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="Rqc-T7-QfL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
+                                                        <state key="normal" title="Aspectos legales">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="legalAspectsAction:" destination="0un-yP-a6Z" eventType="touchUpInside" id="nh5-S0-kFc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="CZc-Ke-NfJ" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="bottom" constant="25" id="1Us-5S-fOf"/>
+                                                    <constraint firstItem="luD-EZ-d7P" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="20" id="2nc-vI-5EC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="luD-EZ-d7P" secondAttribute="trailing" constant="20" id="6sY-Oe-lp6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vwi-19-WYr" secondAttribute="trailing" constant="20" id="7le-Pw-W3p"/>
+                                                    <constraint firstItem="luD-EZ-d7P" firstAttribute="top" secondItem="xrk-Ci-jmg" secondAttribute="bottom" constant="20" id="A3Q-t4-nfd"/>
+                                                    <constraint firstItem="yVt-U8-e4s" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="19" id="Gf9-cb-Mhz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9ve-9f-ARk" secondAttribute="trailing" constant="20" id="MG3-2k-gAN"/>
+                                                    <constraint firstItem="yVt-U8-e4s" firstAttribute="top" secondItem="grn-Um-Sf8" secondAttribute="top" constant="14" id="MNG-9s-tjw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xrk-Ci-jmg" secondAttribute="trailing" constant="29" id="PYW-A0-L9i"/>
+                                                    <constraint firstItem="xrk-Ci-jmg" firstAttribute="top" secondItem="CZc-Ke-NfJ" secondAttribute="bottom" constant="58" id="Pxi-6i-qh3"/>
+                                                    <constraint firstItem="xrk-Ci-jmg" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="29" id="Vwd-yS-JxF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vwi-19-WYr" secondAttribute="bottom" constant="20" id="a7e-eW-dUN"/>
+                                                    <constraint firstItem="vwi-19-WYr" firstAttribute="top" secondItem="luD-EZ-d7P" secondAttribute="bottom" constant="10" id="g1z-0F-Te0"/>
+                                                    <constraint firstItem="9ve-9f-ARk" firstAttribute="top" secondItem="yVt-U8-e4s" secondAttribute="bottom" constant="34" id="h5j-AL-6yD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yVt-U8-e4s" secondAttribute="trailing" constant="30" id="rKd-BY-wd5"/>
+                                                    <constraint firstItem="CZc-Ke-NfJ" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="29" id="tAs-cq-uMV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CZc-Ke-NfJ" secondAttribute="trailing" constant="29" id="wLR-7e-rvA"/>
+                                                    <constraint firstItem="9ve-9f-ARk" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="20" id="wLr-5y-ym0"/>
+                                                    <constraint firstItem="vwi-19-WYr" firstAttribute="leading" secondItem="grn-Um-Sf8" secondAttribute="leading" constant="20" id="wSy-Ur-Chf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="grn-Um-Sf8" secondAttribute="bottom" constant="8" id="9An-qy-3Qf"/>
+                                            <constraint firstAttribute="trailing" secondItem="grn-Um-Sf8" secondAttribute="trailing" id="B60-0r-gVX"/>
+                                            <constraint firstItem="grn-Um-Sf8" firstAttribute="top" secondItem="6bK-m4-Iki" secondAttribute="top" id="mFv-ij-j96"/>
+                                            <constraint firstItem="grn-Um-Sf8" firstAttribute="leading" secondItem="6bK-m4-Iki" secondAttribute="leading" id="wc6-tH-V77"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6bK-m4-Iki" secondAttribute="bottom" id="J2o-Oa-3av"/>
+                                    <constraint firstItem="6bK-m4-Iki" firstAttribute="top" secondItem="K30-ez-iKj" secondAttribute="top" id="fjL-xm-KMD"/>
+                                    <constraint firstItem="6bK-m4-Iki" firstAttribute="leading" secondItem="K30-ez-iKj" secondAttribute="leading" id="mSl-vb-nLj"/>
+                                    <constraint firstAttribute="trailing" secondItem="6bK-m4-Iki" secondAttribute="trailing" id="pCg-YS-Z8d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="grn-Um-Sf8" firstAttribute="width" secondItem="8wA-qx-ZFR" secondAttribute="width" id="7y0-E4-5IX"/>
+                            <constraint firstItem="K30-ez-iKj" firstAttribute="trailing" secondItem="Go5-Hg-0ww" secondAttribute="trailing" id="8Rv-6m-9GY"/>
+                            <constraint firstItem="grn-Um-Sf8" firstAttribute="height" secondItem="8wA-qx-ZFR" secondAttribute="height" priority="250" id="TzQ-T7-6sT"/>
+                            <constraint firstItem="K30-ez-iKj" firstAttribute="top" secondItem="Go5-Hg-0ww" secondAttribute="top" id="VfZ-kJ-yqF"/>
+                            <constraint firstItem="K30-ez-iKj" firstAttribute="bottom" secondItem="Go5-Hg-0ww" secondAttribute="bottom" id="bCZ-wM-evI"/>
+                            <constraint firstItem="K30-ez-iKj" firstAttribute="leading" secondItem="Go5-Hg-0ww" secondAttribute="leading" id="ttC-ok-xl7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Go5-Hg-0ww"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="contentCampaingsLabel" destination="CZc-Ke-NfJ" id="Pqa-YI-qpx"/>
+                        <outlet property="imageCampaings" destination="JZI-Co-nae" id="nuZ-1Y-S5h"/>
+                        <outlet property="lastWinnersButton" destination="luD-EZ-d7P" id="Mc0-Sh-4fd"/>
+                        <outlet property="legalAspects" destination="vwi-19-WYr" id="cpp-ih-v7Q"/>
+                        <outlet property="tittleCampaingsLabel" destination="BfJ-ru-nQK" id="MCG-qg-Mpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsz-uV-VFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2566" y="706"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="Dzo-a7-OyA">
@@ -780,7 +970,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGm-ck-S3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-962.39999999999998" y="-460.56971514242883"/>
+            <point key="canvasLocation" x="-4055" y="1604"/>
         </scene>
     </scenes>
     <resources>
