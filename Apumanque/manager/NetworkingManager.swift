@@ -98,6 +98,7 @@ class NetworkingManager {
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
+                print("TOKEN \(SessionManager.singleton.token!)")
                 guard let storesJSON = JSON(value)["results"].array else { completion(nil) ; return }
                 var stores = [Store]()
                 for storeJSON in storesJSON {
@@ -162,6 +163,31 @@ class NetworkingManager {
                 completion(discounts)
             case .failure(let responseError):
                 print(responseError.localizedDescription)
+            }
+        }
+    }
+    
+    func campaings(completion: @escaping Callback<[Campaing]>) {
+        guard let context = context else { completion(nil) ; return }
+        let endpoint = "/basicmall/api/campaigns/"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let campaingsJSON = JSON(value)["results"].array else { completion(nil) ; return }
+                var campaings = [Campaing]()
+                for campaingJSON in campaingsJSON {
+                    if campaingJSON["is_active"].bool! {
+                        let campaing = Campaing(context: context)
+                        if campaing.setData(from: campaingJSON) {
+                            campaings.append(campaing)
+                        }
+                    }
+                }
+                completion(campaings)
+            case .failure(let responseError):
+                print(responseError.localizedDescription)
+                completion(nil)
             }
         }
     }
