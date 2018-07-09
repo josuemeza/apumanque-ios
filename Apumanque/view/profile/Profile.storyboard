@@ -42,6 +42,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoX-dp-cbv" userLabel="segues">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-Wv-njL" userLabel="To login">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GHH-Vd-eI2"/>
+                                            <constraint firstAttribute="width" constant="30" id="vPR-Sl-EzZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="FC4-35-f7N" kind="show" identifier="profile_to_login_segue" id="gWM-8X-tFR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trw-ua-vOR" userLabel="To register">
+                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ceO-yS-4Yl"/>
+                                            <constraint firstAttribute="width" constant="30" id="ga2-tt-5SM"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="yZL-o1-amS" kind="show" identifier="profile_to_register_segue" id="XoQ-Qi-QEj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THh-yg-cSS" userLabel="To edit">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8Qw-H0-yWF"/>
+                                            <constraint firstAttribute="width" constant="30" id="uND-f8-HpX"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="1QX-Jz-S9K" kind="show" identifier="profile_to_edit_segue" id="nOz-wo-cg5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGL-UM-Wqm" userLabel="To contact">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="9V6-aY-scc"/>
+                                            <constraint firstAttribute="height" constant="30" id="Fod-Yb-V8Q"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="iFf-gR-ykp" kind="presentation" identifier="profile_to_contact_segue" id="oVf-CE-qmK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuV-sS-Z9y" userLabel="To service">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="FY8-ON-IfY"/>
+                                            <constraint firstAttribute="height" constant="30" id="znE-4J-Gd6"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="35U-9o-XwU" kind="show" identifier="profile_to_services_segue" id="OZH-M3-DbH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUm-G1-x64" userLabel="To stores">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7ND-qC-N9k"/>
+                                            <constraint firstAttribute="height" constant="30" id="gGO-1B-eaM"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="7M1-JK-fBv" kind="show" identifier="profile_to_stores_segue" id="tnB-Ai-o4N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE1-Ru-4tp" userLabel="To featured">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="CxR-Sb-Idi"/>
+                                            <constraint firstAttribute="height" constant="30" id="Rve-3Y-hh7"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="Kxs-wL-Mep" kind="show" identifier="profile_to_featured_segue" id="bJL-WV-IeV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SE1-Ru-4tp" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="1Zs-vu-q9K"/>
+                                    <constraint firstItem="SE1-Ru-4tp" firstAttribute="leading" secondItem="eUm-G1-x64" secondAttribute="trailing" id="2Hm-RJ-Qjp"/>
+                                    <constraint firstItem="TuV-sS-Z9y" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="8UD-zs-ugH"/>
+                                    <constraint firstItem="eUm-G1-x64" firstAttribute="leading" secondItem="TuV-sS-Z9y" secondAttribute="trailing" id="BcW-l5-MGb"/>
+                                    <constraint firstItem="TuV-sS-Z9y" firstAttribute="leading" secondItem="bGL-UM-Wqm" secondAttribute="trailing" id="CUE-XG-8VJ"/>
+                                    <constraint firstItem="THh-yg-cSS" firstAttribute="leading" secondItem="Trw-ua-vOR" secondAttribute="trailing" id="EAe-7k-Hcd"/>
+                                    <constraint firstItem="Juh-Wv-njL" firstAttribute="leading" secondItem="zoX-dp-cbv" secondAttribute="leading" id="JtG-oG-7QA"/>
+                                    <constraint firstItem="Trw-ua-vOR" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="LnM-dS-Zor"/>
+                                    <constraint firstItem="bGL-UM-Wqm" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="SoF-OA-K3O"/>
+                                    <constraint firstItem="THh-yg-cSS" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="cmx-VN-9Mx"/>
+                                    <constraint firstItem="Trw-ua-vOR" firstAttribute="leading" secondItem="Juh-Wv-njL" secondAttribute="trailing" id="e7d-re-GBM"/>
+                                    <constraint firstItem="eUm-G1-x64" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="jTe-hx-331"/>
+                                    <constraint firstItem="bGL-UM-Wqm" firstAttribute="leading" secondItem="THh-yg-cSS" secondAttribute="trailing" id="opj-aP-fUS"/>
+                                    <constraint firstItem="Juh-Wv-njL" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="pgt-vU-6SA"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqJ-8S-h4B">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
                                 <subviews>
@@ -214,6 +306,9 @@
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L26-EE-2yA">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                                        <connections>
+                                                                            <action selector="myInvoicesAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="a2B-p6-ea0"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-oz-Gkr">
                                                                         <rect key="frame" x="327" y="5" width="8" height="13"/>
@@ -257,6 +352,9 @@
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-EU-DxS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                                        <connections>
+                                                                            <segue destination="iu1-Cd-sXr" kind="show" id="Abc-9z-enT"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="rID-7b-rIx">
                                                                         <rect key="frame" x="327" y="5" width="8" height="13"/>
@@ -300,6 +398,9 @@
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ant-pd-Hdg">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                                        <connections>
+                                                                            <action selector="lastWinnersAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="PJD-GT-UcP"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="OGs-Fy-NAq">
                                                                         <rect key="frame" x="327" y="5" width="8" height="13"/>
@@ -336,6 +437,9 @@
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-dk-VGD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                                        <connections>
+                                                                            <action selector="helpAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="L1Y-xM-2dU"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="i57-3h-lmH">
                                                                         <rect key="frame" x="327" y="5" width="8" height="13"/>
@@ -427,14 +531,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3Zq-Cs-lKt" firstAttribute="bottom" secondItem="zoX-dp-cbv" secondAttribute="bottom" id="DL5-vf-vEb"/>
                             <constraint firstItem="OqJ-8S-h4B" firstAttribute="top" secondItem="3Zq-Cs-lKt" secondAttribute="top" id="PtT-r5-ElT"/>
                             <constraint firstItem="OqJ-8S-h4B" firstAttribute="leading" secondItem="3Zq-Cs-lKt" secondAttribute="leading" id="TPx-BY-Za0"/>
+                            <constraint firstItem="zoX-dp-cbv" firstAttribute="leading" secondItem="3Zq-Cs-lKt" secondAttribute="leading" id="Yx8-bY-EZF"/>
                             <constraint firstItem="OqJ-8S-h4B" firstAttribute="bottom" secondItem="3Zq-Cs-lKt" secondAttribute="bottom" id="aKh-Wd-zGh"/>
+                            <constraint firstItem="3Zq-Cs-lKt" firstAttribute="trailing" secondItem="zoX-dp-cbv" secondAttribute="trailing" id="dm1-Tn-byl"/>
+                            <constraint firstItem="zoX-dp-cbv" firstAttribute="top" secondItem="3Zq-Cs-lKt" secondAttribute="top" id="jab-sM-vFr"/>
                             <constraint firstItem="OqJ-8S-h4B" firstAttribute="trailing" secondItem="3Zq-Cs-lKt" secondAttribute="trailing" id="l87-EZ-YSr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Zq-Cs-lKt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aQi-Ev-nRK"/>
+                    <navigationItem key="navigationItem" id="aQi-Ev-nRK">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="dqX-rN-GRG">
+                            <connections>
+                                <segue destination="2hG-UR-iIC" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="bi4-bZ-Atx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="circularProgress" destination="vxl-mp-PkM" id="fhy-zq-uWr"/>
@@ -445,9 +559,82 @@
             </objects>
             <point key="canvasLocation" x="256.80000000000001" y="-252.77361319340332"/>
         </scene>
+        <!--menu_view_controller-->
+        <scene sceneID="vNT-AC-E0H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="menu_view_controller" id="2hG-UR-iIC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWi-pd-3BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="-655"/>
+        </scene>
+        <!--services_view_controller-->
+        <scene sceneID="Aeh-Q9-kSZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="35U-9o-XwU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bs-Wn-ni4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="-342"/>
+        </scene>
+        <!--stores_view_controller-->
+        <scene sceneID="LbC-E5-jm7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="stores_view_controller" id="7M1-JK-fBv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3u6-cN-fmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="-290"/>
+        </scene>
+        <!--featured_view_controller-->
+        <scene sceneID="UcZ-hM-8NC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="featured_view_controller" id="Kxs-wL-Mep" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zig-V2-7YO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="-242"/>
+        </scene>
+        <!--valid_campaign_view_controller-->
+        <scene sceneID="XNW-3C-upn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Campaings" referencedIdentifier="valid_campaign_view_controller" id="iu1-Cd-sXr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8u-Z3-FHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="-190"/>
+        </scene>
+        <!--login_view_controller-->
+        <scene sceneID="QxA-eI-A4a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="login_view_controller" id="FC4-35-f7N" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ns-7L-7EB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="-397"/>
+        </scene>
+        <!--register_view_controller-->
+        <scene sceneID="mjp-6b-HoT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="register_view_controller" id="yZL-o1-amS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xzm-f3-FuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-452"/>
+        </scene>
+        <!--edit_user_view_controller-->
+        <scene sceneID="xru-uK-tc2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="1QX-Jz-S9K" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weh-qo-z9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-516"/>
+        </scene>
+        <!--contact_view_controller-->
+        <scene sceneID="HbV-qo-0Ac">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="contact_view_controller" id="iFf-gR-ykp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nZ-lj-Z4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-597"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_gray" width="8" height="13"/>
+        <image name="menu_icon" width="24" height="24"/>
         <image name="profile_icon" width="63" height="63"/>
     </resources>
 </document>

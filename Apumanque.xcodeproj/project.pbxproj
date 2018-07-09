@@ -38,6 +38,7 @@
 		F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */; };
 		F251C82420CE322200718811 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82320CE322200718811 /* HelpViewController.swift */; };
 		F2738AD420EB191B00227728 /* StoreFixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2738AD320EB191B00227728 /* StoreFixViewController.swift */; };
+		F27876E020F2F443000D5B9D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876DF20F2F443000D5B9D /* GradientView.swift */; };
 		F285909020B9C0CF00AD6B7A /* Discounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */; };
 		F2C2DD1120D8938A001314C2 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2DD1020D8938A001314C2 /* Featured.storyboard */; };
 		F2C2DD1420D8AC7A001314C2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2DD1320D8AC7A001314C2 /* FeaturedViewController.swift */; };
@@ -133,6 +134,7 @@
 		F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInvoiceViewController.swift; sourceTree = "<group>"; };
 		F251C82320CE322200718811 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		F2738AD320EB191B00227728 /* StoreFixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFixViewController.swift; sourceTree = "<group>"; };
+		F27876DF20F2F443000D5B9D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discounts.storyboard; sourceTree = "<group>"; };
 		F2C2DD1020D8938A001314C2 /* Featured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
 		F2C2DD1320D8AC7A001314C2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				FAF1AC1620AC008800F01D59 /* MenuViewController.swift */,
 				FAF1AC2920AC993600F01D59 /* ContactViewController.swift */,
+				F27876DF20F2F443000D5B9D /* GradientView.swift */,
 				F2C720E820CC46B200E2C50E /* DesignableView.swift */,
 				F21259F120EC69C800BF6422 /* SearchMapViewController.swift */,
 			);
@@ -741,6 +744,7 @@
 				FAF1AC2F20ACD3A100F01D59 /* ApplicationManager.swift in Sources */,
 				F20620D020B1287F00D5BA3C /* StoresViewController.swift in Sources */,
 				FAD1E76020BD2E1E00F6CABF /* StoreCategoriesViewController.swift in Sources */,
+				F27876E020F2F443000D5B9D /* GradientView.swift in Sources */,
 				FA1E82C520BD175000B69D2B /* BlurredViewController.swift in Sources */,
 				F2CE050620C8BF35006565AC /* KeeperViewController.swift in Sources */,
 				FAF1AC3420ACD9DA00F01D59 /* HomeCategory+CoreDataClass.swift in Sources */,

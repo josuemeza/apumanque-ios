@@ -95,15 +95,35 @@
                                             <segue destination="PgN-J6-5qa" kind="show" identifier="discounts_to_contact_segue" id="K1O-YW-kRj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RW-2g-OgD" userLabel="To Service">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RW-2g-OgD" userLabel="To service">
                                         <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Aam-98-2Tf"/>
                                             <constraint firstAttribute="height" constant="30" id="MHL-m3-E02"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="xv5-cI-e25" kind="show" identifier="home_to_services_segue" id="gcw-pv-j0i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhE-2q-fwM" userLabel="To stores">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Hxd-hi-1Kk"/>
+                                            <constraint firstAttribute="height" constant="30" id="VEt-qJ-wWq"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="hec-d4-smW" kind="show" identifier="home_to_stores_segue" id="n8W-0a-iWp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey7-fx-SPc">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5Fc-Im-TEe"/>
+                                            <constraint firstAttribute="width" constant="30" id="LAL-Z4-xCT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="V6d-To-8dx" kind="show" identifier="home_to_featured_segue" id="EzM-He-tmF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,12 +133,16 @@
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="leading" secondItem="8kT-eE-ofR" secondAttribute="trailing" id="7Tx-kz-LEY"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="JHk-eB-DPA"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="leading" secondItem="zVe-av-gA9" secondAttribute="leading" id="N7M-jm-f8p"/>
+                                    <constraint firstItem="ey7-fx-SPc" firstAttribute="leading" secondItem="KhE-2q-fwM" secondAttribute="trailing" id="QyW-rT-4QZ"/>
                                     <constraint firstItem="8kT-eE-ofR" firstAttribute="leading" secondItem="pqs-f2-6eq" secondAttribute="trailing" id="VdF-px-mfd"/>
+                                    <constraint firstItem="ey7-fx-SPc" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="XW2-2N-MKE"/>
+                                    <constraint firstItem="KhE-2q-fwM" firstAttribute="leading" secondItem="8RW-2g-OgD" secondAttribute="trailing" id="Z7N-Zx-PEV"/>
                                     <constraint firstItem="8kT-eE-ofR" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="ap8-xf-GAW"/>
                                     <constraint firstItem="8RW-2g-OgD" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="hZO-cu-QyN"/>
                                     <constraint firstItem="8RW-2g-OgD" firstAttribute="leading" secondItem="Eic-Pm-SxY" secondAttribute="trailing" id="iA1-sA-8RR"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="kKo-Wo-myz"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="leading" secondItem="a5L-2q-HzS" secondAttribute="trailing" id="oAf-rl-XN0"/>
+                                    <constraint firstItem="KhE-2q-fwM" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="vbB-vo-ol0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO5-Ef-Ptb">
@@ -1052,6 +1076,22 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imf-Cc-Bpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="498" y="-348"/>
+        </scene>
+        <!--stores_view_controller-->
+        <scene sceneID="zIh-bp-cvr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="stores_view_controller" id="hec-d4-smW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec3-TE-0HB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="-302"/>
+        </scene>
+        <!--featured_view_controller-->
+        <scene sceneID="m1C-Fy-V66">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="featured_view_controller" id="V6d-To-8dx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVO-pI-mPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="-612"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="f0R-DD-G7j">

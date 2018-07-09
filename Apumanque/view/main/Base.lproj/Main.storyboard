@@ -159,6 +159,19 @@
                                                     <rect key="frame" x="0.0" y="2" width="375" height="110"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zt-5i-Khk" userLabel="gradientView" customClass="GradientView" customModule="Apumanque" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" white="0.0" alpha="0.80256093146718144" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-tZ-LO5">
                                                     <rect key="frame" x="151" y="18" width="200" height="32.5"/>
                                                     <constraints>
@@ -183,15 +196,20 @@
                                                 <constraint firstAttribute="bottom" secondItem="0pK-hn-lEd" secondAttribute="bottom" constant="2" id="3Qx-eg-b79"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="CuQ-hN-4Pa" secondAttribute="trailing" constant="14" id="Bq6-oW-pvA"/>
                                                 <constraint firstItem="A3y-tZ-LO5" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" constant="18" id="EfA-5v-Wy1"/>
+                                                <constraint firstAttribute="bottom" secondItem="5Zt-5i-Khk" secondAttribute="bottom" id="IZL-S8-FYM"/>
                                                 <constraint firstItem="0pK-hn-lEd" firstAttribute="leading" secondItem="hUa-C7-Waa" secondAttribute="leading" id="MYP-UI-Fig"/>
+                                                <constraint firstAttribute="trailing" secondItem="5Zt-5i-Khk" secondAttribute="trailing" id="WiM-et-NM6"/>
+                                                <constraint firstItem="5Zt-5i-Khk" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" id="gfE-Ug-WIC"/>
                                                 <constraint firstAttribute="trailing" secondItem="A3y-tZ-LO5" secondAttribute="trailing" constant="24" id="kg1-as-3uE"/>
                                                 <constraint firstItem="CuQ-hN-4Pa" firstAttribute="top" secondItem="A3y-tZ-LO5" secondAttribute="bottom" id="rUF-4H-yfV"/>
                                                 <constraint firstItem="0pK-hn-lEd" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" constant="2" id="xWN-Go-s4r"/>
+                                                <constraint firstItem="5Zt-5i-Khk" firstAttribute="leading" secondItem="hUa-C7-Waa" secondAttribute="leading" id="zPY-DK-qeU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="backgrounImageView" destination="0pK-hn-lEd" id="tAQ-bF-oaE"/>
+                                            <outlet property="gradientView" destination="5Zt-5i-Khk" id="MvD-gv-p5O"/>
                                             <outlet property="subtitleLabel" destination="CuQ-hN-4Pa" id="sXW-Jn-0Cy"/>
                                             <outlet property="titleLabel" destination="A3y-tZ-LO5" id="7DZ-Bj-JnU"/>
                                         </connections>
@@ -278,7 +296,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="zxU-nr-bwl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-lp-B9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="170"/>
+            <point key="canvasLocation" x="2174" y="182"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="RDg-mi-ASt">
@@ -389,7 +407,7 @@
                 <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="EgH-Ae-7iw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uk0-WM-loU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="8"/>
+            <point key="canvasLocation" x="2170" y="6"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="wWo-7K-j8R">
@@ -523,7 +541,7 @@
         <!--Stores View Controller-->
         <scene sceneID="0Fg-J0-Vpa">
             <objects>
-                <viewController id="qkh-eg-Zus" customClass="StoresViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stores_view_controller" id="qkh-eg-Zus" customClass="StoresViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="53i-Ak-c2k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1169,7 +1187,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kd-6V-Jos" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1440" y="1349"/>
+            <point key="canvasLocation" x="-1394" y="1354"/>
         </scene>
         <!--Mi Perfil-->
         <scene sceneID="9dI-2S-ItP">
