@@ -14,6 +14,10 @@ class UploadInvoiceViewController: ViewController {
     @IBOutlet weak var saveAndContinueButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var imageViewUploadInvoice: UIImageView!
+    @IBOutlet weak var textFieldNameStore: UITextField!
+    @IBOutlet weak var textFieldBuyDate: UITextField!
+    @IBOutlet weak var textFieldAmountPurchase: UITextField!
+    @IBOutlet weak var textFieldNumberInvoice: UITextField!
     
     private var campaings: Campaing!
     

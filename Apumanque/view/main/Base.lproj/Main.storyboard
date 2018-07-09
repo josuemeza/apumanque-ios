@@ -159,6 +159,19 @@
                                                     <rect key="frame" x="0.0" y="2" width="375" height="110"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zt-5i-Khk" userLabel="gradientView" customClass="GradientView" customModule="Apumanque" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" white="0.0" alpha="0.80256093146718144" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-tZ-LO5">
                                                     <rect key="frame" x="151" y="18" width="200" height="32.5"/>
                                                     <constraints>
@@ -183,15 +196,20 @@
                                                 <constraint firstAttribute="bottom" secondItem="0pK-hn-lEd" secondAttribute="bottom" constant="2" id="3Qx-eg-b79"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="CuQ-hN-4Pa" secondAttribute="trailing" constant="14" id="Bq6-oW-pvA"/>
                                                 <constraint firstItem="A3y-tZ-LO5" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" constant="18" id="EfA-5v-Wy1"/>
+                                                <constraint firstAttribute="bottom" secondItem="5Zt-5i-Khk" secondAttribute="bottom" id="IZL-S8-FYM"/>
                                                 <constraint firstItem="0pK-hn-lEd" firstAttribute="leading" secondItem="hUa-C7-Waa" secondAttribute="leading" id="MYP-UI-Fig"/>
+                                                <constraint firstAttribute="trailing" secondItem="5Zt-5i-Khk" secondAttribute="trailing" id="WiM-et-NM6"/>
+                                                <constraint firstItem="5Zt-5i-Khk" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" id="gfE-Ug-WIC"/>
                                                 <constraint firstAttribute="trailing" secondItem="A3y-tZ-LO5" secondAttribute="trailing" constant="24" id="kg1-as-3uE"/>
                                                 <constraint firstItem="CuQ-hN-4Pa" firstAttribute="top" secondItem="A3y-tZ-LO5" secondAttribute="bottom" id="rUF-4H-yfV"/>
                                                 <constraint firstItem="0pK-hn-lEd" firstAttribute="top" secondItem="hUa-C7-Waa" secondAttribute="top" constant="2" id="xWN-Go-s4r"/>
+                                                <constraint firstItem="5Zt-5i-Khk" firstAttribute="leading" secondItem="hUa-C7-Waa" secondAttribute="leading" id="zPY-DK-qeU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="backgrounImageView" destination="0pK-hn-lEd" id="tAQ-bF-oaE"/>
+                                            <outlet property="gradientView" destination="5Zt-5i-Khk" id="MvD-gv-p5O"/>
                                             <outlet property="subtitleLabel" destination="CuQ-hN-4Pa" id="sXW-Jn-0Cy"/>
                                             <outlet property="titleLabel" destination="A3y-tZ-LO5" id="7DZ-Bj-JnU"/>
                                         </connections>

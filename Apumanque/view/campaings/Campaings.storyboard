@@ -680,6 +680,10 @@
                         <outlet property="helpButton" destination="Xar-LO-Vmx" id="Chk-Fc-jlV"/>
                         <outlet property="imageViewUploadInvoice" destination="jCZ-cH-RHc" id="fD6-si-Uf1"/>
                         <outlet property="saveAndContinueButton" destination="mpO-DE-423" id="K1a-nI-iir"/>
+                        <outlet property="textFieldAmountPurchase" destination="hFd-nH-0Ke" id="K6b-pB-ped"/>
+                        <outlet property="textFieldBuyDate" destination="hwG-xM-xnk" id="lN9-1G-SJR"/>
+                        <outlet property="textFieldNameStore" destination="1ks-wF-8MX" id="eAH-am-pmX"/>
+                        <outlet property="textFieldNumberInvoice" destination="osM-UN-32U" id="LD7-3J-bPg"/>
                         <segue destination="iqr-Ui-FfU" kind="show" identifier="campaings_to_help_segue" id="8Vq-IE-grE"/>
                     </connections>
                 </viewController>
@@ -716,6 +720,10 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JZI-Co-nae">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
                                                             </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8De-Bh-SER">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.14917652027027026" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promoción &quot;Vuela en Capadocia&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-ru-nQK">
                                                                 <rect key="frame" x="8" y="140" width="319" height="79"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="33"/>
@@ -732,12 +740,16 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="BfJ-ru-nQK" secondAttribute="trailing" constant="8" id="1xC-7E-YWB"/>
+                                                            <constraint firstAttribute="bottom" secondItem="8De-Bh-SER" secondAttribute="bottom" id="58m-2I-dVJ"/>
+                                                            <constraint firstItem="8De-Bh-SER" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="top" id="7MJ-G8-x4H"/>
                                                             <constraint firstAttribute="trailing" secondItem="JZI-Co-nae" secondAttribute="trailing" id="Enu-C4-nhJ"/>
                                                             <constraint firstItem="TpI-LI-tX0" firstAttribute="top" secondItem="BfJ-ru-nQK" secondAttribute="bottom" constant="17" id="IVN-SR-agv"/>
                                                             <constraint firstItem="BfJ-ru-nQK" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" constant="8" id="J7L-jg-5kG"/>
                                                             <constraint firstItem="JZI-Co-nae" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="top" id="XsZ-eD-4LS"/>
                                                             <constraint firstAttribute="trailing" secondItem="TpI-LI-tX0" secondAttribute="trailing" constant="60" id="dIq-nG-N81"/>
+                                                            <constraint firstAttribute="trailing" secondItem="8De-Bh-SER" secondAttribute="trailing" id="diw-f7-1ur"/>
                                                             <constraint firstItem="JZI-Co-nae" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" id="gbw-yG-rZ3"/>
+                                                            <constraint firstItem="8De-Bh-SER" firstAttribute="leading" secondItem="9ve-9f-ARk" secondAttribute="leading" id="iBk-6n-7dc"/>
                                                             <constraint firstItem="BfJ-ru-nQK" firstAttribute="top" secondItem="9ve-9f-ARk" secondAttribute="top" constant="140" id="qRO-aN-biy"/>
                                                             <constraint firstAttribute="bottom" secondItem="JZI-Co-nae" secondAttribute="bottom" id="t4g-vJ-HnD"/>
                                                             <constraint firstAttribute="height" constant="335" id="uTa-2o-444"/>
@@ -851,7 +863,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsz-uV-VFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2566" y="706"/>
+            <point key="canvasLocation" x="-2567.1999999999998" y="705.24737631184416"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="Dzo-a7-OyA">
