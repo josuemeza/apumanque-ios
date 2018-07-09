@@ -242,6 +242,8 @@ extension DiscountsViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "home_to_services_segue", sender: nil)
         case .stores:
             performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
+        case .news:
+            performSegue(withIdentifier: "discounts_to_news_segue", sender: nil)
         }
     }
     
