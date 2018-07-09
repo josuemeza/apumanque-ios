@@ -296,7 +296,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="zxU-nr-bwl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-lp-B9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="170"/>
+            <point key="canvasLocation" x="2174" y="182"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="RDg-mi-ASt">
@@ -407,7 +407,7 @@
                 <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="EgH-Ae-7iw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uk0-WM-loU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="8"/>
+            <point key="canvasLocation" x="2170" y="6"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="wWo-7K-j8R">
@@ -541,7 +541,7 @@
         <!--Stores View Controller-->
         <scene sceneID="0Fg-J0-Vpa">
             <objects>
-                <viewController id="qkh-eg-Zus" customClass="StoresViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stores_view_controller" id="qkh-eg-Zus" customClass="StoresViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="53i-Ak-c2k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

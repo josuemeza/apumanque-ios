@@ -82,9 +82,11 @@ extension CampaingsViewController: MenuViewControllerDelegate {
         case .discounts:
             tabBarController?.selectedIndex = 1
         case .featured:
-            ()
+            performSegue(withIdentifier: "home_to_featured_segue", sender: nil)
         case .services:
             performSegue(withIdentifier: "home_to_services_segue", sender: nil)
+        case .stores:
+            performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
         }
     }
     
