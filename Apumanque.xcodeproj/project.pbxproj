@@ -59,6 +59,7 @@
 		FA1E82C520BD175000B69D2B /* BlurredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C420BD175000B69D2B /* BlurredViewController.swift */; };
 		FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */; };
 		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
+		FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33A2B320F2F24E00946E37 /* SearchViewController.swift */; };
 		FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25BE20C0B3140067151E /* DiscountViewController.swift */; };
 		FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */; };
 		FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */; };
@@ -155,6 +156,7 @@
 		FA1E82C420BD175000B69D2B /* BlurredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredViewController.swift; sourceTree = "<group>"; };
 		FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
+		FA33A2B320F2F24E00946E37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FA4E25BE20C0B3140067151E /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				FAD1E75F20BD2E1E00F6CABF /* StoreCategoriesViewController.swift */,
 				FAD1E76120BD341B00F6CABF /* StoreViewController.swift */,
 				F2738AD320EB191B00227728 /* StoreFixViewController.swift */,
+				FA33A2B320F2F24E00946E37 /* SearchViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */,
 				FAF1AC3520ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift in Sources */,
 				FAF1AC1220ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift in Sources */,
+				FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */,
 				F2738AD420EB191B00227728 /* StoreFixViewController.swift in Sources */,
 				FAF6C74120ABB11800DD1CD1 /* ViewController.swift in Sources */,
 				F20620C620AE977400D5BA3C /* TutorialPageViewController.swift in Sources */,
