@@ -79,6 +79,7 @@
 		FAD1E75E20BD293D00F6CABF /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E75A20BD293D00F6CABF /* Store+CoreDataProperties.swift */; };
 		FAD1E76020BD2E1E00F6CABF /* StoreCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E75F20BD2E1E00F6CABF /* StoreCategoriesViewController.swift */; };
 		FAD1E76220BD341B00F6CABF /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E76120BD341B00F6CABF /* StoreViewController.swift */; };
+		FADC0E5920F33948004BB4D8 /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC0E5820F33948004BB4D8 /* FeaturedTableViewCell.swift */; };
 		FAF1AC0D20ABB9C000F01D59 /* Dummy.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF1AC0C20ABB9C000F01D59 /* Dummy.xcassets */; };
 		FAF1AC1220ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1AC1120ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift */; };
 		FAF1AC1520ABD0B400F01D59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1AC1420ABD0B400F01D59 /* HomeViewController.swift */; };
@@ -179,6 +180,7 @@
 		FAD1E75A20BD293D00F6CABF /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAD1E75F20BD2E1E00F6CABF /* StoreCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategoriesViewController.swift; sourceTree = "<group>"; };
 		FAD1E76120BD341B00F6CABF /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		FADC0E5820F33948004BB4D8 /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1AC0C20ABB9C000F01D59 /* Dummy.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Dummy.xcassets; sourceTree = "<group>"; };
 		FAF1AC1120ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1AC1420ABD0B400F01D59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		F2C2DD0F20D8937A001314C2 /* featured */ = {
 			isa = PBXGroup;
 			children = (
+				FADC0E5620F33913004BB4D8 /* components */,
 				F2C2DD1020D8938A001314C2 /* Featured.storyboard */,
 			);
 			path = featured;
@@ -429,6 +432,22 @@
 				FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */,
 			);
 			path = discounts;
+			sourceTree = "<group>";
+		};
+		FADC0E5620F33913004BB4D8 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FADC0E5720F3391F004BB4D8 /* featured */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		FADC0E5720F3391F004BB4D8 /* featured */ = {
+			isa = PBXGroup;
+			children = (
+				FADC0E5820F33948004BB4D8 /* FeaturedTableViewCell.swift */,
+			);
+			path = featured;
 			sourceTree = "<group>";
 		};
 		FAF1AC0720ABB28E00F01D59 /* controller */ = {
@@ -763,6 +782,7 @@
 				FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */,
 				FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */,
 				FAF1AC3120ACD5AA00F01D59 /* LoadingViewController.swift in Sources */,
+				FADC0E5920F33948004BB4D8 /* FeaturedTableViewCell.swift in Sources */,
 				F2CE050820C8BF4D006565AC /* WheelchairViewController.swift in Sources */,
 				F22D79CA20EDDC4200FD326B /* ServicesViewController.swift in Sources */,
 				F2CE050220C8BAEE006565AC /* ServicesMainViewController.swift in Sources */,

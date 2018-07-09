@@ -28,8 +28,10 @@ class LoadingViewController: ViewController {
                 NetworkingManager.singleton.storeCategories { storeCategories in
                     NetworkingManager.singleton.stores { stores in
                         NetworkingManager.singleton.spetialSales { discounts in
-                            NetworkingManager.singleton.campaings {campaings in
-                                self.initMenuItems(from: menuItems)
+                            NetworkingManager.singleton.featuredSpetialSales { featured in
+                                NetworkingManager.singleton.campaings { campaings in
+                                    self.initMenuItems(from: menuItems)
+                                }
                             }
                         }
                     }
