@@ -729,7 +729,7 @@
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">
             <objects>
-                <viewController id="0un-yP-a6Z" customClass="ValidCampaingsViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="valid_campaign_view_controller" id="0un-yP-a6Z" customClass="ValidCampaingsViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wA-qx-ZFR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,7 +9,7 @@
 import UIKit
 import UICircularProgressRing
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: ViewController {
 
     @IBOutlet weak var menuViewProfile: UIView!
     @IBOutlet weak var circularProgress: UICircularProgressRingView!
@@ -41,15 +41,60 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    // MARK: - ACtions
+    
+    @IBAction func myInvoicesAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func campaignAction(_ sender: Any) {
+    }
+    
+    @IBAction func lastWinnersAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func helpAction(_ sender: Any) {
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.destination is MenuViewController {
+            let viewController = segue.destination as! MenuViewController
+            viewController.delegate = self
+        }
     }
-    */
+    
 
+}
+
+// MARK: -
+// MARK: - Menu view controller delegate
+extension ProfileViewController: MenuViewControllerDelegate {
+    
+    func menuViewController(_ controller: MenuViewController, didSelect selection: MenuViewSelection) {
+        switch selection {
+        case .login:
+            performSegue(withIdentifier: "profile_to_login_segue", sender: nil)
+        case .logout: ()
+        case .editUser:
+            performSegue(withIdentifier: "profile_to_edit_user_segue", sender: nil)
+        case .contact:
+            performSegue(withIdentifier: "profile_to_contact_segue", sender: nil)
+        case .register:
+            performSegue(withIdentifier: "profile_to_register_segue", sender: nil)
+        case .discounts:
+            tabBarController?.selectedIndex = 1
+        case .featured:
+            performSegue(withIdentifier: "profile_to_featured_segue", sender: nil)
+        case .services:
+            performSegue(withIdentifier: "profile_to_services_segue", sender: nil)
+        case .stores:
+            performSegue(withIdentifier: "profile_to_stores_segue", sender: nil)
+        }
+    }
+    
 }
