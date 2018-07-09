@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactViewController: UIViewController {
+class ContactViewController: ViewController {
     
     // MARK: - Outlets
     
