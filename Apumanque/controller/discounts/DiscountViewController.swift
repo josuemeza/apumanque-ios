@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class DiscountViewController: ViewController {
+class DiscountViewController: BlurredViewController {
     
     // MARK: - Outlets
     
@@ -19,30 +19,47 @@ class DiscountViewController: ViewController {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var expireDateLabel: UILabel!
     @IBOutlet weak var storeNameLabel: UILabel!
-    @IBOutlet weak var storePhoneLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var documentExpandButtonIconImageView: UIImageView!
+    @IBOutlet weak var documentDetailContainerView: UIView!
+    @IBOutlet weak var documentDetailSeparatorView: UIView!
     
     // MARK: - Attributes
     
     var discount: Discount!
     var storeDiscounts: [Discount]!
     
+    // MAKR: - Attribute accessor
+    
+    var documentDetailViewIsHidden: Bool = true {
+        didSet {
+            documentExpandButtonIconImageView.image = UIImage(named: "arrow-\(documentDetailViewIsHidden ? "down" : "up")")
+            documentDetailContainerView.isHidden = documentDetailViewIsHidden
+            documentDetailSeparatorView.isHidden = documentDetailViewIsHidden
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func getDiscountAction(_ sender: Any) {
         // TODO: implements
+    }
+    @IBAction func detailExpandAction(_ sender: Any) {
+        documentDetailViewIsHidden = !documentDetailViewIsHidden
     }
     
     // MARK: - View controller methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        build(withOpaqueNavigationBar: true)
+        documentDetailViewIsHidden = true
         discountBackgroundImageView.sd_setImage(with: URL(string: discount.imageUrl!), placeholderImage: UIImage(named: "placeholder-image"))
         titleLabel.text = discount.title
-        valueLabel.text = discount.valuePercent
+        valueLabel.text = discount.valueText
+        valueLabel.backgroundColor = discount.valueColor?.color ?? .clear
         expireDateLabel.text = (discount.expireDate as Date?)?.string(format: "dd/MM/yy")
         storeNameLabel.text = discount.store?.name
-        storePhoneLabel.text = discount.store?.phone
+//        storePhoneLabel.text = discount.store?.phone
         storeDiscounts = discount.store?.discounts?.allObjects as? [Discount] ?? []
         storeDiscounts.remove(discount)
     }
