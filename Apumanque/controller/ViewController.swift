@@ -53,12 +53,16 @@ class ViewController: UIViewController {
     
     // MARK: - Methods
     
-    func setGradientNavigationBar() {
-        let backgroundImage = UIImage(named: "navigation_background")?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+    func setGradientNavigationBar(with image: UIImage?) {
         navigationController?.navigationBar.barTintColor = .clear
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.setBackgroundImage(backgroundImage, for: .default)
+        navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func setGradientNavigationBar() {
+        let backgroundImage = UIImage(named: "navigation_background")?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+        setGradientNavigationBar(with: backgroundImage)
     }
     
     private func setNavigationItem() {

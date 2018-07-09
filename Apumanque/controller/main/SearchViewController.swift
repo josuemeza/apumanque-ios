@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: BlurredViewController {
+class SearchViewController: ViewController {
     
     // MARK: - Outlets
     
@@ -25,7 +25,7 @@ class SearchViewController: BlurredViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        build()
+        setGradientNavigationBar(with: UIColor.black.toImage())
         ({
             // Search bar setup
             searchBar.cancelButton?.setTitle("Cancelar", for: .normal)
@@ -121,11 +121,17 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionNames[section]
+        return "    \(sectionNames[section])"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection: Int) {
+        if let tableViewHeaderFooterView = view as? UITableViewHeaderFooterView {
+            tableViewHeaderFooterView.textLabel?.textColor = .white
+        }
     }
     
 }
