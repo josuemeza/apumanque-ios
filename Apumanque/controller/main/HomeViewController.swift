@@ -108,6 +108,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 //            performSegue(withIdentifier: "home_to_highlights_segue", sender: nil)
         case 4:
             print("Noticias")
+            performSegue(withIdentifier: "home_to_news_segue", sender: nil)
         case 5:
             print("Servicios")
             performSegue(withIdentifier: "home_to_services_segue", sender: nil)
@@ -152,6 +153,8 @@ extension HomeViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "home_to_services_segue", sender: nil)
         case .stores:
             performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
+        case .news:
+            performSegue(withIdentifier: "home_to_news_segue", sender: nil)
         }
     }
     

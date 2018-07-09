@@ -87,11 +87,22 @@
                                             <segue destination="0LS-Ea-o1M" kind="show" identifier="home_to_featured_segue" id="eaB-yQ-Fuy"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-K4-EhE" userLabel="To news">
+                                        <rect key="frame" x="194" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JkB-AF-X22"/>
+                                            <constraint firstAttribute="width" constant="30" id="awV-18-3fn"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="ezh-As-ovq" kind="show" identifier="home_to_news_segue" id="4xd-Ls-CCE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="kVw-hc-cLk" firstAttribute="leading" secondItem="Trc-jL-eWm" secondAttribute="leading" id="10Y-yw-7JR"/>
                                     <constraint firstItem="e4E-U1-Lrc" firstAttribute="leading" secondItem="qO3-ip-IRl" secondAttribute="trailing" id="1LY-g2-a2h"/>
+                                    <constraint firstItem="C1d-K4-EhE" firstAttribute="leading" secondItem="9Uw-gT-czW" secondAttribute="trailing" id="5tz-Qa-LkB"/>
                                     <constraint firstItem="kVw-hc-cLk" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="6RD-xf-Hyh"/>
                                     <constraint firstItem="sWK-dA-1TQ" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="FOg-Yv-j82"/>
                                     <constraint firstItem="sWK-dA-1TQ" firstAttribute="leading" secondItem="e4E-U1-Lrc" secondAttribute="trailing" id="GfD-Wv-i5U"/>
@@ -99,6 +110,7 @@
                                     <constraint firstItem="9Uw-gT-czW" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="R0A-AR-hXg"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="SMm-Q4-roK"/>
                                     <constraint firstItem="9Uw-gT-czW" firstAttribute="leading" secondItem="sWK-dA-1TQ" secondAttribute="trailing" constant="44" id="TIO-Fr-Zw4"/>
+                                    <constraint firstItem="C1d-K4-EhE" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="WBJ-ug-rb2"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="leading" secondItem="kVw-hc-cLk" secondAttribute="trailing" id="elk-9R-rP0"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="lGe-9U-sJ1"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qO3-ip-IRl" secondAttribute="trailing" constant="20" symbolic="YES" id="zNQ-0M-o3L"/>
@@ -289,6 +301,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0r-lX-kHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2176" y="289"/>
+        </scene>
+        <!--news_view_controller-->
+        <scene sceneID="VEg-zX-2EQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="ezh-As-ovq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M75-UM-d5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2159" y="341"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="F57-Lq-Jt4">

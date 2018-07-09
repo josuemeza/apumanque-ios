@@ -115,6 +115,16 @@
                                             <segue destination="Kxs-wL-Mep" kind="show" identifier="profile_to_featured_segue" id="bJL-WV-IeV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-AL-WGl" userLabel="To news">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="0Xb-ho-vcR"/>
+                                            <constraint firstAttribute="height" constant="30" id="PS6-lk-aPH"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="SIs-nn-eaB" kind="show" identifier="profile_to_news_segue" id="xA4-RX-Ncw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -126,7 +136,9 @@
                                     <constraint firstItem="THh-yg-cSS" firstAttribute="leading" secondItem="Trw-ua-vOR" secondAttribute="trailing" id="EAe-7k-Hcd"/>
                                     <constraint firstItem="Juh-Wv-njL" firstAttribute="leading" secondItem="zoX-dp-cbv" secondAttribute="leading" id="JtG-oG-7QA"/>
                                     <constraint firstItem="Trw-ua-vOR" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="LnM-dS-Zor"/>
+                                    <constraint firstItem="SE1-Ru-4tp" firstAttribute="leading" secondItem="1AX-AL-WGl" secondAttribute="trailing" id="Ntz-15-dvo"/>
                                     <constraint firstItem="bGL-UM-Wqm" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="SoF-OA-K3O"/>
+                                    <constraint firstItem="1AX-AL-WGl" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="W4v-xb-oir"/>
                                     <constraint firstItem="THh-yg-cSS" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="cmx-VN-9Mx"/>
                                     <constraint firstItem="Trw-ua-vOR" firstAttribute="leading" secondItem="Juh-Wv-njL" secondAttribute="trailing" id="e7d-re-GBM"/>
                                     <constraint firstItem="eUm-G1-x64" firstAttribute="top" secondItem="zoX-dp-cbv" secondAttribute="top" id="jTe-hx-331"/>
@@ -630,6 +642,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nZ-lj-Z4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1093" y="-597"/>
+        </scene>
+        <!--news_view_controller-->
+        <scene sceneID="7iH-mi-yhC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="SIs-nn-eaB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e68-RH-Db1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="-135"/>
         </scene>
     </scenes>
     <resources>
