@@ -266,6 +266,11 @@
                                                                                 <constraint firstAttribute="height" constant="183" id="mdV-NQ-dJg"/>
                                                                             </constraints>
                                                                         </imageView>
+                                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkQ-go-Qrj">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="183"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.20449746621621623" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuentos en marcas Blondi, Jump, Betsy Adams y Xcape." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dm-oG-adH">
                                                                             <rect key="frame" x="12" y="104" width="248" height="70"/>
                                                                             <constraints>
