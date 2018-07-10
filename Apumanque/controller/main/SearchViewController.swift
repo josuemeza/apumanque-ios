@@ -14,9 +14,11 @@ class SearchViewController: ViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewTopContraint: NSLayoutConstraint!
     
     // MARK: - Attributes
     
+    private var recentSearchStores = [StoreSearch]()
     private var sectionNames = [String]()
     private var stores = [String: [Store]]()
     private var storeCategories = [StoreCategory]()
@@ -55,9 +57,16 @@ class SearchViewController: ViewController {
             let viewController: BlurredViewController
             if segue.destination is StoreViewController {
                 let storeViewController = segue.destination as! StoreViewController
-                let indexPath = tableView.indexPathForSelectedRow!
-                let store = self.stores[sectionNames[indexPath.section]]![indexPath.row]
-                storeViewController.store = store
+                if sender is Store {
+                    storeViewController.store = sender as! Store
+                } else {
+                    let indexPath = tableView.indexPathForSelectedRow!
+                    let store = self.stores[sectionNames[indexPath.section]]![indexPath.row]
+                    if let search = searchBar.text, !search.isEmpty {
+                        saveSearch(of: store)
+                    }
+                    storeViewController.store = store
+                }
                 viewController = storeViewController
             } else {
                 viewController = segue.destination as! BlurredViewController
@@ -93,8 +102,27 @@ class SearchViewController: ViewController {
                 }
             }
         }
+        recentSearchStores = StoreSearch.all(on: managedObjectContext) ?? []
+        recentSearchStores = recentSearchStores.filter { storeSearch in
+            storeSearch.store(on: managedObjectContext) != nil
+        }
         sectionNames = sectionNames.sorted()
+        if !recentSearchStores.isEmpty {
+            sectionNames.insert("", at: 0)
+            tableViewTopContraint.constant = -46
+        } else {
+            tableViewTopContraint.constant = 0
+        }
+        view.layoutIfNeeded()
         tableView.reloadData()
+    }
+    
+    private func saveSearch(of store: Store) {
+        let search = StoreSearch(context: managedObjectContext)
+        search.date = Date() as NSDate
+        search.storeId = store.id
+        search.search = searchBar.text
+        try? search.save()
     }
 
 }
@@ -107,17 +135,24 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stores[sectionNames[section]]?.count ?? 0
+        return section > 0 ? stores[sectionNames[section]]?.count ?? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let store = self.stores[sectionNames[indexPath.section]]?[indexPath.row] else { return UITableViewCell() }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "store_list_table_cell", for: indexPath) as! StoreListTableViewCell
-        cell.nameLabel.text = store.name
-        cell.descriptionLabel.text = store.detail
-        cell.storeNumberLabel.text = "Local \(store.number ?? "S/N")"
-        cell.floorLabel.text = "Piso \(store.floor ?? "S/N")"
-        return cell
+        if !recentSearchStores.isEmpty && indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "recent_search_cell", for: indexPath) as! RecentSearchTableViewCell
+            cell.recentSearchStores = recentSearchStores.map { recentSearch in recentSearch.store(on: managedObjectContext)! }
+            cell.delegate = self
+            return cell
+        } else {
+            guard let store = self.stores[sectionNames[indexPath.section]]?[indexPath.row] else { return UITableViewCell() }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "store_list_table_cell", for: indexPath) as! StoreListTableViewCell
+            cell.nameLabel.text = store.name
+            cell.descriptionLabel.text = store.detail
+            cell.storeNumberLabel.text = "Local \(store.number ?? "S/N")"
+            cell.floorLabel.text = "Piso \(store.floor ?? "S/N")"
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -147,6 +182,14 @@ extension SearchViewController: UISearchBarDelegate {
         searchBar.text = ""
         searchBar.resignFirstResponder()
         reloadData()
+    }
+    
+}
+
+extension SearchViewController: RecentSearchTableViewCellDelegate {
+    
+    func recentSearchTableViewCell(_ cell: RecentSearchTableViewCell, didSelectStore store: Store) {
+        performSegue(withIdentifier: "search_to_store_segue", sender: store)
     }
     
 }

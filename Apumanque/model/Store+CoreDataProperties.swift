@@ -2,7 +2,7 @@
 //  Store+CoreDataProperties.swift
 //  
 //
-//  Created by Josue Meza Peña on 31-05-18.
+//  Created by Josue Meza Peña on 10-07-18.
 //
 //
 

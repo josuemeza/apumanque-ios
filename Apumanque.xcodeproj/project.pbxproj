@@ -64,6 +64,10 @@
 		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
 		FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33A2B320F2F24E00946E37 /* SearchViewController.swift */; };
 		FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25BE20C0B3140067151E /* DiscountViewController.swift */; };
+		FA5767D020F4578700C142D8 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */; };
+		FA5767D220F46A4100C142D8 /* RecentSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D120F46A4100C142D8 /* RecentSearchCollectionViewCell.swift */; };
+		FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D320F4792700C142D8 /* StoreSearch+CoreDataClass.swift */; };
+		FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D420F4792700C142D8 /* StoreSearch+CoreDataProperties.swift */; };
 		FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */; };
 		FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */; };
 		FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2154820ACFD8F0034A4B5 /* String.swift */; };
@@ -165,6 +169,10 @@
 		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
 		FA33A2B320F2F24E00946E37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FA4E25BE20C0B3140067151E /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
+		FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
+		FA5767D120F46A4100C142D8 /* RecentSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA5767D320F4792700C142D8 /* StoreSearch+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreSearch+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA5767D420F4792700C142D8 /* StoreSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA2154820ACFD8F0034A4B5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -499,6 +507,8 @@
 				FAD1E75A20BD293D00F6CABF /* Store+CoreDataProperties.swift */,
 				FAD1E75920BD293D00F6CABF /* StoreCategory+CoreDataClass.swift */,
 				FAD1E75720BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift */,
+				FA5767D320F4792700C142D8 /* StoreSearch+CoreDataClass.swift */,
+				FA5767D420F4792700C142D8 /* StoreSearch+CoreDataProperties.swift */,
 				FA11EAC620BE78E600AE07D5 /* User+CoreDataClass.swift */,
 				FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */,
 			);
@@ -546,6 +556,8 @@
 				FAF1AC1120ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift */,
 				FAD1E75520BD221D00F6CABF /* StoreListTableViewCell.swift */,
 				FAB20BFE20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift */,
+				FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */,
+				FA5767D120F46A4100C142D8 /* RecentSearchCollectionViewCell.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -798,8 +810,10 @@
 				FAD1E76220BD341B00F6CABF /* StoreViewController.swift in Sources */,
 				FAF1AC1520ABD0B400F01D59 /* HomeViewController.swift in Sources */,
 				FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */,
+				FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */,
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
+				FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */,
 				FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */,
 				FAF1AC2D20ACC55600F01D59 /* NetworkingManager.swift in Sources */,
 				FAF1AC1720AC008800F01D59 /* MenuViewController.swift in Sources */,
@@ -811,6 +825,7 @@
 				F2CE050C20C8BF92006565AC /* ParkingViewController.swift in Sources */,
 				F20620CA20AEA17F00D5BA3C /* UserRegisterViewController.swift in Sources */,
 				FAF1AC1920AC5AEC00F01D59 /* MenuLoginTableViewCell.swift in Sources */,
+				FA5767D020F4578700C142D8 /* RecentSearchTableViewCell.swift in Sources */,
 				FAF1AC2220AC72FB00F01D59 /* UIButton.swift in Sources */,
 				FAB20BFF20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift in Sources */,
 				FAF6C74720ABB11800DD1CD1 /* Apumanque.xcdatamodeld in Sources */,
@@ -832,6 +847,7 @@
 				FAF1AC2620AC784100F01D59 /* MenuLoggedTableViewCell.swift in Sources */,
 				FAF1AC2820AC8AC200F01D59 /* LoginViewController.swift in Sources */,
 				FAD1E75C20BD293D00F6CABF /* Store+CoreDataClass.swift in Sources */,
+				FA5767D220F46A4100C142D8 /* RecentSearchCollectionViewCell.swift in Sources */,
 				F24B490020F25B8500ACE518 /* Campaing+CoreDataProperties.swift in Sources */,
 				F24B48FE20F25B8000ACE518 /* Campaing+CoreDataClass.swift in Sources */,
 				F2C2DD1420D8AC7A001314C2 /* FeaturedViewController.swift in Sources */,
