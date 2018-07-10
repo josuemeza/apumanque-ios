@@ -365,7 +365,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-EU-DxS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
-                                                                            <segue destination="iu1-Cd-sXr" kind="show" id="Abc-9z-enT"/>
+                                                                            <segue destination="iu1-Cd-sXr" kind="show" identifier="profile_to_valid_campaign_segue" id="Abc-9z-enT"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="rID-7b-rIx">

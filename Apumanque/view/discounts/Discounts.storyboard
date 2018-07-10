@@ -137,6 +137,17 @@
                                             <segue destination="X2F-tc-Fh6" kind="show" identifier="discounts_to_news_segue" id="ScL-ag-9dd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcG-zP-haR" userLabel="To campaign">
+                                        <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="MjB-Qy-Ebe"/>
+                                            <constraint firstAttribute="height" constant="30" id="anK-M2-Rec"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Bcb-Yj-dcm" kind="show" identifier="discounts_to_valid_campaign_segue" id="wWc-yV-LkH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -144,6 +155,7 @@
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="5Ra-9M-nxB"/>
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="leading" secondItem="8kT-eE-ofR" secondAttribute="trailing" id="7Tx-kz-LEY"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="JHk-eB-DPA"/>
+                                    <constraint firstItem="tcG-zP-haR" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="Ltm-af-pYf"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="leading" secondItem="zVe-av-gA9" secondAttribute="leading" id="N7M-jm-f8p"/>
                                     <constraint firstItem="ey7-fx-SPc" firstAttribute="leading" secondItem="KhE-2q-fwM" secondAttribute="trailing" id="QyW-rT-4QZ"/>
                                     <constraint firstItem="8kT-eE-ofR" firstAttribute="leading" secondItem="pqs-f2-6eq" secondAttribute="trailing" id="VdF-px-mfd"/>
@@ -154,6 +166,7 @@
                                     <constraint firstItem="8RW-2g-OgD" firstAttribute="leading" secondItem="Eic-Pm-SxY" secondAttribute="trailing" id="iA1-sA-8RR"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="kKo-Wo-myz"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="leading" secondItem="a5L-2q-HzS" secondAttribute="trailing" id="oAf-rl-XN0"/>
+                                    <constraint firstItem="K3f-pO-TKB" firstAttribute="leading" secondItem="tcG-zP-haR" secondAttribute="trailing" id="taV-hh-9NN"/>
                                     <constraint firstItem="KhE-2q-fwM" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="vbB-vo-ol0"/>
                                     <constraint firstItem="K3f-pO-TKB" firstAttribute="leading" secondItem="ey7-fx-SPc" secondAttribute="trailing" id="ybB-fl-zQn"/>
                                 </constraints>
@@ -1125,7 +1138,15 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="X2F-tc-Fh6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhY-8B-HTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482" y="-161"/>
+            <point key="canvasLocation" x="483" y="-237"/>
+        </scene>
+        <!--valid_campaign_view_controller-->
+        <scene sceneID="zqN-bi-U6T">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Campaings" referencedIdentifier="valid_campaign_view_controller" id="Bcb-Yj-dcm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ww-rg-joP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="-30"/>
         </scene>
     </scenes>
     <resources>
