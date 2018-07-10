@@ -105,7 +105,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             tabBarController?.selectedIndex = 1
         case 3:
             print("Destacados")
-//            performSegue(withIdentifier: "home_to_highlights_segue", sender: nil)
+            performSegue(withIdentifier: "home_to_featured_segue", sender: nil)
         case 4:
             print("Noticias")
             performSegue(withIdentifier: "home_to_news_segue", sender: nil)

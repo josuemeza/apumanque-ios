@@ -150,12 +150,41 @@ class NetworkingManager {
                 for discountJSON in discountsJSON {
                     let discount = Discount(context: context)
                     if let user = SessionManager.singleton.currentUser {
-                        if discount.setData(from: discountJSON["id_special_sale"]) {
+                        if discount.setData(from: discountJSON["id_special_sale"], featured: false) {
                             discount.addToUsers(user)
                             discounts.append(discount)
                         }
                     } else {
-                        if discount.setData(from: discountJSON) {
+                        if discount.setData(from: discountJSON, featured: false) {
+                            discounts.append(discount)
+                        }
+                    }
+                }
+                completion(discounts)
+            case .failure(let responseError):
+                print(responseError.localizedDescription)
+            }
+        }
+    }
+    
+    func featuredSpetialSales(completion: @escaping Callback<[Discount]>) {
+        guard let context = context else { completion(nil) ; return }
+        let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/?code=featuredProduct"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let discountsJSON = JSON(value)["results"].array else { completion(nil) ; return }
+                var discounts = [Discount]()
+                for discountJSON in discountsJSON {
+                    let discount = Discount(context: context)
+                    if let user = SessionManager.singleton.currentUser {
+                        if discount.setData(from: discountJSON, featured: true) {
+                            discount.addToUsers(user)
+                            discounts.append(discount)
+                        }
+                    } else {
+                        if discount.setData(from: discountJSON, featured: true) {
                             discounts.append(discount)
                         }
                     }

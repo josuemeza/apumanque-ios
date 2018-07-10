@@ -22,6 +22,12 @@ extension UISearchBar {
         }
     }
     
+    var imageView: UIImageView? {
+        get {
+            return findImageView(self)
+        }
+    }
+    
     private func findTextField(_ view: UIView) -> UITextField? {
         for subview in view.subviews {
             if subview is UITextField {
@@ -38,6 +44,17 @@ extension UISearchBar {
             if subview.isKind(of: UIButton.self), (subview as? UIButton)?.titleLabel?.text != nil {
                 return subview as? UIButton
             } else if let result = findCancelButton(subview) {
+                return result
+            }
+        }
+        return nil
+    }
+    
+    private func findImageView(_ view: UIView) -> UIImageView? {
+        for subview in view.subviews {
+            if subview.isKind(of: UIImageView.self) {
+                return subview as? UIImageView
+            } else if let result = findImageView(subview) {
                 return result
             }
         }

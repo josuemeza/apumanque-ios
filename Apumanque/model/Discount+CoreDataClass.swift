@@ -59,13 +59,22 @@ public class Discount: NSManagedObject {
     
     // MARK: - Methods
     
-    static func all(on context: NSManagedObjectContext) -> [Discount]? {
+    static func all(featured: Bool, on context: NSManagedObjectContext) -> [Discount]? {
         let request: NSFetchRequest<Discount> = Discount.fetchRequest()
+        request.predicate = NSPredicate(format: "featured == %@", NSNumber(value: featured))
         return try? context.fetch(request)
     }
+    
+    static func find(byId id: Int, on context: NSManagedObjectContext) -> Discount? {
+        let request: NSFetchRequest<Discount> = Discount.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", String(id))
+        guard let response = try? context.fetch(request) else { return nil }
+        return response.theOnlyOneElement
+    }
 
-    func setData(from json: JSON) -> Bool {
+    func setData(from json: JSON, featured: Bool) -> Bool {
         guard let context = managedObjectContext else { return false }
+        self.featured = featured
         id = String(json["id"].intValue)
         title = json["title"].string
         valuePercent = json["value_percent"].string

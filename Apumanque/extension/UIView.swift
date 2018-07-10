@@ -85,4 +85,13 @@ extension UIView {
         return gradient
     }
     
+    @IBInspectable var borderUIColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+    
 }

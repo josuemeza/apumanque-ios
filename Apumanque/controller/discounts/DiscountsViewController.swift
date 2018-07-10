@@ -94,10 +94,10 @@ class DiscountsViewController: ViewController {
             let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
             discounts = stores.map { store in
                 let discounts = store.discounts?.allObjects as? [Discount] ?? []
-                return discounts.filter { discount in discount.active }
+                return discounts.filter { discount in discount.active && !discount.featured }
                 }.reduce([], +) as! [Discount]
         } else {
-            discounts = Discount.all(on: managedObjectContext) ?? []
+            discounts = Discount.all(featured: false, on: managedObjectContext) ?? []
         }
         if let user = Session.currentUser, listSegmentedControl.selectedSegmentIndex == 1 {
             discounts = discounts.filter { discount in
