@@ -85,7 +85,7 @@
                                             <constraint firstAttribute="width" constant="30" id="n7F-Xp-yms"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" animates="NO" modalPresentationStyle="overCurrentContext" id="AvN-BS-Eam"/>
+                                            <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" animates="NO" modalPresentationStyle="overFullScreen" id="AvN-BS-Eam"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-25-S2q" userLabel="To service">
@@ -128,6 +128,16 @@
                                             <segue destination="O1c-qm-pFg" kind="show" identifier="campaings_to_news_segue" id="z6r-ji-LRG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQX-dF-uLp">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="10m-5f-ri8"/>
+                                            <constraint firstAttribute="height" constant="30" id="SUx-r0-ieR"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="0un-yP-a6Z" kind="show" id="0Og-Qt-Vud"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -136,6 +146,7 @@
                                     <constraint firstItem="2kU-xt-ybr" firstAttribute="leading" secondItem="SsA-8q-aXc" secondAttribute="trailing" id="92T-rJ-4QX"/>
                                     <constraint firstItem="hNp-DH-nZ2" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="Bqb-NM-PPI"/>
                                     <constraint firstItem="SuL-aq-IEA" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="Dag-sH-TlE"/>
+                                    <constraint firstItem="BQX-dF-uLp" firstAttribute="leading" secondItem="2kU-xt-ybr" secondAttribute="trailing" id="N6v-kT-Qsd"/>
                                     <constraint firstItem="PR7-Wy-Veh" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="Naz-Ve-duc"/>
                                     <constraint firstItem="PR7-Wy-Veh" firstAttribute="leading" secondItem="XmB-pk-MM4" secondAttribute="trailing" id="e0X-AF-eLV"/>
                                     <constraint firstItem="hNp-DH-nZ2" firstAttribute="leading" secondItem="JjV-Z4-DJz" secondAttribute="leading" id="hT8-dm-xob"/>
@@ -146,6 +157,7 @@
                                     <constraint firstItem="XmB-pk-MM4" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="sMN-AI-qgp"/>
                                     <constraint firstItem="2kU-xt-ybr" firstAttribute="leading" secondItem="SuL-aq-IEA" secondAttribute="trailing" id="sXm-e6-CAZ"/>
                                     <constraint firstItem="zZs-SO-5Nk" firstAttribute="leading" secondItem="PR7-Wy-Veh" secondAttribute="trailing" id="t3S-Cp-zEv"/>
+                                    <constraint firstItem="BQX-dF-uLp" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="y5d-aT-HS0"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash3" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-Yx-NAa">
@@ -183,7 +195,7 @@
                                         </state>
                                         <connections>
                                             <action selector="seeCampaingsButtonTap:" destination="ePc-tD-MCh" eventType="touchUpInside" id="Nr9-jn-6Zg"/>
-                                            <segue destination="0un-yP-a6Z" kind="show" id="Wra-sa-8f7"/>
+                                            <segue destination="0un-yP-a6Z" kind="show" identifier="campaings_to_valid_campaign_segue" id="Wra-sa-8f7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -245,7 +257,7 @@
                     <navigationItem key="navigationItem" id="OPz-ak-GGz">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="5Pn-J4-AbG">
                             <connections>
-                                <segue destination="eP1-Av-xIH" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="3b3-fZ-Al4"/>
+                                <segue destination="eP1-Av-xIH" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="3b3-fZ-Al4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="logo" id="ed0-E1-lNB"/>
@@ -610,6 +622,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="saveAndContinueButtonTap:" destination="9GX-Os-ZOF" eventType="touchUpInside" id="TGl-1l-bNA"/>
+                                                                    <segue destination="im8-9a-yzK" kind="presentation" modalPresentationStyle="overFullScreen" id="tbz-dm-9bm"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -737,6 +750,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDr-qT-hon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4055" y="549"/>
+        </scene>
+        <!--dialog_rut_view_controller-->
+        <scene sceneID="Shu-7I-vhE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="dialog_rut_view_controller" id="im8-9a-yzK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-Bj-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3394" y="831"/>
         </scene>
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">
@@ -1049,4 +1070,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
         <image name="photo_invoice" width="375" height="375"/>
         <image name="photo_invoice_two" width="375" height="302"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wra-sa-8f7"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Nvp-Lc-jFq"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="amH-dH-lyL" kind="presentation" identifier="home_to_contact_segue" modalPresentationStyle="overCurrentContext" id="p7s-Po-2Dg"/>
+                                            <segue destination="amH-dH-lyL" kind="presentation" identifier="home_to_contact_segue" modalPresentationStyle="overFullScreen" id="p7s-Po-2Dg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-U1-Lrc" userLabel="Register segue">
@@ -97,6 +97,16 @@
                                             <segue destination="ezh-As-ovq" kind="show" identifier="home_to_news_segue" id="4xd-Ls-CCE"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86k-Kh-FeX" userLabel="To campaign">
+                                        <rect key="frame" x="232" y="8" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6hh-ci-rG5"/>
+                                            <constraint firstAttribute="width" constant="30" id="J5m-CS-1bn"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="jMf-MD-CtX" kind="show" identifier="home_to_valid_campaign_segue" id="E71-un-rMS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -104,6 +114,7 @@
                                     <constraint firstItem="e4E-U1-Lrc" firstAttribute="leading" secondItem="qO3-ip-IRl" secondAttribute="trailing" id="1LY-g2-a2h"/>
                                     <constraint firstItem="C1d-K4-EhE" firstAttribute="leading" secondItem="9Uw-gT-czW" secondAttribute="trailing" id="5tz-Qa-LkB"/>
                                     <constraint firstItem="kVw-hc-cLk" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="6RD-xf-Hyh"/>
+                                    <constraint firstItem="86k-Kh-FeX" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" constant="8" id="Cu9-JJ-mvO"/>
                                     <constraint firstItem="sWK-dA-1TQ" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="FOg-Yv-j82"/>
                                     <constraint firstItem="sWK-dA-1TQ" firstAttribute="leading" secondItem="e4E-U1-Lrc" secondAttribute="trailing" id="GfD-Wv-i5U"/>
                                     <constraint firstItem="e4E-U1-Lrc" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="MvO-74-UNU"/>
@@ -111,6 +122,7 @@
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="SMm-Q4-roK"/>
                                     <constraint firstItem="9Uw-gT-czW" firstAttribute="leading" secondItem="sWK-dA-1TQ" secondAttribute="trailing" constant="44" id="TIO-Fr-Zw4"/>
                                     <constraint firstItem="C1d-K4-EhE" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="WBJ-ug-rb2"/>
+                                    <constraint firstItem="86k-Kh-FeX" firstAttribute="leading" secondItem="C1d-K4-EhE" secondAttribute="trailing" constant="8" id="ZQy-lU-4Ap"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="leading" secondItem="kVw-hc-cLk" secondAttribute="trailing" id="elk-9R-rP0"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="lGe-9U-sJ1"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qO3-ip-IRl" secondAttribute="trailing" constant="20" symbolic="YES" id="zNQ-0M-o3L"/>
@@ -253,7 +265,7 @@
                         <barButtonItem key="backBarButtonItem" title="Volver" id="ooM-NN-mn1"/>
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="wsi-qe-uHf">
                             <connections>
-                                <segue destination="vBv-IH-zMh" kind="presentation" identifier="home_to_menu_segue" animates="NO" modalPresentationStyle="overCurrentContext" id="ApH-ox-IAv"/>
+                                <segue destination="vBv-IH-zMh" kind="presentation" identifier="home_to_menu_segue" animates="NO" modalPresentationStyle="overFullScreen" id="ApH-ox-IAv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="logo" id="VGz-UQ-scO"/>
@@ -317,6 +329,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOx-lp-B9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3769" y="354"/>
+        </scene>
+        <!--valid_campaign_view_controller-->
+        <scene sceneID="CT9-jI-nnz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Campaings" referencedIdentifier="valid_campaign_view_controller" id="jMf-MD-CtX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh5-mR-Rre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770" y="406"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="RDg-mi-ASt">

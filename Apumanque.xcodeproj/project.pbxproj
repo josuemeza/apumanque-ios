@@ -56,6 +56,7 @@
 		F2DCC4AB20BA88BC0018B086 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DCC4AA20BA88BC0018B086 /* Common.storyboard */; };
 		F2E0BED620CF5C31003D2AF8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */; };
 		F2E0BED920CF67DB003D2AF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0BED820CF67DB003D2AF8 /* ProfileViewController.swift */; };
+		F2F9F23E20F57ECF00DF6EC5 /* DialogRutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */; };
 		FA11EAC820BE78E600AE07D5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11EAC620BE78E600AE07D5 /* User+CoreDataClass.swift */; };
 		FA11EAC920BE78E600AE07D5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */; };
 		FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C220BCFC0800B69D2B /* SessionManager.swift */; };
@@ -160,6 +161,7 @@
 		F2DCC4AA20BA88BC0018B086 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		F2E0BED820CF67DB003D2AF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRutViewController.swift; sourceTree = "<group>"; };
 		F93EDBC0369E877F99105467 /* Pods_Apumanque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apumanque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA11EAC620BE78E600AE07D5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				F27876DF20F2F443000D5B9D /* GradientView.swift */,
 				F2C720E820CC46B200E2C50E /* DesignableView.swift */,
 				F21259F120EC69C800BF6422 /* SearchMapViewController.swift */,
+				F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				FAF1AC1E20AC6D6B00F01D59 /* MenuItemTableViewCell.swift in Sources */,
 				FA11EAC820BE78E600AE07D5 /* User+CoreDataClass.swift in Sources */,
 				FA11EAC920BE78E600AE07D5 /* User+CoreDataProperties.swift in Sources */,
+				F2F9F23E20F57ECF00DF6EC5 /* DialogRutViewController.swift in Sources */,
 				FAC36A3420BF62D4008BD508 /* DiscountCategoryTableViewCell.swift in Sources */,
 				F2CE050C20C8BF92006565AC /* ParkingViewController.swift in Sources */,
 				F20620CA20AEA17F00D5BA3C /* UserRegisterViewController.swift in Sources */,

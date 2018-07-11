@@ -82,7 +82,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Fod-Yb-V8Q"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="iFf-gR-ykp" kind="presentation" identifier="profile_to_contact_segue" id="oVf-CE-qmK"/>
+                                            <segue destination="iFf-gR-ykp" kind="presentation" identifier="profile_to_contact_segue" modalPresentationStyle="overFullScreen" id="oVf-CE-qmK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuV-sS-Z9y" userLabel="To service">
@@ -365,7 +365,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-EU-DxS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
-                                                                            <segue destination="iu1-Cd-sXr" kind="show" id="Abc-9z-enT"/>
+                                                                            <segue destination="iu1-Cd-sXr" kind="show" identifier="profile_to_valid_campaign_segue" id="Abc-9z-enT"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="rID-7b-rIx">
@@ -557,7 +557,7 @@
                     <navigationItem key="navigationItem" id="aQi-Ev-nRK">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="dqX-rN-GRG">
                             <connections>
-                                <segue destination="2hG-UR-iIC" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="bi4-bZ-Atx"/>
+                                <segue destination="2hG-UR-iIC" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="bi4-bZ-Atx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
