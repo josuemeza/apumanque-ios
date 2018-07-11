@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Nvp-Lc-jFq"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="amH-dH-lyL" kind="presentation" identifier="home_to_contact_segue" modalPresentationStyle="overCurrentContext" id="p7s-Po-2Dg"/>
+                                            <segue destination="amH-dH-lyL" kind="presentation" identifier="home_to_contact_segue" modalPresentationStyle="overFullScreen" id="p7s-Po-2Dg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-U1-Lrc" userLabel="Register segue">
@@ -265,7 +265,7 @@
                         <barButtonItem key="backBarButtonItem" title="Volver" id="ooM-NN-mn1"/>
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="wsi-qe-uHf">
                             <connections>
-                                <segue destination="vBv-IH-zMh" kind="presentation" identifier="home_to_menu_segue" animates="NO" modalPresentationStyle="overCurrentContext" id="ApH-ox-IAv"/>
+                                <segue destination="vBv-IH-zMh" kind="presentation" identifier="home_to_menu_segue" animates="NO" modalPresentationStyle="overFullScreen" id="ApH-ox-IAv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="logo" id="VGz-UQ-scO"/>

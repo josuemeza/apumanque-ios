@@ -92,7 +92,7 @@
                                             <constraint firstAttribute="height" constant="30" id="lJ6-Bd-6rA"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="PgN-J6-5qa" kind="show" identifier="discounts_to_contact_segue" id="K1O-YW-kRj"/>
+                                            <segue destination="PgN-J6-5qa" kind="presentation" identifier="discounts_to_contact_segue" modalPresentationStyle="overFullScreen" id="K1O-YW-kRj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RW-2g-OgD" userLabel="To service">
@@ -301,7 +301,7 @@
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="Lbq-7O-WV1" secondAttribute="height" multiplier="1:1" id="Rg9-Uk-e2R"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="24"/>
+                                                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="24"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                     <userDefinedRuntimeAttributes>
@@ -507,7 +507,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="Azv-5n-rbn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ceg-RU-Oe6" kind="presentation" identifier="" animates="NO" modalPresentationStyle="overCurrentContext" id="Knh-rN-qya"/>
+                                <segue destination="ceg-RU-Oe6" kind="presentation" identifier="" animates="NO" modalPresentationStyle="overFullScreen" id="Knh-rN-qya"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Categorías" id="1hS-Mj-HoE">
@@ -606,7 +606,7 @@
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento válido hasta el" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-fq-OhF">
-                                                                            <rect key="frame" x="111.66666666666667" y="24.666666666666686" width="176.33333333333331" height="17"/>
+                                                                            <rect key="frame" x="111.00000000000001" y="24.666666666666686" width="176.33333333333337" height="17"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>

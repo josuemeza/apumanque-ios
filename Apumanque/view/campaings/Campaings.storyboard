@@ -85,7 +85,7 @@
                                             <constraint firstAttribute="width" constant="30" id="n7F-Xp-yms"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" animates="NO" modalPresentationStyle="overCurrentContext" id="AvN-BS-Eam"/>
+                                            <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" animates="NO" modalPresentationStyle="overFullScreen" id="AvN-BS-Eam"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-25-S2q" userLabel="To service">
@@ -257,7 +257,7 @@
                     <navigationItem key="navigationItem" id="OPz-ak-GGz">
                         <barButtonItem key="leftBarButtonItem" image="menu_icon" id="5Pn-J4-AbG">
                             <connections>
-                                <segue destination="eP1-Av-xIH" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="3b3-fZ-Al4"/>
+                                <segue destination="eP1-Av-xIH" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="3b3-fZ-Al4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="logo" id="ed0-E1-lNB"/>
@@ -622,6 +622,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="saveAndContinueButtonTap:" destination="9GX-Os-ZOF" eventType="touchUpInside" id="TGl-1l-bNA"/>
+                                                                    <segue destination="im8-9a-yzK" kind="presentation" modalPresentationStyle="overFullScreen" id="tbz-dm-9bm"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -749,6 +750,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDr-qT-hon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4055" y="549"/>
+        </scene>
+        <!--dialog_rut_view_controller-->
+        <scene sceneID="Shu-7I-vhE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="dialog_rut_view_controller" id="im8-9a-yzK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-Bj-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3394" y="831"/>
         </scene>
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">
