@@ -450,7 +450,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-dk-VGD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
-                                                                            <action selector="helpAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="L1Y-xM-2dU"/>
+                                                                            <segue destination="2eE-sZ-zla" kind="show" id="qwU-8g-cIA"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="i57-3h-lmH">
@@ -650,6 +650,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e68-RH-Db1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="-135"/>
+        </scene>
+        <!--help_view_controller-->
+        <scene sceneID="6kG-BT-nYG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="2eE-sZ-zla" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUG-fF-atL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-67"/>
         </scene>
     </scenes>
     <resources>
