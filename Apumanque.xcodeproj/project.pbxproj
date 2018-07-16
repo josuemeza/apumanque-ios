@@ -64,6 +64,7 @@
 		FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */; };
 		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
 		FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33A2B320F2F24E00946E37 /* SearchViewController.swift */; };
+		FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */; };
 		FA3701A920FC7D0A0066790B /* NewsSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */; };
 		FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25BE20C0B3140067151E /* DiscountViewController.swift */; };
 		FA5767D020F4578700C142D8 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */; };
@@ -173,6 +174,7 @@
 		FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
 		FA33A2B320F2F24E00946E37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSingleViewController.swift; sourceTree = "<group>"; };
 		FA4E25BE20C0B3140067151E /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				FA67AC0B20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift */,
+				FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				FAF1AC1520ABD0B400F01D59 /* HomeViewController.swift in Sources */,
 				FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */,
 				FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */,
+				FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */,
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
 				FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */,

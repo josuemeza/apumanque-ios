@@ -10,6 +10,14 @@ import UIKit
 
 class NewsListItemCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Definitions
+    
+    private let colors: [UIColor] = [
+        UIColor(red: 30/255, green: 155/255, blue: 90/255, alpha: 1),
+        UIColor(red: 244, green: 85/255, blue: 22/255, alpha: 1),
+        UIColor(red: 1, green: 120, blue: 215/255, alpha: 1)
+    ]
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tagLabel: UILabel!
@@ -23,11 +31,21 @@ class NewsListItemCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Enumerations
     
+    enum TagColor: Int {
+        case green = 0, orange, blue
+    }
+    
     enum CellType {
         case full, left, right
     }
     
     // MARK: - Attributes
+    
+    var tagColor: TagColor = .green {
+        didSet {
+            tagLabel.backgroundColor = colors[tagColor.rawValue]
+        }
+    }
     
     var type: CellType = .full {
         didSet {

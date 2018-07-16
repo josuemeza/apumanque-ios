@@ -60,7 +60,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewLayout key="collectionViewLayout" id="c7N-OJ-g2z" customClass="UICollectionViewLeftAlignedLayout"/>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="news_list_title_cell" id="EOI-G0-oyu">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="news_list_title_cell" id="EOI-G0-oyu" customClass="NewsListTitleCollectionViewCell" customModule="Apumanque" customModuleProvider="target">
                                                 <rect key="frame" x="1.5" y="0.0" width="372" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -81,6 +81,9 @@
                                                     <constraint firstItem="gfi-vT-r2a" firstAttribute="centerY" secondItem="EOI-G0-oyu" secondAttribute="centerY" id="d2L-4k-BN2"/>
                                                 </constraints>
                                                 <size key="customSize" width="372" height="40"/>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="gfi-vT-r2a" id="a3s-5a-a4y"/>
+                                                </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="news_list_item_cell" id="hq1-Zj-TEz" customClass="NewsListItemCollectionViewCell" customModule="Apumanque" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="50" width="335" height="360"/>
@@ -249,7 +252,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkq-dS-uFi">
                                                 <rect key="frame" x="20" y="669" width="335" height="384.5"/>
-                                                <mutableString key="text">Te invitamos a participar en la promoción "Es viernes y tus amigas lo saben". Premio que consta de $5.000.000 para 10 fines de semana ($500.000 cada viernes por 10 fines de semana consecutivos).
+                                                <string key="text">Te invitamos a participar en la promoción "Es viernes y tus amigas lo saben". Premio que consta de $5.000.000 para 10 fines de semana ($500.000 cada viernes por 10 fines de semana consecutivos).
 
 Para participar, el cliente debe registrar sus boletas de compras en los módulos de informaciones, donde obtendrá un cupón digital por cada $10.000.
 
@@ -259,7 +262,7 @@ Participan boletas emitidas entre el 31 de mayo y el 16 de agosto de 2018, ambas
 
 Fecha del sorteo: 17 de agosto de 2018.
 
-*Las boletas por valores inferiores también pueden participar si completan el monto mínimo requerido.</mutableString>
+*Las boletas por valores inferiores también pueden participar si completan el monto mínimo requerido.</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

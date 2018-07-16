@@ -13,7 +13,8 @@ class NewsViewController: BlurredViewController {
     // MARK: - Actions
     
     @IBAction func categorySelectorAction(_ sender: UISegmentedControl) {
-        
+        let index = sender.selectedSegmentIndex
+        // TODO: implement
     }
     
     // MARK: - View controller methods
@@ -58,7 +59,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "news_list_title_cell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "news_list_title_cell", for: indexPath) as! NewsListTitleCollectionViewCell
             
             return cell
         case 1:
@@ -70,6 +71,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
             } else {
                 cell.type = .left
             }
+            cell.tagColor = .orange
             return cell
         default:
             return UICollectionViewCell()
