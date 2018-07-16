@@ -17,5 +17,7 @@ target 'Apumanque' do
   # Web image loader ( https://github.com/rs/SDWebImage )
   pod 'SDWebImage'
   # Circular Progress
-  pod 'UICircularProgressRing' 
+  pod 'UICircularProgressRing'
+  # Left align layout for collection view ( https://github.com/mokagio/UICollectionViewLeftAlignedLayout )
+  pod 'UICollectionViewLeftAlignedLayout'
 end
