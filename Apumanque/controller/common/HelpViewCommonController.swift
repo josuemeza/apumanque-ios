@@ -24,12 +24,10 @@ class HelpViewCommonController: ViewController {
         navigationItem.rightBarButtonItem = barButtonItem
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print(helpArray.count)
+        for i in helpArray{
+            print(i)
+        }
     }
     
 

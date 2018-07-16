@@ -17,6 +17,8 @@ public class Help: NSManagedObject {
     
     static func all(on context: NSManagedObjectContext) -> [Help]? {
         let request: NSFetchRequest<Help> = Help.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(Help.order), ascending: true)
+        request.sortDescriptors = [sort]
         return try? context.fetch(request)
     }
     
@@ -29,7 +31,7 @@ public class Help: NSManagedObject {
             questions.order = Int16(item["order"].intValue)
             
             questionsItems.append(questions)
-            
+            print("AQUI ESTAMOS")
         }
     
         return true
