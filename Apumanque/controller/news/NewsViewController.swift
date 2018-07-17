@@ -33,6 +33,7 @@ class NewsViewController: BlurredViewController {
         super.viewDidLoad()
         build()
         news = News.all(on: managedObjectContext)
+        segmentedControl.setWidth(120, forSegmentAt: 2)
         filterNewsItems()
     }
     
@@ -56,23 +57,12 @@ class NewsViewController: BlurredViewController {
     
     func filterNewsItems() {
         newsItems = news
-        switch segmentedControl.selectedSegmentIndex {
-        case 1:
+        let newsTypeName = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex) ?? ""
+        if newsTypeName != "Todo" {
             newsItems = newsItems.compactMap { news in
-                guard let typeName = news.newsType?.name, typeName == "Eventos" else { return nil }
+                guard let typeName = news.newsType?.name, typeName == newsTypeName else { return nil }
                 return news
             }
-        case 2:
-            newsItems = newsItems.compactMap { news in
-                guard let typeName = news.newsType?.name, typeName == "Sorteos" else { return nil }
-                return news
-            }
-        case 3:
-            newsItems = newsItems.compactMap { news in
-                guard let typeName = news.newsType?.name, typeName == "Generales" else { return nil }
-                return news
-            }
-        default: ()
         }
         newsItems.sort { left, right in
             if let leftDate = left.start?.toDate as Date?, let rightDate = right.start?.toDate as Date? {
@@ -121,7 +111,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
             switch news.newsType?.name?.lowercased() ?? "" {
             case "eventos":
                 cell.tagColor = .orange
-            case "sorteos":
+            case "cliente frecuente":
                 cell.tagColor = .green
             case "generales":
                 cell.tagColor = .blue

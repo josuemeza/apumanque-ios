@@ -20,6 +20,7 @@ class NewsListItemCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var tagContainer: UIView!
     @IBOutlet weak var tagLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -43,8 +44,8 @@ class NewsListItemCollectionViewCell: UICollectionViewCell {
     
     var tagColor: TagColor = .green {
         didSet {
-            tagLabel.backgroundColor = colors[tagColor.rawValue]
-            tagLabel.isHidden = false
+            tagContainer.backgroundColor = colors[tagColor.rawValue]
+            tagContainer.isHidden = false
         }
     }
     

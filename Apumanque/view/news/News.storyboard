@@ -47,7 +47,7 @@
                                         <segments>
                                             <segment title="Todo"/>
                                             <segment title="Eventos"/>
-                                            <segment title="Sorteos"/>
+                                            <segment title="Cliente Frecuente"/>
                                             <segment title="Generales"/>
                                         </segments>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,22 +102,29 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.39744755993150682" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTEOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceE-dd-MPf">
-                                                                    <rect key="frame" x="11" y="14" width="78" height="31"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-kO-5c3">
+                                                                    <rect key="frame" x="11" y="14" width="116" height="31"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cliente frecuente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-Uf-c2K">
+                                                                            <rect key="frame" x="10" y="8.5" width="96" height="13.5"/>
+                                                                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="11"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.0" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="78" id="2GS-ho-tce"/>
-                                                                        <constraint firstAttribute="height" constant="31" id="CLk-F3-VfH"/>
+                                                                        <constraint firstAttribute="height" constant="31" id="84J-9U-Mlx"/>
+                                                                        <constraint firstItem="UdX-Uf-c2K" firstAttribute="leading" secondItem="Ql9-kO-5c3" secondAttribute="leading" constant="10" id="Btj-DI-neC"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="UdX-Uf-c2K" secondAttribute="trailing" constant="10" id="YFI-tx-BO5"/>
+                                                                        <constraint firstItem="UdX-Uf-c2K" firstAttribute="centerY" secondItem="Ql9-kO-5c3" secondAttribute="centerY" id="pke-az-Jge"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="11"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                             <integer key="value" value="6"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
-                                                                </label>
+                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA5-hH-dBw">
                                                                     <rect key="frame" x="6" y="263.5" width="323" height="21.5"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
@@ -140,13 +147,13 @@
                                                                 <constraint firstItem="NJ5-pX-zAY" firstAttribute="leading" secondItem="pnB-hx-Ouq" secondAttribute="leading" id="HYU-z4-44k"/>
                                                                 <constraint firstAttribute="trailing" secondItem="RA5-hH-dBw" secondAttribute="trailing" constant="6" id="NcK-As-abA"/>
                                                                 <constraint firstAttribute="bottom" secondItem="qrv-2a-alu" secondAttribute="bottom" id="Q5m-ze-Lj1"/>
+                                                                <constraint firstItem="Ql9-kO-5c3" firstAttribute="leading" secondItem="pnB-hx-Ouq" secondAttribute="leading" constant="11" id="Srb-0c-2m2"/>
                                                                 <constraint firstItem="qrv-2a-alu" firstAttribute="top" secondItem="pnB-hx-Ouq" secondAttribute="top" id="VTG-Xe-Tde"/>
                                                                 <constraint firstAttribute="trailing" secondItem="NJ5-pX-zAY" secondAttribute="trailing" id="WBa-ul-QHe"/>
+                                                                <constraint firstItem="Mf6-TP-SNz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ql9-kO-5c3" secondAttribute="bottom" constant="11" id="Y9Y-Nt-mme"/>
                                                                 <constraint firstItem="RA5-hH-dBw" firstAttribute="top" secondItem="Mf6-TP-SNz" secondAttribute="bottom" constant="11" id="Z9J-9y-IgP"/>
                                                                 <constraint firstAttribute="bottom" secondItem="NJ5-pX-zAY" secondAttribute="bottom" id="ZNq-Q3-LTw"/>
-                                                                <constraint firstItem="ceE-dd-MPf" firstAttribute="leading" secondItem="pnB-hx-Ouq" secondAttribute="leading" constant="11" id="agY-9c-UDd"/>
-                                                                <constraint firstItem="ceE-dd-MPf" firstAttribute="top" secondItem="pnB-hx-Ouq" secondAttribute="top" constant="14" id="fef-u2-weA"/>
-                                                                <constraint firstItem="Mf6-TP-SNz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ceE-dd-MPf" secondAttribute="bottom" constant="11" id="l8U-i3-kXm"/>
+                                                                <constraint firstItem="Ql9-kO-5c3" firstAttribute="top" secondItem="pnB-hx-Ouq" secondAttribute="top" constant="14" id="mfg-y6-tf9"/>
                                                                 <constraint firstItem="Mf6-TP-SNz" firstAttribute="leading" secondItem="pnB-hx-Ouq" secondAttribute="leading" constant="6" id="n5G-2W-e8j"/>
                                                                 <constraint firstAttribute="bottom" secondItem="RA5-hH-dBw" secondAttribute="bottom" constant="50" id="nRi-8C-mVJ"/>
                                                                 <constraint firstItem="RA5-hH-dBw" firstAttribute="leading" secondItem="pnB-hx-Ouq" secondAttribute="leading" constant="6" id="uYy-Ue-ko2"/>
@@ -172,7 +179,8 @@
                                                     <outlet property="rightConstraint" destination="WG6-LB-c7r" id="VEj-mg-vDo"/>
                                                     <outlet property="subtitleBottomConstraint" destination="nRi-8C-mVJ" id="N52-bT-0Zc"/>
                                                     <outlet property="subtitleLabel" destination="RA5-hH-dBw" id="4yW-D2-gL4"/>
-                                                    <outlet property="tagLabel" destination="ceE-dd-MPf" id="e0B-Vx-RWl"/>
+                                                    <outlet property="tagContainer" destination="Ql9-kO-5c3" id="T83-SE-R8w"/>
+                                                    <outlet property="tagLabel" destination="UdX-Uf-c2K" id="Kad-dL-vXL"/>
                                                     <outlet property="titleLabel" destination="Mf6-TP-SNz" id="Z8h-Mo-nSx"/>
                                                     <segue destination="IUg-mJ-oSW" kind="show" id="0ld-Eb-pvP"/>
                                                 </connections>
