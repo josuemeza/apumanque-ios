@@ -34,6 +34,10 @@ class StoresViewController: BlurredViewController {
                 if let text = searchBar.text?.lowercased(), !text.isEmpty {
                     if store.name?.lowercased().range(of: text) != nil {
                         return store
+                    } else if store.tags?.lowercased().range(of: text) != nil {
+                        return store
+                    } else if store.number?.lowercased().range(of: text) != nil {
+                        return store
                     }
                     return nil
                 } else {

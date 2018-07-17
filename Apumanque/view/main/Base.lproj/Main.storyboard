@@ -947,7 +947,7 @@
                                             <outlet property="delegate" destination="qkh-eg-Zus" id="Mgq-7O-8Il"/>
                                         </connections>
                                     </tableView>
-                                    <searchBar contentMode="redraw" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-zZ-cT5">
+                                    <searchBar contentMode="redraw" placeholder="¿Qué buscas?" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-zZ-cT5">
                                         <rect key="frame" x="0.0" y="130" width="375" height="56"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
