@@ -221,6 +221,39 @@ class NetworkingManager {
         }
     }
     
+    func news(completion: @escaping Callback<[News]>) {
+        guard let context = context else { completion(nil) ; return }
+        let endpoint = "/news/api/news/"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let newsJSON = JSON(value)["results"].array else { completion(nil) ; return }
+                for newsSingleJSON in newsJSON {
+                    guard let id = newsSingleJSON["id"].int else { continue }
+                    let newsSingle = News.find(byId: id, on: context) ?? News(context: context)
+                    _ = newsSingle.setData(from: newsSingleJSON)
+                    guard let typeId = newsSingleJSON["new_type"]["id"].int else { continue }
+                    let newsType = NewsType.find(byId: typeId, on: context) ?? NewsType(context: context)
+                    _ = newsType.setData(from: newsSingleJSON["new_type"])
+                    newsSingle.newsType = newsType
+                    for newsFileJSON in newsSingleJSON["news_files"].array ?? [] {
+                        guard let fileId = newsFileJSON["id"].int else { continue }
+                        let newsFile = NewsFile.find(byId: fileId, on: context) ?? NewsFile(context: context)
+                        _ = newsFile.setData(from: newsFileJSON)
+                        if newsFile.objectID.isTemporaryID {
+                            newsSingle.addToNewsFiles(newsFile)
+                        }
+                    }
+                }
+                completion(News.all(on: context))
+            case .failure(let responseError):
+                print(responseError.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
     func requestData(completion: @escaping Callback<JSON>) {
         let endpoint = "/hxc/api/login_token/"
         let parameters: Parameters = ["username": "apumanque_user", "password": "apumanque2018"]

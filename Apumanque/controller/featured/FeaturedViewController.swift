@@ -52,7 +52,7 @@ class FeaturedViewController: BlurredViewController {
     func sortDiscounts() {
         discounts.sort { left, right in
             if let leftDate = left.startDate?.toDate as Date?, let rightDate = right.startDate?.toDate as Date? {
-                return leftDate < rightDate
+                return leftDate > rightDate
             }
             return false
         }

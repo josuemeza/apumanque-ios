@@ -7,6 +7,7 @@ PODS:
   - SwiftyEssentials (1.0.7)
   - SwiftyJSON (4.0.0)
   - UICircularProgressRing (2.1.0)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
   - Validator (3.0.2)
 
 DEPENDENCIES:
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - SwiftyEssentials
   - SwiftyJSON
   - UICircularProgressRing
+  - UICollectionViewLeftAlignedLayout
   - Validator
 
 SPEC REPOS:
@@ -26,6 +28,7 @@ SPEC REPOS:
     - SwiftyEssentials
     - SwiftyJSON
     - UICircularProgressRing
+    - UICollectionViewLeftAlignedLayout
     - Validator
 
 SPEC CHECKSUMS:
@@ -35,8 +38,9 @@ SPEC CHECKSUMS:
   SwiftyEssentials: ac62363b69850ac88607319f3910bf0482982a73
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UICircularProgressRing: 01b8f67bbaca7e3a83ccfa67630fe059a51211d1
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: df5c97f7ea0df432b3c3ddb284e1af07a626d319
+PODFILE CHECKSUM: 551b9f71a879dc553ed039d7b1c1fc53d3f13732
 
 COCOAPODS: 1.5.0
