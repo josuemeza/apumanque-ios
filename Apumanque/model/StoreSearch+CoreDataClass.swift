@@ -24,10 +24,4 @@ public class StoreSearch: NSManagedObject {
         return Store.find(byId: id, on: context)
     }
     
-    func save() throws {
-        if let context = self.managedObjectContext {
-            try context.save()
-        }
-    }
-    
 }

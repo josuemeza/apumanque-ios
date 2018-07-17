@@ -71,6 +71,7 @@ class MenuViewController: ViewController {
     
     @IBAction func logoutAction(_ sender: Any?) {
         Session.logout()
+        User.all(on: managedObjectContext)?.forEach { user in managedObjectContext.delete(user) }
         logoutButton.isHidden = !Session.isLogged
         tableView.reloadData()
         delegate?.menuViewController(self, didSelect: .logout)

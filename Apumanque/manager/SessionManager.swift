@@ -19,7 +19,7 @@ class SessionManager {
         }
     }
     var token: String?
-    private(set) var currentUser: User?
+    var currentUser: User?
     var isLogged: Bool { get { return currentUser != nil } }
     
     // MARK: - Methods
