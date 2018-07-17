@@ -122,7 +122,6 @@ class SearchViewController: ViewController {
         search.date = Date() as NSDate
         search.storeId = store.id
         search.search = searchBar.text
-        try? search.save()
     }
 
 }

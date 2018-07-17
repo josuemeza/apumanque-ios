@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  
 //
-//  Created by Josue Meza Peña on 02-06-18.
+//  Created by Josue Meza Peña on 17-07-18.
 //
 //
 
@@ -27,6 +27,7 @@ extension User {
     @NSManaged public var phone: String?
     @NSManaged public var region: String?
     @NSManaged public var rut: String?
+    @NSManaged public var token: String?
     @NSManaged public var discounts: NSSet?
 
 }

@@ -93,6 +93,7 @@ class NetworkingManager {
     
     func stores(completion: @escaping Callback<[Store]>) {
         guard let context = context else { completion(nil) ; return }
+        Store.all(on: context)?.forEach { store in context.delete(store) }
         let endpoint = "/basicmall/api/stores/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
@@ -117,6 +118,7 @@ class NetworkingManager {
     
     func storeCategories(completion: @escaping Callback<[StoreCategory]>) {
         guard let context = context else { completion(nil) ; return }
+        StoreCategory.all(on: context)?.forEach { category in context.delete(category) }
         let endpoint = "/basicmall/api/categories/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
@@ -140,6 +142,7 @@ class NetworkingManager {
     
     func spetialSales(completion: @escaping Callback<[Discount]>) {
         guard let context = context else { completion(nil) ; return }
+        Discount.all(featured: false, on: context)?.forEach { discount in context.delete(discount) }
         let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
@@ -169,6 +172,7 @@ class NetworkingManager {
     
     func featuredSpetialSales(completion: @escaping Callback<[Discount]>) {
         guard let context = context else { completion(nil) ; return }
+        Discount.all(featured: true, on: context)?.forEach { discount in context.delete(discount) }
         let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/?code=featuredProduct"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
@@ -198,6 +202,7 @@ class NetworkingManager {
     
     func campaings(completion: @escaping Callback<[Campaing]>) {
         guard let context = context else { completion(nil) ; return }
+        Campaing.all(on: context)?.forEach { campaing in context.delete(campaing) }
         let endpoint = "/basicmall/api/campaigns/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
@@ -223,6 +228,7 @@ class NetworkingManager {
     
     func news(completion: @escaping Callback<[News]>) {
         guard let context = context else { completion(nil) ; return }
+        News.all(on: context)?.forEach { news in context.delete(news) }
         let endpoint = "/news/api/news/"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in

@@ -94,6 +94,7 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rut" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="discounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Discount" inverseName="users" inverseEntity="Discount" syncable="YES"/>
     </entity>
     <elements>
@@ -106,6 +107,6 @@
         <element name="Store" positionX="297" positionY="-9" width="128" height="268"/>
         <element name="StoreCategory" positionX="286" positionY="360" width="128" height="135"/>
         <element name="StoreSearch" positionX="97" positionY="137" width="128" height="88"/>
-        <element name="User" positionX="718" positionY="-18" width="128" height="223"/>
+        <element name="User" positionX="718" positionY="-18" width="128" height="240"/>
     </elements>
 </model>

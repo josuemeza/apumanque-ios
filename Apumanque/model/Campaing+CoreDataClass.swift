@@ -18,6 +18,11 @@ public class Campaing: NSManagedObject {
         return (try? context.fetch(request))?.first
     }
     
+    static func all(on context: NSManagedObjectContext) -> [Campaing]? {
+        let request: NSFetchRequest<Campaing> = Campaing.fetchRequest()
+        return try? context.fetch(request)
+    }
+    
     func setData(from json: JSON) -> Bool {
             contentCampaign = json["campaign"].string
             code = Int16(json["code"].intValue)
