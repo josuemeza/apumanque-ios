@@ -14,10 +14,10 @@ class StoresViewController: BlurredViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Attributes
     
-    private var searchBar: UISearchBar!
     private(set) var stores = [Store]()
     private(set) var storeCategory: StoreCategory?
     
@@ -53,17 +53,9 @@ class StoresViewController: BlurredViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         build(withOpaqueNavigationBar: true)
-        searchBar = ({
-            let searchBar = UISearchBar()
-            searchBar.delegate = self
-            searchBar.backgroundImage = UIColor.black.toImage()
-            searchBar.placeholder = "¿Qué buscas?"
-            searchBar.sizeToFit()
-            searchBar.textField?.textColor = .white
-            searchBar.textField?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
-            tableView.tableHeaderView = searchBar
-            return searchBar
-        })()
+        searchBar.showsCancelButton = false
+        searchBar.textField?.textColor = .white
+        searchBar.textField?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
         initData()
     }
     

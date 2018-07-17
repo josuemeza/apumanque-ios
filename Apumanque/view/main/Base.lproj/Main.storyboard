@@ -880,7 +880,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GYJ-3e-c4O">
-                                        <rect key="frame" x="0.0" y="130" width="375" height="537"/>
+                                        <rect key="frame" x="0.0" y="186" width="375" height="481"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" red="1" green="0.019607843140000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -947,15 +947,27 @@
                                             <outlet property="delegate" destination="qkh-eg-Zus" id="Mgq-7O-8Il"/>
                                         </connections>
                                     </tableView>
+                                    <searchBar contentMode="redraw" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-zZ-cT5">
+                                        <rect key="frame" x="0.0" y="130" width="375" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qkh-eg-Zus" id="jb8-dn-7Qg"/>
+                                        </connections>
+                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GYJ-3e-c4O" secondAttribute="bottom" id="00b-ec-BWa"/>
                                     <constraint firstAttribute="trailing" secondItem="GYJ-3e-c4O" secondAttribute="trailing" id="1qv-k7-HIS"/>
                                     <constraint firstAttribute="trailing" secondItem="0x9-Bm-xFk" secondAttribute="trailing" id="4j2-iP-msh"/>
+                                    <constraint firstItem="jnO-zZ-cT5" firstAttribute="leading" secondItem="Lt4-Cc-g9i" secondAttribute="leading" id="EI2-GS-GfG"/>
                                     <constraint firstItem="GYJ-3e-c4O" firstAttribute="leading" secondItem="Lt4-Cc-g9i" secondAttribute="leading" id="OUH-lf-Q5t"/>
-                                    <constraint firstItem="GYJ-3e-c4O" firstAttribute="top" secondItem="0x9-Bm-xFk" secondAttribute="bottom" id="Rs7-BK-ILQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="jnO-zZ-cT5" secondAttribute="trailing" id="Rvy-UF-5At"/>
                                     <constraint firstItem="0x9-Bm-xFk" firstAttribute="leading" secondItem="Lt4-Cc-g9i" secondAttribute="leading" id="VYc-Nf-MbG"/>
+                                    <constraint firstItem="GYJ-3e-c4O" firstAttribute="top" secondItem="jnO-zZ-cT5" secondAttribute="bottom" id="sJ9-cN-LMl"/>
+                                    <constraint firstItem="jnO-zZ-cT5" firstAttribute="top" secondItem="0x9-Bm-xFk" secondAttribute="bottom" id="wBE-bB-iPR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -978,6 +990,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="jnO-zZ-cT5" id="lH9-1N-Zpy"/>
                         <outlet property="tableView" destination="GYJ-3e-c4O" id="eB0-xU-N1k"/>
                         <outlet property="titleLabel" destination="Yr7-gW-qjy" id="me8-RY-nhL"/>
                     </connections>
@@ -1566,7 +1579,7 @@
         <image name="tab_ticket_icon" width="15" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CMT-RE-1Gf"/>
+        <segue reference="BbB-Jw-iin"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
