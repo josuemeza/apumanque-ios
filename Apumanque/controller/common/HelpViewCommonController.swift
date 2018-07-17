@@ -25,9 +25,6 @@ class HelpViewCommonController: ViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         print(helpArray.count)
-        for i in helpArray{
-            print(i)
-        }
     }
     
 
