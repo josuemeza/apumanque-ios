@@ -50,7 +50,7 @@
     <entity name="NewsType" representedClassName="NewsType" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="news" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="newsType" inverseEntity="News" syncable="YES"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="News" inverseName="newsType" inverseEntity="News" syncable="YES"/>
     </entity>
     <entity name="Store" representedClassName="Store" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -100,12 +100,12 @@
         <element name="Campaing" positionX="99" positionY="324" width="128" height="180"/>
         <element name="Discount" positionX="520" positionY="-18" width="128" height="270"/>
         <element name="HomeCategory" positionX="99" positionY="-7" width="128" height="88"/>
+        <element name="News" positionX="549" positionY="452" width="128" height="133"/>
+        <element name="NewsFile" positionX="630" positionY="362" width="128" height="103"/>
+        <element name="NewsType" positionX="466" positionY="362" width="128" height="90"/>
         <element name="Store" positionX="297" positionY="-9" width="128" height="268"/>
         <element name="StoreCategory" positionX="286" positionY="360" width="128" height="135"/>
         <element name="StoreSearch" positionX="97" positionY="137" width="128" height="88"/>
         <element name="User" positionX="718" positionY="-18" width="128" height="223"/>
-        <element name="NewsType" positionX="466" positionY="362" width="128" height="88"/>
-        <element name="NewsFile" positionX="630" positionY="362" width="128" height="103"/>
-        <element name="News" positionX="549" positionY="452" width="128" height="133"/>
     </elements>
 </model>

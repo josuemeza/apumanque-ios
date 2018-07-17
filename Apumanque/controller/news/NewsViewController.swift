@@ -104,7 +104,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "news_list_title_cell", for: indexPath) as! NewsListTitleCollectionViewCell
-            
+            cell.titleLabel.text = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "news_list_item_cell", for: indexPath) as! NewsListItemCollectionViewCell
