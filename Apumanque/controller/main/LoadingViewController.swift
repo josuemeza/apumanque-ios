@@ -30,7 +30,9 @@ class LoadingViewController: ViewController {
                         NetworkingManager.singleton.spetialSales { discounts in
                             NetworkingManager.singleton.featuredSpetialSales { featured in
                                 NetworkingManager.singleton.campaings { campaings in
-                                    self.initMenuItems(from: menuItems)
+                                    NetworkingManager.singleton.news { news in
+                                        self.initMenuItems(from: menuItems)
+                                    }
                                 }
                             }
                         }

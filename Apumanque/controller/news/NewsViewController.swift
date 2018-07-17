@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewsViewController: BlurredViewController {
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    // MARK: - Attributes
+    
+    private var news: [News]!
+    fileprivate var newsItems: [News]!
     
     // MARK: - Actions
     
     @IBAction func categorySelectorAction(_ sender: UISegmentedControl) {
-        let index = sender.selectedSegmentIndex
-        // TODO: implement
+        filterNewsItems()
     }
     
     // MARK: - View controller methods
@@ -22,6 +32,8 @@ class NewsViewController: BlurredViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         build()
+        news = News.all(on: managedObjectContext)
+        filterNewsItems()
     }
     
     // MARK: - Navigation view controller methods
@@ -30,13 +42,45 @@ class NewsViewController: BlurredViewController {
         if segue.destination is BlurredViewController {
             let viewController: BlurredViewController
             if segue.destination is NewsSingleViewController {
-                let storeCategories = segue.destination as! NewsSingleViewController
-                viewController = storeCategories
+                let newsSingle = segue.destination as! NewsSingleViewController
+                if let indexPath = collectionView.indexPathsForSelectedItems?.first, indexPath.section == 1 {
+                    newsSingle.news = newsItems[indexPath.row]
+                }
+                viewController = newsSingle
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
             viewController.backgroundImage = backgroundImage
         }
+    }
+    
+    func filterNewsItems() {
+        newsItems = news
+        switch segmentedControl.selectedSegmentIndex {
+        case 1:
+            newsItems = newsItems.compactMap { news in
+                guard let typeName = news.newsType?.name, typeName == "Eventos" else { return nil }
+                return news
+            }
+        case 2:
+            newsItems = newsItems.compactMap { news in
+                guard let typeName = news.newsType?.name, typeName == "Sorteos" else { return nil }
+                return news
+            }
+        case 3:
+            newsItems = newsItems.compactMap { news in
+                guard let typeName = news.newsType?.name, typeName == "Generales" else { return nil }
+                return news
+            }
+        default: ()
+        }
+        newsItems.sort { left, right in
+            if let leftDate = left.start?.toDate as Date?, let rightDate = right.start?.toDate as Date? {
+                return leftDate > rightDate
+            }
+            return false
+        }
+        collectionView.reloadData()
     }
 
 }
@@ -51,7 +95,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0: return 1
-        case 1: return 6
+        case 1: return newsItems.count
         default: return 0
         }
     }
@@ -71,7 +115,25 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
             } else {
                 cell.type = .left
             }
-            cell.tagColor = .orange
+            let news = newsItems[indexPath.row]
+            cell.titleLabel.text = news.title ?? "S/V"
+            cell.tagLabel.text = news.newsType?.name ?? "S/V"
+            switch news.newsType?.name?.lowercased() ?? "" {
+            case "eventos":
+                cell.tagColor = .orange
+            case "sorteos":
+                cell.tagColor = .green
+            case "generales":
+                cell.tagColor = .blue
+            default:
+                cell.tagLabel.isHidden = true
+            }
+            if let stringUrl = news.mainFile?.url, let url = URL(string: stringUrl) {
+                cell.backgroundImageView.sd_setImage(with: url, placeholderImage: UIColor.black.toImage())
+            } else {
+                cell.backgroundImageView.image = UIColor.black.toImage()
+            }
+            cell.subtitleLabel.text = news.start?.toDate.string(format: "yyyy") ?? "S/V"
             return cell
         default:
             return UICollectionViewCell()

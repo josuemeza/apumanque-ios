@@ -33,6 +33,25 @@
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="News" representedClassName="News" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newsFiles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewsFile" inverseName="news" inverseEntity="NewsFile" syncable="YES"/>
+        <relationship name="newsType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewsType" inverseName="news" inverseEntity="NewsType" syncable="YES"/>
+    </entity>
+    <entity name="NewsFile" representedClassName="NewsFile" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="main" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="news" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="newsFiles" inverseEntity="News" syncable="YES"/>
+    </entity>
+    <entity name="NewsType" representedClassName="NewsType" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="news" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="newsType" inverseEntity="News" syncable="YES"/>
+    </entity>
     <entity name="Store" representedClassName="Store" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
@@ -83,7 +102,10 @@
         <element name="HomeCategory" positionX="99" positionY="-7" width="128" height="88"/>
         <element name="Store" positionX="297" positionY="-9" width="128" height="268"/>
         <element name="StoreCategory" positionX="286" positionY="360" width="128" height="135"/>
-        <element name="User" positionX="718" positionY="-18" width="128" height="223"/>
         <element name="StoreSearch" positionX="97" positionY="137" width="128" height="88"/>
+        <element name="User" positionX="718" positionY="-18" width="128" height="223"/>
+        <element name="NewsType" positionX="466" positionY="362" width="128" height="88"/>
+        <element name="NewsFile" positionX="630" positionY="362" width="128" height="103"/>
+        <element name="News" positionX="549" positionY="452" width="128" height="133"/>
     </elements>
 </model>

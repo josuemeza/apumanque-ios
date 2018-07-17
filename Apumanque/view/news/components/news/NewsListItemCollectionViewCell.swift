@@ -14,8 +14,8 @@ class NewsListItemCollectionViewCell: UICollectionViewCell {
     
     private let colors: [UIColor] = [
         UIColor(red: 30/255, green: 155/255, blue: 90/255, alpha: 1),
-        UIColor(red: 244, green: 85/255, blue: 22/255, alpha: 1),
-        UIColor(red: 1, green: 120, blue: 215/255, alpha: 1)
+        UIColor(red: 244/255, green: 85/255, blue: 22/255, alpha: 1),
+        UIColor(red: 0, green: 120/255, blue: 215/255, alpha: 1)
     ]
     
     // MARK: - Outlets
@@ -44,6 +44,7 @@ class NewsListItemCollectionViewCell: UICollectionViewCell {
     var tagColor: TagColor = .green {
         didSet {
             tagLabel.backgroundColor = colors[tagColor.rawValue]
+            tagLabel.isHidden = false
         }
     }
     

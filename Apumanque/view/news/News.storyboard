@@ -210,6 +210,10 @@
                     <navigationItem key="navigationItem" id="bGC-ED-DAy">
                         <barButtonItem key="backBarButtonItem" title="Volver" id="sL9-nK-GcR"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="3oq-j2-C53" id="HMc-h2-MVg"/>
+                        <outlet property="segmentedControl" destination="FzQ-pX-ROO" id="5L2-pv-7P3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGC-gB-Sxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,8 @@ class NewsSingleViewController: BlurredViewController {
     
     // MARK: - Attributes
     
-    var images = [UIImage]()
+    var news: News!
+    fileprivate var images = [URL]()
     
     // MARK: - Actions
     
@@ -33,9 +34,12 @@ class NewsSingleViewController: BlurredViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         build()
-        // TODO: Remove example
-        let names = ["home_table_cell_1", "home_table_cell_2", "home_table_cell_3", "home_table_cell_4"]
-        images = names.compactMap { name in UIImage(named: name) }
+        if let nsSet = news.newsFiles, let newsFiles = nsSet.allObjects as? [NewsFile] {
+            images = newsFiles.compactMap { newsFile in  URL(string: newsFile.url!) }
+        }
+        titleLabel.text = news.title
+        subtitleLabel.text = news.start?.toDate.string(format: "yyyy")
+        contentLabel.text = news.content?.parsedOnDocument
     }
     
     // MARK: - Navigation controller methods

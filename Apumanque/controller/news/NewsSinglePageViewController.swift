@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewsSinglePageViewController: UIPageViewController {
     
     // MARK: - Attributes
     
-    var images = [UIImage]()
+    var images = [URL]()
     fileprivate var pages = [NewsSinglePageItemViewController]()
     
     // MARK: - View controller methods
@@ -29,7 +30,7 @@ class NewsSinglePageViewController: UIPageViewController {
     
     // MARK: - Methods
     
-    private func presentGallery(with images: [UIImage]) {
+    private func presentGallery(with images: [URL]) {
         pages = []
         for image in images {
             let page = NewsSinglePageItemViewController()
@@ -42,7 +43,7 @@ class NewsSinglePageViewController: UIPageViewController {
     
     class NewsSinglePageItemViewController: UIViewController {
         
-        var image: UIImage!
+        var image: URL!
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -57,7 +58,7 @@ class NewsSinglePageViewController: UIPageViewController {
                 view.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0)
             ])
             view.layoutIfNeeded()
-            imageView.image = image
+            imageView.sd_setImage(with: image, placeholderImage: UIColor.black.toImage())
             imageView.layer.cornerRadius = 14
             imageView.clipsToBounds = true
         }
