@@ -996,6 +996,7 @@
         <image name="user_icon" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Rfz-9p-4Ct"/>
         <segue reference="HWD-FG-3Uv"/>
     </inferredMetricsTieBreakers>
 </document>

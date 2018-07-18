@@ -13,9 +13,6 @@
         <array key="SF-Pro-Text-Bold.otf">
             <string>SFProText-Bold</string>
         </array>
-        <array key="SF-Pro-Text-Regular.otf">
-            <string>SFProText-Regular</string>
-        </array>
         <array key="SF-Pro-Text-Semibold.otf">
             <string>SFProText-Semibold</string>
         </array>
@@ -323,7 +320,6 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
                                                                             <action selector="myInvoicesAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="a2B-p6-ea0"/>
-                                                                            <segue destination="2UD-uq-Tpq" kind="show" id="gw8-Vg-33H"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-oz-Gkr">
@@ -454,7 +450,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-dk-VGD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
-                                                                            <segue destination="2eE-sZ-zla" kind="show" id="qwU-8g-cIA"/>
+                                                                            <action selector="helpAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="L1Y-xM-2dU"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="i57-3h-lmH">
@@ -654,206 +650,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e68-RH-Db1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="-135"/>
-        </scene>
-        <!--help_view_controller-->
-        <scene sceneID="6kG-BT-nYG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="2eE-sZ-zla" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUG-fF-atL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1074" y="-67"/>
-        </scene>
-        <!--Apumanque-->
-        <scene sceneID="eRL-RT-410">
-            <objects>
-                <viewController id="2UD-uq-Tpq" customClass="TicketsViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U8K-BW-kiD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-xt-FHY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CfB-xt-FHY" firstAttribute="top" secondItem="Kcc-RN-eGH" secondAttribute="top" id="08B-0g-HOh"/>
-                            <constraint firstItem="CfB-xt-FHY" firstAttribute="leading" secondItem="Kcc-RN-eGH" secondAttribute="leading" id="86v-Ob-b8K"/>
-                            <constraint firstItem="CfB-xt-FHY" firstAttribute="bottom" secondItem="Kcc-RN-eGH" secondAttribute="bottom" id="K86-s1-Y1Z"/>
-                            <constraint firstItem="CfB-xt-FHY" firstAttribute="trailing" secondItem="Kcc-RN-eGH" secondAttribute="trailing" id="QLj-iS-JHo"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Kcc-RN-eGH"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Apumanque" id="j7M-qg-kFb">
-                        <barButtonItem key="rightBarButtonItem" title="Resumen" id="mrh-8n-0Ey">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="KeX-5W-m1t" kind="show" id="MTm-yv-aFe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FRg-A6-wPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="252" y="747.9760119940031"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cbs-9u-c2z">
-            <objects>
-                <viewController id="KeX-5W-m1t" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="acg-Kt-ypk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i6-IG-GrL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-VZ-EZj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCC-2R-VjT">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loz-MM-3iG">
-                                                        <rect key="frame" x="19" y="14" width="157.5" height="41"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="34"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de boletas registradas campaña vigente: 24" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-p2-RI6">
-                                                        <rect key="frame" x="19" y="92" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total monto ingresado campaña vigente: $126.200" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKr-9K-lHQ">
-                                                        <rect key="frame" x="19" y="133" width="328" height="33.5"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de puntos acumulados campaña vigente: 120 ptos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSm-Px-OH2">
-                                                        <rect key="frame" x="19" y="190" width="328" height="33.5"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nivel de ciudadano: 1-Ilustre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-7l-b50">
-                                                        <rect key="frame" x="19" y="247.5" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de cupones por cada $10.000: 1,2 cupones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUf-1C-ne2">
-                                                        <rect key="frame" x="19" y="288.5" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-WU-zNV">
-                                                        <rect key="frame" x="0.0" y="335.5" width="375" height="39"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumen histórico" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-E0-Xc7">
-                                                                <rect key="frame" x="19" y="10" width="139.5" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
-                                                                <color key="textColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="qeu-E0-Xc7" firstAttribute="centerY" secondItem="BuM-WU-zNV" secondAttribute="centerY" id="3BT-ty-tpd"/>
-                                                            <constraint firstItem="qeu-E0-Xc7" firstAttribute="leading" secondItem="BuM-WU-zNV" secondAttribute="leading" constant="19" id="Mt8-fU-gvH"/>
-                                                            <constraint firstAttribute="height" constant="39" id="l4S-Se-fdT"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de boletas registradas: 236" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-SB-NFw">
-                                                        <rect key="frame" x="19" y="398.5" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total monto ingresado: $1.126.200" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kB-Oc-0hQ">
-                                                        <rect key="frame" x="19" y="439.5" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de puntos acumulados: 1620 ptos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDJ-OD-Om1">
-                                                        <rect key="frame" x="19" y="480.5" width="328" height="17"/>
-                                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="5sm-SB-NFw" secondAttribute="trailing" constant="28" id="50Y-aR-qsi"/>
-                                                    <constraint firstItem="xKr-9K-lHQ" firstAttribute="top" secondItem="mOK-p2-RI6" secondAttribute="bottom" constant="24" id="6wq-Zj-knD"/>
-                                                    <constraint firstItem="dSm-Px-OH2" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="7iW-9f-IuA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="KDJ-OD-Om1" secondAttribute="trailing" constant="28" id="DUf-Qz-JZp"/>
-                                                    <constraint firstAttribute="trailing" secondItem="1kB-Oc-0hQ" secondAttribute="trailing" constant="28" id="DsK-A6-tvt"/>
-                                                    <constraint firstItem="BuM-WU-zNV" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" id="FP3-lz-Rwn"/>
-                                                    <constraint firstItem="xKr-9K-lHQ" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="FSu-RD-xFh"/>
-                                                    <constraint firstItem="Hcd-7l-b50" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="GAy-zY-gvD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Hcd-7l-b50" secondAttribute="trailing" constant="28" id="Gwl-5Y-CVq"/>
-                                                    <constraint firstAttribute="trailing" secondItem="BuM-WU-zNV" secondAttribute="trailing" id="HG3-sP-elK"/>
-                                                    <constraint firstItem="dSm-Px-OH2" firstAttribute="top" secondItem="xKr-9K-lHQ" secondAttribute="bottom" constant="24" id="K1F-40-cdM"/>
-                                                    <constraint firstItem="BuM-WU-zNV" firstAttribute="top" secondItem="lUf-1C-ne2" secondAttribute="bottom" constant="30" id="OjM-Ve-jY6"/>
-                                                    <constraint firstItem="mOK-p2-RI6" firstAttribute="top" secondItem="Loz-MM-3iG" secondAttribute="bottom" constant="37" id="OyE-lT-PN7"/>
-                                                    <constraint firstItem="mOK-p2-RI6" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="PWq-t5-vG8"/>
-                                                    <constraint firstItem="1kB-Oc-0hQ" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="Poy-LL-Qdu"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xKr-9K-lHQ" secondAttribute="trailing" constant="28" id="Uwv-2s-s0Z"/>
-                                                    <constraint firstItem="5sm-SB-NFw" firstAttribute="top" secondItem="BuM-WU-zNV" secondAttribute="bottom" constant="24" id="ZID-wJ-nEI"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mOK-p2-RI6" secondAttribute="trailing" constant="28" id="ad6-NI-Tc7"/>
-                                                    <constraint firstItem="lUf-1C-ne2" firstAttribute="top" secondItem="Hcd-7l-b50" secondAttribute="bottom" constant="24" id="dHA-pI-NV7"/>
-                                                    <constraint firstItem="Loz-MM-3iG" firstAttribute="top" secondItem="qCC-2R-VjT" secondAttribute="top" constant="14" id="eUL-aA-V16"/>
-                                                    <constraint firstItem="KDJ-OD-Om1" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="fIk-HC-fya"/>
-                                                    <constraint firstItem="lUf-1C-ne2" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="fxh-At-agy"/>
-                                                    <constraint firstItem="KDJ-OD-Om1" firstAttribute="top" secondItem="1kB-Oc-0hQ" secondAttribute="bottom" constant="24" id="gar-h4-ort"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dSm-Px-OH2" secondAttribute="trailing" constant="28" id="hsz-JO-iLf"/>
-                                                    <constraint firstItem="1kB-Oc-0hQ" firstAttribute="top" secondItem="5sm-SB-NFw" secondAttribute="bottom" constant="24" id="k1d-80-0dx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lUf-1C-ne2" secondAttribute="trailing" constant="28" id="l3Z-AO-7pG"/>
-                                                    <constraint firstItem="Hcd-7l-b50" firstAttribute="top" secondItem="dSm-Px-OH2" secondAttribute="bottom" constant="24" id="vLS-gf-B8x"/>
-                                                    <constraint firstItem="5sm-SB-NFw" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="vqV-Rg-K5Q"/>
-                                                    <constraint firstItem="Loz-MM-3iG" firstAttribute="leading" secondItem="qCC-2R-VjT" secondAttribute="leading" constant="19" id="w6w-xB-LS7"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="qCC-2R-VjT" secondAttribute="trailing" id="DHF-wp-8Bt"/>
-                                            <constraint firstItem="qCC-2R-VjT" firstAttribute="leading" secondItem="BUa-VZ-EZj" secondAttribute="leading" id="fv1-y3-USb"/>
-                                            <constraint firstItem="qCC-2R-VjT" firstAttribute="top" secondItem="BUa-VZ-EZj" secondAttribute="top" id="rga-wq-pVW"/>
-                                            <constraint firstAttribute="bottom" secondItem="qCC-2R-VjT" secondAttribute="bottom" id="rnU-m6-CEu"/>
-                                        </constraints>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="BUa-VZ-EZj" firstAttribute="top" secondItem="5i6-IG-GrL" secondAttribute="top" id="50N-nE-eHX"/>
-                                    <constraint firstItem="BUa-VZ-EZj" firstAttribute="leading" secondItem="5i6-IG-GrL" secondAttribute="leading" id="6Qg-Tn-QQ0"/>
-                                    <constraint firstAttribute="trailing" secondItem="BUa-VZ-EZj" secondAttribute="trailing" id="UrL-sn-b6J"/>
-                                    <constraint firstAttribute="bottom" secondItem="BUa-VZ-EZj" secondAttribute="bottom" id="vjV-O4-uzK"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="5i6-IG-GrL" firstAttribute="leading" secondItem="8CV-2Q-EB1" secondAttribute="leading" id="9hw-9Y-Sle"/>
-                            <constraint firstItem="qCC-2R-VjT" firstAttribute="width" secondItem="acg-Kt-ypk" secondAttribute="width" id="DCZ-b4-iSb"/>
-                            <constraint firstItem="5i6-IG-GrL" firstAttribute="trailing" secondItem="8CV-2Q-EB1" secondAttribute="trailing" id="EfS-4s-RHH"/>
-                            <constraint firstItem="5i6-IG-GrL" firstAttribute="top" secondItem="8CV-2Q-EB1" secondAttribute="top" id="J0t-Sv-LSZ"/>
-                            <constraint firstItem="5i6-IG-GrL" firstAttribute="bottom" secondItem="8CV-2Q-EB1" secondAttribute="bottom" id="LZO-pw-h5K"/>
-                            <constraint firstItem="qCC-2R-VjT" firstAttribute="height" secondItem="acg-Kt-ypk" secondAttribute="height" priority="250" id="nUa-hI-YCA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8CV-2Q-EB1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AIS-W1-jYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="747.9760119940031"/>
         </scene>
     </scenes>
     <resources>

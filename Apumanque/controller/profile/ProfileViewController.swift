@@ -9,7 +9,7 @@
 import UIKit
 import UICircularProgressRing
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: ViewController {
 
     @IBOutlet weak var menuViewProfile: UIView!
     @IBOutlet weak var circularProgress: UICircularProgressRingView!
@@ -25,8 +25,8 @@ class ProfileViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButton
+//        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+//        navigationItem.backBarButtonItem = backButton
         
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "logo"), for: .normal)
@@ -47,10 +47,16 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func campaignAction(_ sender: Any) {
+    }
+    
     @IBAction func lastWinnersAction(_ sender: Any) {
         
     }
     
+    @IBAction func helpAction(_ sender: Any) {
+        
+    }
     
     // MARK: - Navigation
 
