@@ -452,6 +452,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                                                         <connections>
                                                                             <action selector="helpAction:" destination="0Jd-yV-J7e" eventType="touchUpInside" id="L1Y-xM-2dU"/>
+                                                                            <segue destination="0Oc-Y3-Y3l" kind="show" identifier="profile_to_help_segue" id="iP3-t4-NC6"/>
                                                                         </connections>
                                                                     </button>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="i57-3h-lmH">
@@ -611,6 +612,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8u-Z3-FHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1130" y="-190"/>
+        </scene>
+        <!--help_view_controller-->
+        <scene sceneID="yS7-vg-iMC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="0Oc-Y3-Y3l" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MvR-ee-1Ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="-122"/>
         </scene>
         <!--login_view_controller-->
         <scene sceneID="QxA-eI-A4a">

@@ -25,8 +25,8 @@ class ProfileViewController: ViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        //        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
-        //        navigationItem.backBarButtonItem = backButton
+        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
         
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "logo"), for: .normal)
