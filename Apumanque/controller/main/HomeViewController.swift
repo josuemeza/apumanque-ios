@@ -157,6 +157,8 @@ extension HomeViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "home_to_news_segue", sender: nil)
         case .campaign:
             performSegue(withIdentifier: "home_to_valid_campaign_segue", sender: nil)
+        case .invoices:
+            tabBarController?.selectedIndex = 2
         }
     }
     

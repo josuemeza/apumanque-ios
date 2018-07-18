@@ -320,7 +320,7 @@
                 <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="ezh-As-ovq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M75-UM-d5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2159" y="341"/>
+            <point key="canvasLocation" x="2089" y="614"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="F57-Lq-Jt4">
@@ -997,7 +997,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7k-dj-kUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="902"/>
+            <point key="canvasLocation" x="2788" y="913"/>
         </scene>
         <!--Store Categories View Controller-->
         <scene sceneID="f5f-px-KAT">

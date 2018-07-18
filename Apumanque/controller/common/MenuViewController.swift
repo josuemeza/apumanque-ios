@@ -11,7 +11,7 @@ import UIKit
 // MARK: -
 // MARK: - Enumerations
 enum MenuViewSelection {
-    case login, logout, editUser, contact, register, discounts, stores, featured, news, services, campaign
+    case login, logout, editUser, contact, register, discounts, stores, featured, news, services, campaign, invoices
 }
 
 // MARK: -
@@ -70,17 +70,35 @@ class MenuViewController: ViewController {
     }
     
     @IBAction func logoutAction(_ sender: Any?) {
-        Session.logout()
-        User.all(on: managedObjectContext)?.forEach { user in managedObjectContext.delete(user) }
-        logoutButton.isHidden = !Session.isLogged
-        tableView.reloadData()
-        delegate?.menuViewController(self, didSelect: .logout)
+        let alert = UIAlertController(title: "Cierre de sesión", message: "¿Estás seguro que deseas cerrar la sesión?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
+            
+            self.Session.logout()
+            User.all(on: self.managedObjectContext)?.forEach { user in self.managedObjectContext.delete(user) }
+            self.logoutButton.isHidden = !self.Session.isLogged
+            self.tableView.reloadData()
+            self.delegate?.menuViewController(self, didSelect: .logout)
+            
+        }))
+        
+        self.present(alert, animated: true)
+        
     }
     
     @IBAction func discountsSegueAction(_ sender: Any?) {
         hideMenu {
             self.dismiss(animated: false) {
                 self.delegate?.menuViewController(self, didSelect: .discounts)
+            }
+        }
+    }
+    
+    @IBAction func invoicesSegueAction(_ sender: Any?) {
+        hideMenu {
+            self.dismiss(animated: false) {
+                self.delegate?.menuViewController(self, didSelect: .invoices)
             }
         }
     }
@@ -124,7 +142,7 @@ class MenuViewController: ViewController {
             completion()
         })
     }
-
+    
 }
 
 // MARK: -

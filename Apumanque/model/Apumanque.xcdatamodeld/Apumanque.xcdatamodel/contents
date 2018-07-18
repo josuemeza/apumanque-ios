@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Campaing" representedClassName="Campaing" syncable="YES">
         <attribute name="code" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="contentCampaign" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,6 +27,11 @@
         <attribute name="valuePercent" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="discounts" inverseEntity="Store" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="discounts" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Help" representedClassName="Help" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="HomeCategory" representedClassName="HomeCategory" syncable="YES">
         <attribute name="background" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -108,5 +113,6 @@
         <element name="StoreCategory" positionX="286" positionY="360" width="128" height="135"/>
         <element name="StoreSearch" positionX="97" positionY="137" width="128" height="88"/>
         <element name="User" positionX="718" positionY="-18" width="128" height="240"/>
+        <element name="Help" positionX="306" positionY="135" width="128" height="90"/>
     </elements>
 </model>

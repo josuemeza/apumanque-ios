@@ -35,6 +35,7 @@ class NewsViewController: BlurredViewController {
         news = News.all(on: managedObjectContext)
         segmentedControl.setWidth(120, forSegmentAt: 2)
         filterNewsItems()
+        segmentedControl.selectedSegmentIndex = 2
     }
     
     // MARK: - Navigation view controller methods
