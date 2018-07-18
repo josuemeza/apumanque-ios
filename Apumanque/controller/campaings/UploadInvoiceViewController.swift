@@ -32,6 +32,7 @@ class UploadInvoiceViewController: ViewController {
         contentView.roundOut(radious: 10)
         saveAndContinueButton.roundOut(radious: 28)
         
+        print("CAMPANIAS \(Session.currentUser?.rut)")
         
 //        let view = UIView()
 //        let button = UIButton(type: .system)

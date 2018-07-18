@@ -757,7 +757,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="dialog_rut_view_controller" id="im8-9a-yzK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-Bj-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3394" y="831"/>
+            <point key="canvasLocation" x="-3274" y="549"/>
         </scene>
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">

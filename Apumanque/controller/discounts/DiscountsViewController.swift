@@ -246,6 +246,8 @@ extension DiscountsViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "discounts_to_news_segue", sender: nil)
         case .campaign:
             performSegue(withIdentifier: "discounts_to_valid_campaign_segue", sender: nil)
+        case .invoices:
+            tabBarController?.selectedIndex = 2
         }
     }
     

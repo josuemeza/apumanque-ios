@@ -44,6 +44,7 @@ class CampaingsViewController: ViewController {
     
 
     @IBAction func uploadInvoiceButtonTap(_ sender: Any) {
+        
     }
     
     
@@ -91,6 +92,8 @@ extension CampaingsViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "campaings_to_news_segue", sender: nil)
         case .campaign:
             performSegue(withIdentifier: "campaings_to_valid_campaign_segue", sender: nil)
+        case .invoices:
+            tabBarController?.selectedIndex = 2
         }
     }
     

@@ -662,6 +662,9 @@
                                                                     <state key="normal" title="Subir boletas" image="voucher_icon_white">
                                                                         <color key="titleColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="invoicesSegueAction:" destination="Hzv-UW-yhm" eventType="touchUpInside" id="K24-Ax-mak"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunes a sábado: 10:00 a 21:00 hrs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpu-3x-0Si">
                                                                     <rect key="frame" x="142" y="108.5" width="92" height="23.5"/>
@@ -938,7 +941,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uzg-mT-j6U">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uzg-mT-j6U">
                                         <rect key="frame" x="0.0" y="139" width="375" height="508"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -972,10 +975,10 @@
                                                             </constraints>
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-CA-Akf">
-                                                            <rect key="frame" x="333" y="21" width="37" height="32"/>
+                                                            <rect key="frame" x="343" y="26" width="27" height="22"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="1jS-rU-L3Z"/>
-                                                                <constraint firstAttribute="width" constant="37" id="owT-Wd-V1f"/>
+                                                                <constraint firstAttribute="height" constant="22" id="1jS-rU-L3Z"/>
+                                                                <constraint firstAttribute="width" constant="27" id="owT-Wd-V1f"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
