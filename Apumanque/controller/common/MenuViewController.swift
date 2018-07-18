@@ -72,14 +72,16 @@ class MenuViewController: ViewController {
     @IBAction func logoutAction(_ sender: Any?) {
         let alert = UIAlertController(title: "Cierre de sesión", message: "¿Estás seguro que deseas cerrar la sesión?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
-        
         alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
-            
-            self.Session.logout()
-            User.all(on: self.managedObjectContext)?.forEach { user in self.managedObjectContext.delete(user) }
-            self.logoutButton.isHidden = !self.Session.isLogged
-            self.tableView.reloadData()
-            self.delegate?.menuViewController(self, didSelect: .logout)
+            let button = sender as! UIButton
+            button.isHidden = true
+            self.Session.logout {
+                button.isHidden = false
+                User.all(on: self.managedObjectContext)?.forEach { user in self.managedObjectContext.delete(user) }
+                self.logoutButton.isHidden = !self.Session.isLogged
+                self.tableView.reloadData()
+                self.delegate?.menuViewController(self, didSelect: .logout)
+            }
             
         }))
         
