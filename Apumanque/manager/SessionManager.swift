@@ -25,9 +25,10 @@ class SessionManager {
             if let result = result {
                 self.currentUser = result.user
                 self.currentUser?.token = result.token
-                print(result.token)
                 NetworkingManager.singleton.spetialSales { _ in
-                    completion(true)
+                    NetworkingManager.singleton.featuredSpetialSales { _ in
+                        completion(true)
+                    }
                 }
             } else {
                 completion(false)
@@ -35,8 +36,13 @@ class SessionManager {
         })
     }
     
-    func logout() {
+    func logout(completion: @escaping () -> Void) {
         currentUser = nil
+        NetworkingManager.singleton.spetialSales { _ in
+            NetworkingManager.singleton.featuredSpetialSales { _ in
+                completion()
+            }
+        }
     }
     
     // MARK: - Singleton definition
