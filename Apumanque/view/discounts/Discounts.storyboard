@@ -1074,7 +1074,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="login_view_controller" id="pbk-tP-HuM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tet-RT-vTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="-523"/>
+            <point key="canvasLocation" x="491" y="-760"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="ArH-Rz-xLa">
@@ -1082,7 +1082,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="menu_view_controller" id="ceg-RU-Oe6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy7-xN-q47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="-569"/>
+            <point key="canvasLocation" x="492" y="-814"/>
         </scene>
         <!--register_view_controller-->
         <scene sceneID="J60-uD-dvr">
@@ -1090,7 +1090,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="register_view_controller" id="YLA-ky-e4e" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30N-Dh-j8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="-475"/>
+            <point key="canvasLocation" x="505" y="-708"/>
         </scene>
         <!--contact_view_controller-->
         <scene sceneID="aov-nz-jIf">
@@ -1098,7 +1098,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="contact_view_controller" id="PgN-J6-5qa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7n-U2-fkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="-386"/>
+            <point key="canvasLocation" x="506" y="-488"/>
         </scene>
         <!--services_view_controller-->
         <scene sceneID="R3C-B6-U16">
@@ -1106,7 +1106,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="xv5-cI-e25" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imf-Cc-Bpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="-348"/>
+            <point key="canvasLocation" x="512" y="-442"/>
         </scene>
         <!--stores_view_controller-->
         <scene sceneID="zIh-bp-cvr">
@@ -1114,7 +1114,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="stores_view_controller" id="hec-d4-smW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec3-TE-0HB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="-302"/>
+            <point key="canvasLocation" x="503" y="-389"/>
         </scene>
         <!--featured_view_controller-->
         <scene sceneID="m1C-Fy-V66">
@@ -1122,7 +1122,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="featured_view_controller" id="V6d-To-8dx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVO-pI-mPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-612"/>
+            <point key="canvasLocation" x="504" y="-871"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="f0R-DD-G7j">
@@ -1130,7 +1130,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="jGv-XO-W6n" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kz-AU-MYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-429"/>
+            <point key="canvasLocation" x="509" y="-534"/>
         </scene>
         <!--news_view_controller-->
         <scene sceneID="eT8-dM-ZMB">
@@ -1138,7 +1138,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="X2F-tc-Fh6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhY-8B-HTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-237"/>
+            <point key="canvasLocation" x="489" y="-333"/>
         </scene>
         <!--valid_campaign_view_controller-->
         <scene sceneID="zqN-bi-U6T">

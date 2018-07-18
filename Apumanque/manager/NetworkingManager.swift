@@ -47,7 +47,7 @@ class NetworkingManager {
     
     private func user(action: HTTPMethod, user: User, completion: @escaping Callback<User>) {
         let endpoint = "/hxc/api/user/\(action == .put ? "\(user.id!)/" : "")"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
         // TODO: review commune on user put API
         var parameters: Parameters = [
             "username": user.email!,
@@ -95,11 +95,11 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         Store.all(on: context)?.forEach { store in context.delete(store) }
         let endpoint = "/basicmall/api/stores/"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
-                print("TOKEN \(SessionManager.singleton.token!)")
+                print("TOKEN \(SessionManager.singleton.defaultToken!)")
                 guard let storesJSON = JSON(value)["results"].array else { completion(nil) ; return }
                 var stores = [Store]()
                 for storeJSON in storesJSON {
@@ -120,7 +120,7 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         StoreCategory.all(on: context)?.forEach { category in context.delete(category) }
         let endpoint = "/basicmall/api/categories/"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -144,7 +144,8 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         Discount.all(featured: false, on: context)?.forEach { discount in context.delete(discount) }
         let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let token = SessionManager.singleton.isLogged ? SessionManager.singleton.currentUser!.token! : SessionManager.singleton.defaultToken!
+        let headers: HTTPHeaders = ["Authorization": "token \(token)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -174,7 +175,8 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         Discount.all(featured: true, on: context)?.forEach { discount in context.delete(discount) }
         let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/?code=featuredProduct"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let token = SessionManager.singleton.isLogged ? SessionManager.singleton.currentUser!.token! : SessionManager.singleton.defaultToken!
+        let headers: HTTPHeaders = ["Authorization": "token \(token)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -204,7 +206,7 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         Campaing.all(on: context)?.forEach { campaing in context.delete(campaing) }
         let endpoint = "/basicmall/api/campaigns/"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -230,7 +232,7 @@ class NetworkingManager {
         guard let context = context else { completion(nil) ; return }
         News.all(on: context)?.forEach { news in context.delete(news) }
         let endpoint = "/news/api/news/"
-        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.token!)"]
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):

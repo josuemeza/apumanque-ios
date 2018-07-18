@@ -13,12 +13,8 @@ class SessionManager {
     
     // MARK: - Attributes
     
-    var defaultToken: String? {
-        didSet {
-            token = defaultToken
-        }
-    }
-    var token: String?
+    var defaultToken: String?
+//    var token: String?
     var currentUser: User?
     var isLogged: Bool { get { return currentUser != nil } }
     
@@ -28,7 +24,8 @@ class SessionManager {
         NetworkingManager.singleton.login(username: username, password: password, completion: { result in
             if let result = result {
                 self.currentUser = result.user
-                self.token = result.token
+                self.currentUser?.token = result.token
+                print(result.token)
                 NetworkingManager.singleton.spetialSales { _ in
                     completion(true)
                 }
@@ -39,7 +36,6 @@ class SessionManager {
     }
     
     func logout() {
-        token = defaultToken
         currentUser = nil
     }
     

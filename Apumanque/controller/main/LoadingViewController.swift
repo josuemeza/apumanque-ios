@@ -24,7 +24,6 @@ class LoadingViewController: ViewController {
         NetworkingManager.singleton.requestData { data in
             if let user = User.all(on: self.managedObjectContext)?.theOnlyOneElement {
                 self.Session.currentUser = user
-                self.Session.token = user.token
             }
             if let json = data {
                 SessionManager.singleton.defaultToken = json["results"][0]["token"].string
