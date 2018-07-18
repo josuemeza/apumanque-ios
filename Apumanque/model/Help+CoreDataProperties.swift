@@ -2,7 +2,7 @@
 //  Help+CoreDataProperties.swift
 //  
 //
-//  Created by Jimmy Hernandez on 18-07-18.
+//  Created by Josue Meza Peña on 18-07-18.
 //
 //
 

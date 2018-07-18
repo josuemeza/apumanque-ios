@@ -17,14 +17,12 @@ class HelpViewCommonController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         helpArray = Help.all(on: managedObjectContext)
-        
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "logo"), for: .normal)
         let barButtonItem = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = barButtonItem
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        print(helpArray.count)
     }
     
     

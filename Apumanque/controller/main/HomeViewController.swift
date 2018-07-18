@@ -59,11 +59,15 @@ class HomeViewController: ViewController {
             let viewController = segue.destination as! MenuViewController
             viewController.delegate = self
         } else if segue.destination is BlurredViewController {
-            let viewController = segue.destination as! BlurredViewController
+            let viewController: BlurredViewController
+            if segue.identifier == "home_to_winner_segue" {
+                let destination = segue.destination as! NewsViewController
+                destination.isContestDefault = true
+                viewController = destination
+            } else {
+                viewController = segue.destination as! BlurredViewController
+            }
             viewController.backgroundImage = view.takeScreenshot()
-        } else if segue.identifier == "home_to_winner_segue" {
-            let destination = segue.destination as! NewsViewController
-            destination.isContestDefault = true
         }
     }
     

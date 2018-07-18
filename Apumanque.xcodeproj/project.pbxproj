@@ -42,8 +42,7 @@
 		F27876E320F3181F000D5B9D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27876E220F3181F000D5B9D /* News.storyboard */; };
 		F27876E620F318DD000D5B9D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876E520F318DD000D5B9D /* NewsViewController.swift */; };
 		F285909020B9C0CF00AD6B7A /* Discounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */; };
-		F298133920FF11A700A34BB8 /* Help+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133720FF11A600A34BB8 /* Help+CoreDataProperties.swift */; };
-		F298133A20FF11A700A34BB8 /* Help+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133820FF11A700A34BB8 /* Help+CoreDataClass.swift */; };
+		F298133920FF11A700A34BB8 /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133720FF11A600A34BB8 /* Discount+CoreDataProperties.swift */; };
 		F298133C20FF120000A34BB8 /* HelpCommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133B20FF120000A34BB8 /* HelpCommonTableViewCell.swift */; };
 		F298133E20FF128700A34BB8 /* HelpViewCommonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133D20FF128700A34BB8 /* HelpViewCommonController.swift */; };
 		F2C2DD1120D8938A001314C2 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2DD1020D8938A001314C2 /* Featured.storyboard */; };
@@ -67,6 +66,9 @@
 		FA1E82C520BD175000B69D2B /* BlurredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C420BD175000B69D2B /* BlurredViewController.swift */; };
 		FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */; };
 		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
+		FA2D68BD20FF9DA80050C648 /* Help+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D68BB20FF9DA70050C648 /* Help+CoreDataClass.swift */; };
+		FA2D68BE20FF9DA80050C648 /* Help+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D68BC20FF9DA70050C648 /* Help+CoreDataProperties.swift */; };
+		FA2D68C020FF9E070050C648 /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D68BF20FF9E070050C648 /* Discount+CoreDataClass.swift */; };
 		FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33A2B320F2F24E00946E37 /* SearchViewController.swift */; };
 		FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */; };
 		FA3701A920FC7D0A0066790B /* NewsSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */; };
@@ -82,8 +84,6 @@
 		FA8D49B520FD533800B6ADD2 /* NewsType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49AF20FD533800B6ADD2 /* NewsType+CoreDataClass.swift */; };
 		FA8D49B620FD533800B6ADD2 /* NewsFile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49B020FD533800B6ADD2 /* NewsFile+CoreDataClass.swift */; };
 		FA8D49B720FD533800B6ADD2 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */; };
-		FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */; };
-		FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */; };
 		FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2154820ACFD8F0034A4B5 /* String.swift */; };
 		FAA2154D20AD17020034A4B5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2154C20AD17020034A4B5 /* UIColor.swift */; };
 		FAB20BFF20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB20BFE20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift */; };
@@ -161,8 +161,7 @@
 		F27876E220F3181F000D5B9D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		F27876E520F318DD000D5B9D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discounts.storyboard; sourceTree = "<group>"; };
-		F298133720FF11A600A34BB8 /* Help+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Help+CoreDataProperties.swift"; path = "/Users/jimmyhernandez/apumanque-ios/Apumanque/model/Help+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		F298133820FF11A700A34BB8 /* Help+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Help+CoreDataClass.swift"; path = "/Users/jimmyhernandez/apumanque-ios/Apumanque/model/Help+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		F298133720FF11A600A34BB8 /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F298133B20FF120000A34BB8 /* HelpCommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommonTableViewCell.swift; sourceTree = "<group>"; };
 		F298133D20FF128700A34BB8 /* HelpViewCommonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewCommonController.swift; sourceTree = "<group>"; };
 		F2C2DD1020D8938A001314C2 /* Featured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
@@ -187,6 +186,9 @@
 		FA1E82C420BD175000B69D2B /* BlurredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredViewController.swift; sourceTree = "<group>"; };
 		FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
+		FA2D68BB20FF9DA70050C648 /* Help+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Help+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA2D68BC20FF9DA70050C648 /* Help+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Help+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA2D68BF20FF9E070050C648 /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA33A2B320F2F24E00946E37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSingleViewController.swift; sourceTree = "<group>"; };
@@ -202,8 +204,6 @@
 		FA8D49AF20FD533800B6ADD2 /* NewsType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA8D49B020FD533800B6ADD2 /* NewsFile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsFile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA2154820ACFD8F0034A4B5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FAA2154C20AD17020034A4B5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FAB20BFE20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSingleDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -550,12 +550,12 @@
 			isa = PBXGroup;
 			children = (
 				FAF6C74520ABB11800DD1CD1 /* Apumanque.xcdatamodeld */,
-				F298133820FF11A700A34BB8 /* Help+CoreDataClass.swift */,
-				F298133720FF11A600A34BB8 /* Help+CoreDataProperties.swift */,
 				F24B48FD20F25B8000ACE518 /* Campaing+CoreDataClass.swift */,
 				F24B48FF20F25B8500ACE518 /* Campaing+CoreDataProperties.swift */,
-				FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */,
-				FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */,
+				FA2D68BF20FF9E070050C648 /* Discount+CoreDataClass.swift */,
+				F298133720FF11A600A34BB8 /* Discount+CoreDataProperties.swift */,
+				FA2D68BB20FF9DA70050C648 /* Help+CoreDataClass.swift */,
+				FA2D68BC20FF9DA70050C648 /* Help+CoreDataProperties.swift */,
 				FAF1AC3220ACD9DA00F01D59 /* HomeCategory+CoreDataClass.swift */,
 				FAF1AC3320ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift */,
 				FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */,
@@ -844,7 +844,6 @@
 			files = (
 				F20620CE20B0CC0400D5BA3C /* EditProfileViewController.swift in Sources */,
 				FAD1E75D20BD293D00F6CABF /* StoreCategory+CoreDataClass.swift in Sources */,
-				FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */,
 				FAC36A3220BF62C1008BD508 /* DiscountTableViewCell.swift in Sources */,
 				FAF1AC1C20AC5E2500F01D59 /* UIView.swift in Sources */,
 				FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */,
@@ -859,11 +858,11 @@
 				FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */,
 				FAF1AC3120ACD5AA00F01D59 /* LoadingViewController.swift in Sources */,
 				F298133E20FF128700A34BB8 /* HelpViewCommonController.swift in Sources */,
-				F298133A20FF11A700A34BB8 /* Help+CoreDataClass.swift in Sources */,
 				FADC0E5920F33948004BB4D8 /* FeaturedTableViewCell.swift in Sources */,
 				F2CE050820C8BF4D006565AC /* WheelchairViewController.swift in Sources */,
 				F22D79CA20EDDC4200FD326B /* ServicesViewController.swift in Sources */,
 				F2CE050220C8BAEE006565AC /* ServicesMainViewController.swift in Sources */,
+				FA2D68BE20FF9DA80050C648 /* Help+CoreDataProperties.swift in Sources */,
 				F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */,
 				FA8D49B320FD533800B6ADD2 /* NewsType+CoreDataProperties.swift in Sources */,
 				FAF1AC2F20ACD3A100F01D59 /* ApplicationManager.swift in Sources */,
@@ -884,7 +883,6 @@
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
 				FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */,
-				FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */,
 				F298133C20FF120000A34BB8 /* HelpCommonTableViewCell.swift in Sources */,
 				FAF1AC2D20ACC55600F01D59 /* NetworkingManager.swift in Sources */,
 				FAF1AC1720AC008800F01D59 /* MenuViewController.swift in Sources */,
@@ -905,6 +903,7 @@
 				FAF1AC2220AC72FB00F01D59 /* UIButton.swift in Sources */,
 				FAB20BFF20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift in Sources */,
 				FAF6C74720ABB11800DD1CD1 /* Apumanque.xcdatamodeld in Sources */,
+				FA2D68BD20FF9DA80050C648 /* Help+CoreDataClass.swift in Sources */,
 				F2E0BED920CF67DB003D2AF8 /* ProfileViewController.swift in Sources */,
 				F20620D620B1CB5F00D5BA3C /* DiscountsViewController.swift in Sources */,
 				F27876E620F318DD000D5B9D /* NewsViewController.swift in Sources */,
@@ -914,7 +913,7 @@
 				F2CE050420C8BE20006565AC /* ServicesContainerViewController.swift in Sources */,
 				F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */,
 				FAF1AC3520ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift in Sources */,
-				F298133920FF11A700A34BB8 /* Help+CoreDataProperties.swift in Sources */,
+				F298133920FF11A700A34BB8 /* Discount+CoreDataProperties.swift in Sources */,
 				FAF1AC1220ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift in Sources */,
 				FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */,
 				F2738AD420EB191B00227728 /* StoreFixViewController.swift in Sources */,
@@ -929,6 +928,7 @@
 				F24B490020F25B8500ACE518 /* Campaing+CoreDataProperties.swift in Sources */,
 				F24B48FE20F25B8000ACE518 /* Campaing+CoreDataClass.swift in Sources */,
 				F2C2DD1420D8AC7A001314C2 /* FeaturedViewController.swift in Sources */,
+				FA2D68C020FF9E070050C648 /* Discount+CoreDataClass.swift in Sources */,
 				FAF6C73F20ABB11800DD1CD1 /* AppDelegate.swift in Sources */,
 				F2CE050E20C8BFCC006565AC /* BabycarriageViewController.swift in Sources */,
 				F21259F220EC69C800BF6422 /* SearchMapViewController.swift in Sources */,

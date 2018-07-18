@@ -23,17 +23,9 @@ public class Help: NSManagedObject {
     }
     
     func setData(from json: JSON) -> Bool {
-        let array = json["results"][0]["config"][1]["menues"][2]["options"].arrayValue
-        for item in array {
-            let questions = Help(context: managedObjectContext!)
-            questions.question = item["name"].string
-            questions.answer = item["texts"][0]["description"].string
-            questions.order = Int16(item["order"].intValue)
-            
-            questionsItems.append(questions)
-            print("AQUI ESTAMOS")
-        }
-        
+        question = json["name"].string
+        answer = json["texts"][0]["description"].string
+        order = Int16(json["order"].intValue)
         return true
     }
     

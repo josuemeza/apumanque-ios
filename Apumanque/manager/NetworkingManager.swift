@@ -270,8 +270,10 @@ class NetworkingManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let help = Help(context: context)
-                help.setData(from: json)
+                for helpJSON in json["results"][0]["config"][1]["menues"][2]["options"].array ?? [] {
+                    let help = Help(context: context)
+                    _ = help.setData(from: helpJSON)
+                }
                 completion(json)
             case .failure(let responseError):
                 print(responseError.localizedDescription)
