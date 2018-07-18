@@ -37,11 +37,14 @@
 		F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C81E20CCF43300718811 /* CampaingsViewController.swift */; };
 		F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */; };
 		F251C82420CE322200718811 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82320CE322200718811 /* HelpViewController.swift */; };
+		F25FA46320F5D5DB00A46C0E /* Help+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25FA46120F5D5DB00A46C0E /* Help+CoreDataClass.swift */; };
+		F25FA46420F5D5DB00A46C0E /* Help+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25FA46220F5D5DB00A46C0E /* Help+CoreDataProperties.swift */; };
 		F2738AD420EB191B00227728 /* StoreFixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2738AD320EB191B00227728 /* StoreFixViewController.swift */; };
 		F27876E020F2F443000D5B9D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876DF20F2F443000D5B9D /* GradientView.swift */; };
 		F27876E320F3181F000D5B9D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27876E220F3181F000D5B9D /* News.storyboard */; };
 		F27876E620F318DD000D5B9D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876E520F318DD000D5B9D /* NewsViewController.swift */; };
 		F285909020B9C0CF00AD6B7A /* Discounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */; };
+		F29A18F720FD3AB700835501 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A18F620FD3AB700835501 /* TicketsViewController.swift */; };
 		F2C2DD1120D8938A001314C2 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2DD1020D8938A001314C2 /* Featured.storyboard */; };
 		F2C2DD1420D8AC7A001314C2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2DD1320D8AC7A001314C2 /* FeaturedViewController.swift */; };
 		F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C720E820CC46B200E2C50E /* DesignableView.swift */; };
@@ -57,6 +60,8 @@
 		F2E0BED620CF5C31003D2AF8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */; };
 		F2E0BED920CF67DB003D2AF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0BED820CF67DB003D2AF8 /* ProfileViewController.swift */; };
 		F2F9F23E20F57ECF00DF6EC5 /* DialogRutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */; };
+		F2F9F24020F5AF7200DF6EC5 /* HelpViewCommonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9F23F20F5AF7200DF6EC5 /* HelpViewCommonController.swift */; };
+		F2F9F24220F5CDCD00DF6EC5 /* HelpCommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9F24120F5CDCD00DF6EC5 /* HelpCommonTableViewCell.swift */; };
 		FA11EAC820BE78E600AE07D5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11EAC620BE78E600AE07D5 /* User+CoreDataClass.swift */; };
 		FA11EAC920BE78E600AE07D5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */; };
 		FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E82C220BCFC0800B69D2B /* SessionManager.swift */; };
@@ -152,11 +157,14 @@
 		F251C81E20CCF43300718811 /* CampaingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaingsViewController.swift; sourceTree = "<group>"; };
 		F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInvoiceViewController.swift; sourceTree = "<group>"; };
 		F251C82320CE322200718811 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		F25FA46120F5D5DB00A46C0E /* Help+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Help+CoreDataClass.swift"; path = "/Users/jimmyhernandez/apumanque-ios/Apumanque/model/Help+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		F25FA46220F5D5DB00A46C0E /* Help+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Help+CoreDataProperties.swift"; path = "/Users/jimmyhernandez/apumanque-ios/Apumanque/model/Help+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		F2738AD320EB191B00227728 /* StoreFixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFixViewController.swift; sourceTree = "<group>"; };
 		F27876DF20F2F443000D5B9D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F27876E220F3181F000D5B9D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		F27876E520F318DD000D5B9D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discounts.storyboard; sourceTree = "<group>"; };
+		F29A18F620FD3AB700835501 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		F2C2DD1020D8938A001314C2 /* Featured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
 		F2C2DD1320D8AC7A001314C2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		F2C720E820CC46B200E2C50E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 		F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		F2E0BED820CF67DB003D2AF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRutViewController.swift; sourceTree = "<group>"; };
+		F2F9F23F20F5AF7200DF6EC5 /* HelpViewCommonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewCommonController.swift; sourceTree = "<group>"; };
+		F2F9F24120F5CDCD00DF6EC5 /* HelpCommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommonTableViewCell.swift; sourceTree = "<group>"; };
 		F93EDBC0369E877F99105467 /* Pods_Apumanque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apumanque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA11EAC620BE78E600AE07D5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA11EAC720BE78E600AE07D5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -421,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E0BED820CF67DB003D2AF8 /* ProfileViewController.swift */,
+				F29A18F620FD3AB700835501 /* TicketsViewController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -434,6 +445,7 @@
 				F2C720E820CC46B200E2C50E /* DesignableView.swift */,
 				F21259F120EC69C800BF6422 /* SearchMapViewController.swift */,
 				F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */,
+				F2F9F23F20F5AF7200DF6EC5 /* HelpViewCommonController.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -445,6 +457,7 @@
 				FAF1AC2520AC784100F01D59 /* MenuLoggedTableViewCell.swift */,
 				FAF1AC1D20AC6D6B00F01D59 /* MenuItemTableViewCell.swift */,
 				FAF1AC2320AC74A900F01D59 /* MenuFooterTableViewCell.swift */,
+				F2F9F24120F5CDCD00DF6EC5 /* HelpCommonTableViewCell.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -540,6 +553,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF6C74520ABB11800DD1CD1 /* Apumanque.xcdatamodeld */,
+				F25FA46120F5D5DB00A46C0E /* Help+CoreDataClass.swift */,
+				F25FA46220F5D5DB00A46C0E /* Help+CoreDataProperties.swift */,
 				F24B48FD20F25B8000ACE518 /* Campaing+CoreDataClass.swift */,
 				F24B48FF20F25B8500ACE518 /* Campaing+CoreDataProperties.swift */,
 				FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */,
@@ -830,6 +845,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F9F24020F5AF7200DF6EC5 /* HelpViewCommonController.swift in Sources */,
 				F20620CE20B0CC0400D5BA3C /* EditProfileViewController.swift in Sources */,
 				FAD1E75D20BD293D00F6CABF /* StoreCategory+CoreDataClass.swift in Sources */,
 				FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */,
@@ -865,11 +881,13 @@
 				FAD1E76220BD341B00F6CABF /* StoreViewController.swift in Sources */,
 				FAF1AC1520ABD0B400F01D59 /* HomeViewController.swift in Sources */,
 				FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */,
+				F25FA46320F5D5DB00A46C0E /* Help+CoreDataClass.swift in Sources */,
 				FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */,
 				FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */,
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
 				FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */,
+				F29A18F720FD3AB700835501 /* TicketsViewController.swift in Sources */,
 				FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */,
 				FAF1AC2D20ACC55600F01D59 /* NetworkingManager.swift in Sources */,
 				FAF1AC1720AC008800F01D59 /* MenuViewController.swift in Sources */,
@@ -891,11 +909,13 @@
 				FAB20BFF20C3515000A62485 /* StoreSingleDiscountCollectionViewCell.swift in Sources */,
 				FAF6C74720ABB11800DD1CD1 /* Apumanque.xcdatamodeld in Sources */,
 				F2E0BED920CF67DB003D2AF8 /* ProfileViewController.swift in Sources */,
+				F2F9F24220F5CDCD00DF6EC5 /* HelpCommonTableViewCell.swift in Sources */,
 				F20620D620B1CB5F00D5BA3C /* DiscountsViewController.swift in Sources */,
 				F27876E620F318DD000D5B9D /* NewsViewController.swift in Sources */,
 				FAD1E75E20BD293D00F6CABF /* Store+CoreDataProperties.swift in Sources */,
 				FAF1AC2420AC74A900F01D59 /* MenuFooterTableViewCell.swift in Sources */,
 				F23AC1A520F19F8900D21F8E /* ValidCampaingsViewController.swift in Sources */,
+				F25FA46420F5D5DB00A46C0E /* Help+CoreDataProperties.swift in Sources */,
 				F2CE050420C8BE20006565AC /* ServicesContainerViewController.swift in Sources */,
 				F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */,
 				FAF1AC3520ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift in Sources */,

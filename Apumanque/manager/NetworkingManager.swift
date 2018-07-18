@@ -261,12 +261,15 @@ class NetworkingManager {
     }
     
     func requestData(completion: @escaping Callback<JSON>) {
+        guard let context = context else { completion(nil) ; return }
         let endpoint = "/hxc/api/login_token/"
         let parameters: Parameters = ["username": "apumanque_user", "password": "apumanque2018"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .post, parameters: parameters).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                let help = Help(context: context)
+                help.setData(from: json) 
                 completion(json)
             case .failure(let responseError):
                 print(responseError.localizedDescription)
