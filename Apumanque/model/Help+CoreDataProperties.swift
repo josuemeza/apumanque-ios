@@ -2,7 +2,7 @@
 //  Help+CoreDataProperties.swift
 //  
 //
-//  Created by Jimmy Hernandez on 11-07-18.
+//  Created by Jimmy Hernandez on 17-07-18.
 //
 //
 
@@ -16,8 +16,8 @@ extension Help {
         return NSFetchRequest<Help>(entityName: "Help")
     }
 
+    @NSManaged public var question: String?
     @NSManaged public var answer: String?
     @NSManaged public var order: Int16
-    @NSManaged public var question: String?
 
 }
