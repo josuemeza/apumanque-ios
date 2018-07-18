@@ -75,7 +75,7 @@ class MenuViewController: ViewController {
         alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
             let button = sender as! UIButton
             button.isHidden = true
-            Session.logout {
+            self.Session.logout {
                 button.isHidden = false
                 User.all(on: self.managedObjectContext)?.forEach { user in self.managedObjectContext.delete(user) }
                 self.logoutButton.isHidden = !self.Session.isLogged
