@@ -22,6 +22,10 @@ class LoadingViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkingManager.singleton.requestData { data in
+            if let user = User.all(on: self.managedObjectContext)?.theOnlyOneElement {
+                self.Session.currentUser = user
+                self.Session.token = user.token
+            }
             if let json = data {
                 SessionManager.singleton.defaultToken = json["results"][0]["token"].string
                 let menuItems = json["results"][0]["config"][1]["menues"][0]["options"].arrayValue
@@ -30,7 +34,9 @@ class LoadingViewController: ViewController {
                         NetworkingManager.singleton.spetialSales { discounts in
                             NetworkingManager.singleton.featuredSpetialSales { featured in
                                 NetworkingManager.singleton.campaings { campaings in
-                                    self.initMenuItems(from: menuItems)
+                                    NetworkingManager.singleton.news { news in
+                                        self.initMenuItems(from: menuItems)
+                                    }
                                 }
                             }
                         }

@@ -13,8 +13,14 @@ import SwiftyJSON
 @objc(User)
 public class User: NSManagedObject {
     
+    static func all(on context: NSManagedObjectContext) -> [User]? {
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        return try? context.fetch(request)
+    }
+    
     func setData(from json: JSON) -> Bool {
         id = String(json["id"].intValue)
+        token = json["token"].string
         firstName = json["first_name"].string
         lastName = json["last_name"].string
         email = json["email"].string

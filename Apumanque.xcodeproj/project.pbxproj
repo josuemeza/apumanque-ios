@@ -69,11 +69,20 @@
 		FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */; };
 		FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */; };
 		FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33A2B320F2F24E00946E37 /* SearchViewController.swift */; };
+		FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */; };
+		FA3701A920FC7D0A0066790B /* NewsSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */; };
 		FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25BE20C0B3140067151E /* DiscountViewController.swift */; };
 		FA5767D020F4578700C142D8 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */; };
 		FA5767D220F46A4100C142D8 /* RecentSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D120F46A4100C142D8 /* RecentSearchCollectionViewCell.swift */; };
 		FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D320F4792700C142D8 /* StoreSearch+CoreDataClass.swift */; };
 		FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5767D420F4792700C142D8 /* StoreSearch+CoreDataProperties.swift */; };
+		FA67AC0C20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67AC0B20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift */; };
+		FA8D49B220FD533800B6ADD2 /* NewsFile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49AC20FD533700B6ADD2 /* NewsFile+CoreDataProperties.swift */; };
+		FA8D49B320FD533800B6ADD2 /* NewsType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49AD20FD533700B6ADD2 /* NewsType+CoreDataProperties.swift */; };
+		FA8D49B420FD533800B6ADD2 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49AE20FD533800B6ADD2 /* News+CoreDataProperties.swift */; };
+		FA8D49B520FD533800B6ADD2 /* NewsType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49AF20FD533800B6ADD2 /* NewsType+CoreDataClass.swift */; };
+		FA8D49B620FD533800B6ADD2 /* NewsFile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49B020FD533800B6ADD2 /* NewsFile+CoreDataClass.swift */; };
+		FA8D49B720FD533800B6ADD2 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */; };
 		FAA15C0320BFB3CA00577FEE /* Discount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */; };
 		FAA15C0420BFB3CA00577FEE /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */; };
 		FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2154820ACFD8F0034A4B5 /* String.swift */; };
@@ -82,6 +91,7 @@
 		FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB20C0020C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift */; };
 		FAC36A3220BF62C1008BD508 /* DiscountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC36A3120BF62C1008BD508 /* DiscountTableViewCell.swift */; };
 		FAC36A3420BF62D4008BD508 /* DiscountCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC36A3320BF62D4008BD508 /* DiscountCategoryTableViewCell.swift */; };
+		FACE4B0120FC62B4005A2EDF /* NewsSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE4B0020FC62B4005A2EDF /* NewsSinglePageViewController.swift */; };
 		FAD1E75620BD221D00F6CABF /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E75520BD221D00F6CABF /* StoreListTableViewCell.swift */; };
 		FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E75720BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift */; };
 		FAD1E75C20BD293D00F6CABF /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1E75820BD293D00F6CABF /* Store+CoreDataClass.swift */; };
@@ -180,11 +190,20 @@
 		FA1F947220F25BFF00B5AF6D /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		FA2CB3D220F2834300DEE88E /* MyDiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiscountTableViewCell.swift; sourceTree = "<group>"; };
 		FA33A2B320F2F24E00946E37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSingleViewController.swift; sourceTree = "<group>"; };
 		FA4E25BE20C0B3140067151E /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		FA5767CF20F4578700C142D8 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
 		FA5767D120F46A4100C142D8 /* RecentSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA5767D320F4792700C142D8 /* StoreSearch+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreSearch+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA5767D420F4792700C142D8 /* StoreSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA67AC0B20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA8D49AC20FD533700B6ADD2 /* NewsFile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsFile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA8D49AD20FD533700B6ADD2 /* NewsType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA8D49AE20FD533800B6ADD2 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA8D49AF20FD533800B6ADD2 /* NewsType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA8D49B020FD533800B6ADD2 /* NewsFile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsFile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAA15C0120BFB3C900577FEE /* Discount+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA2154820ACFD8F0034A4B5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -193,6 +212,7 @@
 		FAB20C0020C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountOfStoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAC36A3120BF62C1008BD508 /* DiscountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountTableViewCell.swift; sourceTree = "<group>"; };
 		FAC36A3320BF62D4008BD508 /* DiscountCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		FACE4B0020FC62B4005A2EDF /* NewsSinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSinglePageViewController.swift; sourceTree = "<group>"; };
 		FAD1E75520BD221D00F6CABF /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		FAD1E75720BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoreCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAD1E75820BD293D00F6CABF /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -307,6 +327,7 @@
 		F27876E120F31812000D5B9D /* news */ = {
 			isa = PBXGroup;
 			children = (
+				FA67AC0920FC3DEF00CD8379 /* components */,
 				F27876E220F3181F000D5B9D /* News.storyboard */,
 			);
 			path = news;
@@ -316,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				F27876E520F318DD000D5B9D /* NewsViewController.swift */,
+				FA3701A820FC7D0A0066790B /* NewsSingleViewController.swift */,
+				FACE4B0020FC62B4005A2EDF /* NewsSinglePageViewController.swift */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -439,6 +462,23 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		FA67AC0920FC3DEF00CD8379 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FA67AC0A20FC3DFC00CD8379 /* news */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		FA67AC0A20FC3DFC00CD8379 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				FA67AC0B20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift */,
+				FA36A6AE20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift */,
+			);
+			path = news;
+			sourceTree = "<group>";
+		};
 		FAC36A2F20BF6290008BD508 /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +561,12 @@
 				FAA15C0220BFB3CA00577FEE /* Discount+CoreDataProperties.swift */,
 				FAF1AC3220ACD9DA00F01D59 /* HomeCategory+CoreDataClass.swift */,
 				FAF1AC3320ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift */,
+				FA8D49B120FD533800B6ADD2 /* News+CoreDataClass.swift */,
+				FA8D49AE20FD533800B6ADD2 /* News+CoreDataProperties.swift */,
+				FA8D49B020FD533800B6ADD2 /* NewsFile+CoreDataClass.swift */,
+				FA8D49AC20FD533700B6ADD2 /* NewsFile+CoreDataProperties.swift */,
+				FA8D49AF20FD533800B6ADD2 /* NewsType+CoreDataClass.swift */,
+				FA8D49AD20FD533700B6ADD2 /* NewsType+CoreDataProperties.swift */,
 				FAD1E75820BD293D00F6CABF /* Store+CoreDataClass.swift */,
 				FAD1E75A20BD293D00F6CABF /* Store+CoreDataProperties.swift */,
 				FAD1E75920BD293D00F6CABF /* StoreCategory+CoreDataClass.swift */,
@@ -755,6 +801,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyEssentials/SwiftyEssentials.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -765,6 +812,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyEssentials.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,6 +858,7 @@
 				FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */,
 				FA2CB3D320F2834300DEE88E /* MyDiscountTableViewCell.swift in Sources */,
 				F2CE050A20C8BF83006565AC /* BikeViewController.swift in Sources */,
+				FA8D49B620FD533800B6ADD2 /* NewsFile+CoreDataClass.swift in Sources */,
 				FAA2154920ACFD8F0034A4B5 /* String.swift in Sources */,
 				FAD1E75B20BD293D00F6CABF /* StoreCategory+CoreDataProperties.swift in Sources */,
 				FAF1AC3120ACD5AA00F01D59 /* LoadingViewController.swift in Sources */,
@@ -818,7 +867,10 @@
 				F22D79CA20EDDC4200FD326B /* ServicesViewController.swift in Sources */,
 				F2CE050220C8BAEE006565AC /* ServicesMainViewController.swift in Sources */,
 				F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */,
+				FA8D49B320FD533800B6ADD2 /* NewsType+CoreDataProperties.swift in Sources */,
 				FAF1AC2F20ACD3A100F01D59 /* ApplicationManager.swift in Sources */,
+				FA67AC0C20FC3E3E00CD8379 /* NewsListItemCollectionViewCell.swift in Sources */,
+				FACE4B0120FC62B4005A2EDF /* NewsSinglePageViewController.swift in Sources */,
 				F20620D020B1287F00D5BA3C /* StoresViewController.swift in Sources */,
 				FAD1E76020BD2E1E00F6CABF /* StoreCategoriesViewController.swift in Sources */,
 				F27876E020F2F443000D5B9D /* GradientView.swift in Sources */,
@@ -831,6 +883,7 @@
 				FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */,
 				F25FA46320F5D5DB00A46C0E /* Help+CoreDataClass.swift in Sources */,
 				FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */,
+				FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */,
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
 				FA5767D620F4792700C142D8 /* StoreSearch+CoreDataProperties.swift in Sources */,
@@ -842,10 +895,14 @@
 				FAF1AC1E20AC6D6B00F01D59 /* MenuItemTableViewCell.swift in Sources */,
 				FA11EAC820BE78E600AE07D5 /* User+CoreDataClass.swift in Sources */,
 				FA11EAC920BE78E600AE07D5 /* User+CoreDataProperties.swift in Sources */,
+				FA8D49B520FD533800B6ADD2 /* NewsType+CoreDataClass.swift in Sources */,
 				F2F9F23E20F57ECF00DF6EC5 /* DialogRutViewController.swift in Sources */,
 				FAC36A3420BF62D4008BD508 /* DiscountCategoryTableViewCell.swift in Sources */,
 				F2CE050C20C8BF92006565AC /* ParkingViewController.swift in Sources */,
+				FA8D49B420FD533800B6ADD2 /* News+CoreDataProperties.swift in Sources */,
 				F20620CA20AEA17F00D5BA3C /* UserRegisterViewController.swift in Sources */,
+				FA8D49B220FD533800B6ADD2 /* NewsFile+CoreDataProperties.swift in Sources */,
+				FA8D49B720FD533800B6ADD2 /* News+CoreDataClass.swift in Sources */,
 				FAF1AC1920AC5AEC00F01D59 /* MenuLoginTableViewCell.swift in Sources */,
 				FA5767D020F4578700C142D8 /* RecentSearchTableViewCell.swift in Sources */,
 				FAF1AC2220AC72FB00F01D59 /* UIButton.swift in Sources */,
@@ -870,6 +927,7 @@
 				FA4E25BF20C0B3150067151E /* DiscountViewController.swift in Sources */,
 				FAF1AC2620AC784100F01D59 /* MenuLoggedTableViewCell.swift in Sources */,
 				FAF1AC2820AC8AC200F01D59 /* LoginViewController.swift in Sources */,
+				FA3701A920FC7D0A0066790B /* NewsSingleViewController.swift in Sources */,
 				FAD1E75C20BD293D00F6CABF /* Store+CoreDataClass.swift in Sources */,
 				FA5767D220F46A4100C142D8 /* RecentSearchCollectionViewCell.swift in Sources */,
 				F24B490020F25B8500ACE518 /* Campaing+CoreDataProperties.swift in Sources */,
