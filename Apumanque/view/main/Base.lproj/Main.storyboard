@@ -107,6 +107,16 @@
                                             <segue destination="jMf-MD-CtX" kind="show" identifier="home_to_valid_campaign_segue" id="E71-un-rMS"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yL7-85-mMX" userLabel="To winner">
+                                        <rect key="frame" x="262" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JTI-yO-4Lo"/>
+                                            <constraint firstAttribute="width" constant="30" id="upN-ID-6fG"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="ezh-As-ovq" kind="show" identifier="home_to_winner_segue" id="ZMs-xc-Jgh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -124,6 +134,8 @@
                                     <constraint firstItem="C1d-K4-EhE" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="WBJ-ug-rb2"/>
                                     <constraint firstItem="86k-Kh-FeX" firstAttribute="leading" secondItem="C1d-K4-EhE" secondAttribute="trailing" constant="8" id="ZQy-lU-4Ap"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="leading" secondItem="kVw-hc-cLk" secondAttribute="trailing" id="elk-9R-rP0"/>
+                                    <constraint firstItem="yL7-85-mMX" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="hHR-uU-6nf"/>
+                                    <constraint firstItem="yL7-85-mMX" firstAttribute="leading" secondItem="86k-Kh-FeX" secondAttribute="trailing" id="kAZ-5h-ynM"/>
                                     <constraint firstItem="qO3-ip-IRl" firstAttribute="top" secondItem="Trc-jL-eWm" secondAttribute="top" id="lGe-9U-sJ1"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qO3-ip-IRl" secondAttribute="trailing" constant="20" symbolic="YES" id="zNQ-0M-o3L"/>
                                 </constraints>
@@ -1580,6 +1592,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BbB-Jw-iin"/>
+        <segue reference="ZMs-xc-Jgh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

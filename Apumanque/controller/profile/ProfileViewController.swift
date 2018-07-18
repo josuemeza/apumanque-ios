@@ -10,14 +10,14 @@ import UIKit
 import UICircularProgressRing
 
 class ProfileViewController: ViewController {
-
+    
     @IBOutlet weak var menuViewProfile: UIView!
     @IBOutlet weak var circularProgress: UICircularProgressRingView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         menuViewProfile.roundOut(radious: 10)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -25,17 +25,17 @@ class ProfileViewController: ViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-//        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
-//        navigationItem.backBarButtonItem = backButton
+        //        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        //        navigationItem.backBarButtonItem = backButton
         
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "logo"), for: .normal)
         let barButtonItem = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = barButtonItem
-    
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,16 +59,19 @@ class ProfileViewController: ViewController {
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MenuViewController {
             let viewController = segue.destination as! MenuViewController
             viewController.delegate = self
+        } else if segue.identifier == "profile_to_winner_segue" {
+            let destination = segue.destination as! NewsViewController
+            destination.isContestDefault = true
         }
     }
     
-
+    
 }
 
 // MARK: -

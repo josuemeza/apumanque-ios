@@ -21,7 +21,10 @@ class NewsViewController: BlurredViewController {
     private var news: [News]!
     fileprivate var newsItems: [News]!
     
+    var isContestDefault = false
+    
     // MARK: - Actions
+    
     
     @IBAction func categorySelectorAction(_ sender: UISegmentedControl) {
         filterNewsItems()
@@ -35,7 +38,13 @@ class NewsViewController: BlurredViewController {
         news = News.all(on: managedObjectContext)
         segmentedControl.setWidth(120, forSegmentAt: 2)
         filterNewsItems()
-        segmentedControl.selectedSegmentIndex = 2
+        
+        if isContestDefault {
+            segmentedControl.selectedSegmentIndex = 2
+            segmentedControl.sendActions(for: .valueChanged)
+            filterNewsItems()
+        }
+        
     }
     
     // MARK: - Navigation view controller methods
@@ -78,6 +87,7 @@ class NewsViewController: BlurredViewController {
 
 // MARK: - Collection view data source, delegate and layout delegate
 extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2

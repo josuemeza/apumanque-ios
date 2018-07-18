@@ -61,6 +61,9 @@ class HomeViewController: ViewController {
         } else if segue.destination is BlurredViewController {
             let viewController = segue.destination as! BlurredViewController
             viewController.backgroundImage = view.takeScreenshot()
+        } else if segue.identifier == "home_to_winner_segue" {
+            let destination = segue.destination as! NewsViewController
+            destination.isContestDefault = true
         }
     }
     
@@ -100,6 +103,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
         case 1:
             print("Cliente frecuente")
+            performSegue(withIdentifier: "home_to_winner_segue", sender: nil)
         case 2:
             print("Descuentos")
             tabBarController?.selectedIndex = 1
