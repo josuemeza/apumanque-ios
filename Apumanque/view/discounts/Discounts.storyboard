@@ -121,7 +121,6 @@
                                             <constraint firstAttribute="height" constant="30" id="5Fc-Im-TEe"/>
                                             <constraint firstAttribute="width" constant="30" id="LAL-Z4-xCT"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="V6d-To-8dx" kind="show" identifier="home_to_featured_segue" id="EzM-He-tmF"/>
                                         </connections>
@@ -132,7 +131,6 @@
                                             <constraint firstAttribute="width" constant="30" id="MjB-Qy-Ebe"/>
                                             <constraint firstAttribute="height" constant="30" id="anK-M2-Rec"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="Bcb-Yj-dcm" kind="show" identifier="discounts_to_valid_campaign_segue" id="wWc-yV-LkH"/>
                                         </connections>
@@ -143,7 +141,6 @@
                                             <constraint firstAttribute="height" constant="30" id="696-09-erl"/>
                                             <constraint firstAttribute="width" constant="30" id="Okq-G0-H5H"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="X2F-tc-Fh6" kind="show" identifier="discounts_to_news_segue" id="ScL-ag-9dd"/>
                                         </connections>
@@ -154,9 +151,18 @@
                                             <constraint firstAttribute="width" constant="30" id="VSU-Tq-ecs"/>
                                             <constraint firstAttribute="height" constant="30" id="nnq-Sz-jua"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="sLd-NO-w1F" kind="show" identifier="discounts_to_store_segue" id="DYQ-bX-1YD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4L-CE-mud" userLabel="To help">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="4Af-2d-iqu"/>
+                                            <constraint firstAttribute="height" constant="30" id="Nxi-sc-krt"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="UAA-2o-PQ8" kind="show" identifier="discounts_to_help_segue" id="b7G-F6-1ke"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -165,10 +171,12 @@
                                     <constraint firstItem="K3f-pO-TKB" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="39e-sd-wQs"/>
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="5Ra-9M-nxB"/>
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="leading" secondItem="8kT-eE-ofR" secondAttribute="trailing" id="7Tx-kz-LEY"/>
+                                    <constraint firstItem="L4L-CE-mud" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="9Pf-zv-Uv1"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="JHk-eB-DPA"/>
                                     <constraint firstItem="tcG-zP-haR" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="Ltm-af-pYf"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="leading" secondItem="zVe-av-gA9" secondAttribute="leading" id="N7M-jm-f8p"/>
                                     <constraint firstItem="ey7-fx-SPc" firstAttribute="leading" secondItem="KhE-2q-fwM" secondAttribute="trailing" id="QyW-rT-4QZ"/>
+                                    <constraint firstItem="L4L-CE-mud" firstAttribute="leading" secondItem="A17-OR-bJz" secondAttribute="trailing" id="R5P-Ku-Y3a"/>
                                     <constraint firstItem="8kT-eE-ofR" firstAttribute="leading" secondItem="pqs-f2-6eq" secondAttribute="trailing" id="VdF-px-mfd"/>
                                     <constraint firstItem="ey7-fx-SPc" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="XW2-2N-MKE"/>
                                     <constraint firstItem="A17-OR-bJz" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="Xee-yq-srx"/>
@@ -1171,6 +1179,14 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ww-rg-joP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="392" y="-30"/>
+        </scene>
+        <!--help_view_controller-->
+        <scene sceneID="Igx-XF-zvy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="UAA-2o-PQ8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Js-Th-yjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-924"/>
         </scene>
     </scenes>
     <resources>
