@@ -264,6 +264,7 @@ class NetworkingManager {
     
     func requestData(completion: @escaping Callback<JSON>) {
         guard let context = context else { completion(nil) ; return }
+        Help.all(on: context)?.forEach { help in context.delete(help) }
         let endpoint = "/hxc/api/login_token/"
         let parameters: Parameters = ["username": "apumanque_user", "password": "apumanque2018"]
         Alamofire.request("\(apiUrl)\(endpoint)", method: .post, parameters: parameters).responseJSON { response in

@@ -23,6 +23,7 @@ class HelpViewCommonController: ViewController {
         navigationItem.rightBarButtonItem = barButtonItem
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        print("AYUDA \(helpArray.count)")
     }
     
     
