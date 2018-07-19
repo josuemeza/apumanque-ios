@@ -13,7 +13,9 @@ class ProfileViewController: ViewController {
     
     @IBOutlet weak var menuViewProfile: UIView!
     @IBOutlet weak var circularProgress: UICircularProgressRingView!
+    @IBOutlet weak var blurBackground: UIVisualEffectView!
     
+    var isLogin: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,21 @@ class ProfileViewController: ViewController {
         let barButtonItem = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = barButtonItem
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
+        if Session.isLogged{
+            blurBackground.isHidden = true
+        } else {
+            if isLogin {
+                tabBarController?.selectedIndex = 0
+                isLogin = false
+            } else {
+                performSegue(withIdentifier: "profile_to_login_segue", sender: nil)
+                isLogin = true
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,6 +119,8 @@ extension ProfileViewController: MenuViewControllerDelegate {
             performSegue(withIdentifier: "profile_to_valid_campaign_segue", sender: nil)
         case .invoices:
             tabBarController?.selectedIndex = 2
+        case .help:
+            performSegue(withIdentifier: "profile_to_help_segue", sender: nil)
         }
     }
     

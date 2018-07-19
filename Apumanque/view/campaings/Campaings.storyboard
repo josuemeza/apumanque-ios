@@ -128,7 +128,7 @@
                                             <segue destination="O1c-qm-pFg" kind="show" identifier="campaings_to_news_segue" id="z6r-ji-LRG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQX-dF-uLp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQX-dF-uLp" userLabel="To campaign">
                                         <rect key="frame" x="210" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="10m-5f-ri8"/>
@@ -138,11 +138,23 @@
                                             <segue destination="0un-yP-a6Z" kind="show" id="0Og-Qt-Vud"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDL-Z6-pVC" userLabel="To help">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Upn-hv-1Gw"/>
+                                            <constraint firstAttribute="width" constant="30" id="i6k-nU-iOX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="byk-T6-rt6" kind="show" identifier="campaings_to_help_segue" id="s1p-hc-x5f"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="zZs-SO-5Nk" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="0BS-ex-Vxe"/>
                                     <constraint firstItem="Su5-25-S2q" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="0zi-he-Awk"/>
+                                    <constraint firstItem="mDL-Z6-pVC" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="4vY-k9-T07"/>
                                     <constraint firstItem="2kU-xt-ybr" firstAttribute="leading" secondItem="SsA-8q-aXc" secondAttribute="trailing" id="92T-rJ-4QX"/>
                                     <constraint firstItem="hNp-DH-nZ2" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="Bqb-NM-PPI"/>
                                     <constraint firstItem="SuL-aq-IEA" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="Dag-sH-TlE"/>
@@ -153,6 +165,7 @@
                                     <constraint firstItem="2kU-xt-ybr" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="jO5-xe-Mby"/>
                                     <constraint firstItem="Su5-25-S2q" firstAttribute="leading" secondItem="zZs-SO-5Nk" secondAttribute="trailing" id="mgf-DO-Tyd"/>
                                     <constraint firstItem="XmB-pk-MM4" firstAttribute="leading" secondItem="hNp-DH-nZ2" secondAttribute="trailing" id="p08-Bn-GYn"/>
+                                    <constraint firstItem="mDL-Z6-pVC" firstAttribute="leading" secondItem="BQX-dF-uLp" secondAttribute="trailing" id="pvk-Cv-1Zf"/>
                                     <constraint firstItem="SsA-8q-aXc" firstAttribute="leading" secondItem="Su5-25-S2q" secondAttribute="trailing" id="qKX-EQ-6vY"/>
                                     <constraint firstItem="XmB-pk-MM4" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="sMN-AI-qgp"/>
                                     <constraint firstItem="2kU-xt-ybr" firstAttribute="leading" secondItem="SuL-aq-IEA" secondAttribute="trailing" id="sXm-e6-CAZ"/>
@@ -354,7 +367,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h24-WC-etj">
                                 <rect key="frame" x="0.0" y="850" width="375" height="0.0"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.10427726833976834" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-dt-Qyn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="786"/>
@@ -851,6 +864,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                                                         </state>
                                                         <connections>
                                                             <action selector="lastWinnersAction:" destination="0un-yP-a6Z" eventType="touchUpInside" id="7ba-2i-hBG"/>
+                                                            <segue destination="GBP-oN-SNA" kind="show" identifier="campaign_to_winner_segue" id="eKV-pd-6AT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-19-WYr">
@@ -1060,6 +1074,22 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
             </objects>
             <point key="canvasLocation" x="-2580" y="-310"/>
         </scene>
+        <!--news_view_controller-->
+        <scene sceneID="T0b-Vc-vuY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="GBP-oN-SNA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPC-oJ-BLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1666" y="981"/>
+        </scene>
+        <!--help_view_controller-->
+        <scene sceneID="am3-Pg-hD7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="byk-T6-rt6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9P7-3A-Ba3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584" y="-260"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Splash3" width="375" height="667"/>
@@ -1071,6 +1101,6 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
         <image name="photo_invoice_two" width="375" height="302"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wra-sa-8f7"/>
+        <segue reference="0Og-Qt-Vud"/>
     </inferredMetricsTieBreakers>
 </document>
