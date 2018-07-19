@@ -29,6 +29,8 @@ class ValidCampaingsViewController: ViewController {
             imageCampaings.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
         }
         contentCampaingsLabel.text = htmlString(text: campaings.contentCampaign!)
+        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
         
         
     }
@@ -58,14 +60,13 @@ class ValidCampaingsViewController: ViewController {
         
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if segue.identifier == "campaign_to_winner_segue" {
+            let destination = segue.destination as! NewsViewController
+            destination.isContestDefault = true
+        }    }
 
 }

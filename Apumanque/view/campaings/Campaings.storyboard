@@ -851,6 +851,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                                                         </state>
                                                         <connections>
                                                             <action selector="lastWinnersAction:" destination="0un-yP-a6Z" eventType="touchUpInside" id="7ba-2i-hBG"/>
+                                                            <segue destination="GBP-oN-SNA" kind="show" identifier="campaign_to_winner_segue" id="eKV-pd-6AT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-19-WYr">
@@ -1059,6 +1060,14 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXj-kr-HMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2580" y="-310"/>
+        </scene>
+        <!--news_view_controller-->
+        <scene sceneID="T0b-Vc-vuY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="GBP-oN-SNA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPC-oJ-BLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1666" y="981"/>
         </scene>
     </scenes>
     <resources>
