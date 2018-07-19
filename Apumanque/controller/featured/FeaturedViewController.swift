@@ -49,26 +49,23 @@ class FeaturedViewController: BlurredViewController {
     
     // MARK: - Methods
     
-    func sortDiscounts() {
+    func initDiscountList() {
+        if let storeCategory = storeCategory {
+            let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
+            let collection: [[Discount]] = stores.map { store in
+                let discounts = store.discounts?.allObjects as? [Discount] ?? []
+                return discounts.filter { discount in discount.active && discount.featured }
+            }
+            discounts = collection.reduce([], +)
+        } else {
+            discounts = Discount.all(featured: true, on: managedObjectContext) ?? []
+        }
         discounts.sort { left, right in
             if let leftDate = left.startDate?.toDate as Date?, let rightDate = right.startDate?.toDate as Date? {
                 return leftDate > rightDate
             }
             return false
         }
-    }
-    
-    func initDiscountList() {
-        if let storeCategory = storeCategory {
-            let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
-            discounts = stores.map { store in
-                let discounts = store.discounts?.allObjects as? [Discount] ?? []
-                return discounts.filter { discount in discount.active && discount.featured }
-                }.reduce([], +) as! [Discount]
-        } else {
-            discounts = Discount.all(featured: true, on: managedObjectContext) ?? []
-        }
-        sortDiscounts()
         tableView.reloadData()
     }
 
@@ -129,12 +126,7 @@ extension FeaturedViewController: StoreCategoriesViewControllerDelegate {
     
     func storeCategories(_ controller: StoreCategoriesViewController, didSelectCategory category: StoreCategory) {
         storeCategory = category
-        let stores: [Store] = storeCategory?.stores?.allObjects as? [Store] ?? []
-        discounts = stores.map { store in
-            let discounts = store.discounts?.allObjects as? [Discount] ?? []
-            return discounts.filter { discount in discount.active }
-            }.reduce([], +) as! [Discount]
-        sortDiscounts()
+        initDiscountList()
         tableView.reloadData()
     }
     

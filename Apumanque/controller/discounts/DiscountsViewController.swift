@@ -90,19 +90,21 @@ class DiscountsViewController: ViewController {
     }
     
     func initDiscountList() {
+        discounts = []
         if let storeCategory = storeCategory {
             let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
-            discounts = stores.map { store in
+            let collection: [[Discount]] = stores.map { store in
                 let discounts = store.discounts?.allObjects as? [Discount] ?? []
                 return discounts.filter { discount in discount.active && !discount.featured }
-                }.reduce([], +) as! [Discount]
+            }
+            discounts = collection.reduce([], +)
         } else {
             discounts = Discount.all(featured: false, on: managedObjectContext) ?? []
         }
-        if let user = Session.currentUser, listSegmentedControl.selectedSegmentIndex == 1 {
-            discounts = discounts.filter { discount in
-                ((discount.users?.allObjects as? [User])?.index(of: user) ?? -1) >= 0
-            }
+        if listSegmentedControl.selectedSegmentIndex == 1, Session.isLogged {
+            discounts = discounts.filter { discount in discount.user?.id == Session.currentUser!.id! }
+        } else {
+            discounts = discounts.filter { discount in discount.user == nil }
         }
         sortDiscounts()
         tableView.reloadData()

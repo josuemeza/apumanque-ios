@@ -2,7 +2,7 @@
 //  Discount+CoreDataProperties.swift
 //  
 //
-//  Created by Josue Meza Peña on 09-07-18.
+//  Created by Josue Meza Peña on 18-07-18.
 //
 //
 
@@ -21,6 +21,7 @@ extension Discount {
     @NSManaged public var conditions: String?
     @NSManaged public var detail: String?
     @NSManaged public var expireDate: NSDate?
+    @NSManaged public var featured: Bool
     @NSManaged public var id: String?
     @NSManaged public var imageUrl: String?
     @NSManaged public var resume: String?
@@ -28,25 +29,7 @@ extension Discount {
     @NSManaged public var tagColor: String?
     @NSManaged public var title: String?
     @NSManaged public var valuePercent: String?
-    @NSManaged public var featured: Bool
     @NSManaged public var store: Store?
-    @NSManaged public var users: NSSet?
-
-}
-
-// MARK: Generated accessors for users
-extension Discount {
-
-    @objc(addUsersObject:)
-    @NSManaged public func addToUsers(_ value: User)
-
-    @objc(removeUsersObject:)
-    @NSManaged public func removeFromUsers(_ value: User)
-
-    @objc(addUsers:)
-    @NSManaged public func addToUsers(_ values: NSSet)
-
-    @objc(removeUsers:)
-    @NSManaged public func removeFromUsers(_ values: NSSet)
+    @NSManaged public var user: User?
 
 }

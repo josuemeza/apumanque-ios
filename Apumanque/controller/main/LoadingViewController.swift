@@ -22,19 +22,25 @@ class LoadingViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkingManager.singleton.requestData { data in
-            if let user = User.all(on: self.managedObjectContext)?.theOnlyOneElement {
-                self.Session.currentUser = user
-            }
             if let json = data {
                 SessionManager.singleton.defaultToken = json["results"][0]["token"].string
                 let menuItems = json["results"][0]["config"][1]["menues"][0]["options"].arrayValue
-                NetworkingManager.singleton.storeCategories { storeCategories in
-                    NetworkingManager.singleton.stores { stores in
-                        NetworkingManager.singleton.spetialSales { discounts in
-                            NetworkingManager.singleton.featuredSpetialSales { featured in
-                                NetworkingManager.singleton.campaings { campaings in
-                                    NetworkingManager.singleton.news { news in
-                                        self.initMenuItems(from: menuItems)
+                NetworkingManager.singleton.storeCategories { _ in
+                    NetworkingManager.singleton.stores { _ in
+                        NetworkingManager.singleton.discounts(featured: false) { _ in
+                            NetworkingManager.singleton.discounts(featured: true) { _ in
+                                NetworkingManager.singleton.campaings { _ in
+                                    NetworkingManager.singleton.news { _ in
+                                        if let user = User.all(on: self.managedObjectContext)?.theOnlyOneElement {
+                                            self.Session.currentUser = user
+                                            NetworkingManager.singleton.userDiscounts(featured: false) { _ in
+                                                NetworkingManager.singleton.userDiscounts(featured: true) { _ in
+                                                    self.initMenuItems(from: menuItems)
+                                                }
+                                            }
+                                        } else {
+                                            self.initMenuItems(from: menuItems)
+                                        }
                                     }
                                 }
                             }
