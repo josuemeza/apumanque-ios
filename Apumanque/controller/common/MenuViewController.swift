@@ -11,7 +11,7 @@ import UIKit
 // MARK: -
 // MARK: - Enumerations
 enum MenuViewSelection {
-    case login, logout, editUser, contact, register, discounts, stores, featured, news, services, campaign, invoices
+    case login, logout, editUser, contact, register, discounts, stores, featured, news, services, campaign, invoices, help
 }
 
 // MARK: -
@@ -101,6 +101,14 @@ class MenuViewController: ViewController {
         hideMenu {
             self.dismiss(animated: false) {
                 self.delegate?.menuViewController(self, didSelect: .invoices)
+            }
+        }
+    }
+    
+    @IBAction func helpSegueAction(_ sender: Any?) {
+        hideMenu {
+            self.dismiss(animated: false) {
+                self.delegate?.menuViewController(self, didSelect: .help)
             }
         }
     }

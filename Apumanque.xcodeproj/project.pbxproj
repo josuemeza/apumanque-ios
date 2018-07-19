@@ -41,6 +41,7 @@
 		F27876E020F2F443000D5B9D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876DF20F2F443000D5B9D /* GradientView.swift */; };
 		F27876E320F3181F000D5B9D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27876E220F3181F000D5B9D /* News.storyboard */; };
 		F27876E620F318DD000D5B9D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27876E520F318DD000D5B9D /* NewsViewController.swift */; };
+		F27A9DBA21002E5000C97BBD /* GradientHigherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27A9DB921002E5000C97BBD /* GradientHigherView.swift */; };
 		F285909020B9C0CF00AD6B7A /* Discounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */; };
 		F298133920FF11A700A34BB8 /* Discount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133720FF11A600A34BB8 /* Discount+CoreDataProperties.swift */; };
 		F298133C20FF120000A34BB8 /* HelpCommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298133B20FF120000A34BB8 /* HelpCommonTableViewCell.swift */; };
@@ -160,6 +161,7 @@
 		F27876DF20F2F443000D5B9D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F27876E220F3181F000D5B9D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		F27876E520F318DD000D5B9D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		F27A9DB921002E5000C97BBD /* GradientHigherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHigherView.swift; sourceTree = "<group>"; };
 		F285908F20B9C0CF00AD6B7A /* Discounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discounts.storyboard; sourceTree = "<group>"; };
 		F298133720FF11A600A34BB8 /* Discount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F298133B20FF120000A34BB8 /* HelpCommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				F21259F120EC69C800BF6422 /* SearchMapViewController.swift */,
 				F2F9F23D20F57ECF00DF6EC5 /* DialogRutViewController.swift */,
 				F298133D20FF128700A34BB8 /* HelpViewCommonController.swift */,
+				F27A9DB921002E5000C97BBD /* GradientHigherView.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 				F2CE050420C8BE20006565AC /* ServicesContainerViewController.swift in Sources */,
 				F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */,
 				FAF1AC3520ACD9DA00F01D59 /* HomeCategory+CoreDataProperties.swift in Sources */,
+				F27A9DBA21002E5000C97BBD /* GradientHigherView.swift in Sources */,
 				F298133920FF11A700A34BB8 /* Discount+CoreDataProperties.swift in Sources */,
 				FAF1AC1220ABCFD000F01D59 /* HomeMenuItemTableViewCell.swift in Sources */,
 				FA33A2B420F2F24E00946E37 /* SearchViewController.swift in Sources */,

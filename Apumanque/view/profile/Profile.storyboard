@@ -522,12 +522,24 @@
                                                     <constraint firstItem="AxT-WE-QVC" firstAttribute="centerX" secondItem="inp-D3-rWk" secondAttribute="centerX" id="mNC-P2-7c9"/>
                                                 </constraints>
                                             </view>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-gH-Xgy">
+                                                <rect key="frame" x="0.0" y="-66" width="375" height="669"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8NQ-V0-G5a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="669"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <blurEffect style="light"/>
+                                            </visualEffectView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="inp-D3-rWk" secondAttribute="trailing" id="3P5-FX-f42"/>
                                             <constraint firstAttribute="bottom" secondItem="inp-D3-rWk" secondAttribute="bottom" id="KIK-wj-DtQ"/>
                                             <constraint firstItem="inp-D3-rWk" firstAttribute="top" secondItem="hi7-ei-keJ" secondAttribute="top" id="Pa6-b9-MZg"/>
+                                            <constraint firstItem="RSs-gH-Xgy" firstAttribute="top" secondItem="hi7-ei-keJ" secondAttribute="top" id="Qln-JY-5pf"/>
+                                            <constraint firstAttribute="trailing" secondItem="RSs-gH-Xgy" secondAttribute="trailing" id="c1U-Fh-5No"/>
+                                            <constraint firstItem="RSs-gH-Xgy" firstAttribute="leading" secondItem="hi7-ei-keJ" secondAttribute="leading" id="ezu-pc-YLy"/>
+                                            <constraint firstAttribute="bottom" secondItem="RSs-gH-Xgy" secondAttribute="bottom" id="qpZ-uY-LAJ"/>
                                             <constraint firstItem="inp-D3-rWk" firstAttribute="leading" secondItem="hi7-ei-keJ" secondAttribute="leading" id="w7N-3e-L4e"/>
                                         </constraints>
                                     </scrollView>
@@ -565,13 +577,14 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="blurBackground" destination="RSs-gH-Xgy" id="8U5-jz-eZl"/>
                         <outlet property="circularProgress" destination="vxl-mp-PkM" id="fhy-zq-uWr"/>
                         <outlet property="menuViewProfile" destination="2D7-jl-BfC" id="IXj-Ji-2WI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twh-rG-5Rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256.80000000000001" y="-252.77361319340332"/>
+            <point key="canvasLocation" x="256.80000000000001" y="-253.2233883058471"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="vNT-AC-E0H">

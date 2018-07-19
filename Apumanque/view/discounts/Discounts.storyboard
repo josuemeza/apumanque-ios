@@ -121,20 +121,8 @@
                                             <constraint firstAttribute="height" constant="30" id="5Fc-Im-TEe"/>
                                             <constraint firstAttribute="width" constant="30" id="LAL-Z4-xCT"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="V6d-To-8dx" kind="show" identifier="home_to_featured_segue" id="EzM-He-tmF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3f-pO-TKB" userLabel="To news">
-                                        <rect key="frame" x="210" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="696-09-erl"/>
-                                            <constraint firstAttribute="width" constant="30" id="Okq-G0-H5H"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="X2F-tc-Fh6" kind="show" identifier="discounts_to_news_segue" id="ScL-ag-9dd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcG-zP-haR" userLabel="To campaign">
@@ -143,9 +131,28 @@
                                             <constraint firstAttribute="width" constant="30" id="MjB-Qy-Ebe"/>
                                             <constraint firstAttribute="height" constant="30" id="anK-M2-Rec"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="Bcb-Yj-dcm" kind="show" identifier="discounts_to_valid_campaign_segue" id="wWc-yV-LkH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3f-pO-TKB" userLabel="To news">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="696-09-erl"/>
+                                            <constraint firstAttribute="width" constant="30" id="Okq-G0-H5H"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="X2F-tc-Fh6" kind="show" identifier="discounts_to_news_segue" id="ScL-ag-9dd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-7V-gw8" userLabel="To help">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="GLQ-5z-G5g"/>
+                                            <constraint firstAttribute="height" constant="30" id="zkv-En-KAQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="DQD-hA-Lme" kind="show" identifier="discounts_to_help_segue" id="mw8-Vr-dif"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -154,6 +161,7 @@
                                     <constraint firstItem="K3f-pO-TKB" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="39e-sd-wQs"/>
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="5Ra-9M-nxB"/>
                                     <constraint firstItem="a5L-2q-HzS" firstAttribute="leading" secondItem="8kT-eE-ofR" secondAttribute="trailing" id="7Tx-kz-LEY"/>
+                                    <constraint firstItem="hdO-7V-gw8" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="CQj-WV-iCn"/>
                                     <constraint firstItem="Eic-Pm-SxY" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="JHk-eB-DPA"/>
                                     <constraint firstItem="tcG-zP-haR" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="Ltm-af-pYf"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="leading" secondItem="zVe-av-gA9" secondAttribute="leading" id="N7M-jm-f8p"/>
@@ -162,6 +170,7 @@
                                     <constraint firstItem="ey7-fx-SPc" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="XW2-2N-MKE"/>
                                     <constraint firstItem="KhE-2q-fwM" firstAttribute="leading" secondItem="8RW-2g-OgD" secondAttribute="trailing" id="Z7N-Zx-PEV"/>
                                     <constraint firstItem="8kT-eE-ofR" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="ap8-xf-GAW"/>
+                                    <constraint firstItem="hdO-7V-gw8" firstAttribute="leading" secondItem="K3f-pO-TKB" secondAttribute="trailing" id="c3E-7W-09h"/>
                                     <constraint firstItem="8RW-2g-OgD" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="hZO-cu-QyN"/>
                                     <constraint firstItem="8RW-2g-OgD" firstAttribute="leading" secondItem="Eic-Pm-SxY" secondAttribute="trailing" id="iA1-sA-8RR"/>
                                     <constraint firstItem="pqs-f2-6eq" firstAttribute="top" secondItem="zVe-av-gA9" secondAttribute="top" id="kKo-Wo-myz"/>
@@ -545,6 +554,13 @@
                                             <constraint firstAttribute="height" constant="416" id="dPO-uG-i3S"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lne-ij-QuH" customClass="GradientHigherView" customModule="Apumanque" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="pgI-ed-xc8"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-9y-6AC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1936"/>
                                         <subviews>
@@ -1024,9 +1040,12 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="lne-ij-QuH" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="DIX-T7-Wdb"/>
+                                    <constraint firstAttribute="trailing" secondItem="lne-ij-QuH" secondAttribute="trailing" id="JY5-Xh-VRU"/>
                                     <constraint firstAttribute="bottom" secondItem="ldZ-9y-6AC" secondAttribute="bottom" id="KWW-qb-i6T"/>
                                     <constraint firstItem="G74-IM-LUG" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="M99-Vo-uJ8"/>
                                     <constraint firstItem="ldZ-9y-6AC" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="Nss-oL-gxz"/>
+                                    <constraint firstItem="lne-ij-QuH" firstAttribute="top" secondItem="sxW-cm-xee" secondAttribute="top" id="YO6-Cc-47o"/>
                                     <constraint firstAttribute="trailing" secondItem="G74-IM-LUG" secondAttribute="trailing" id="biz-we-RTL"/>
                                     <constraint firstAttribute="trailing" secondItem="ldZ-9y-6AC" secondAttribute="trailing" id="c9F-O2-Ozm"/>
                                     <constraint firstItem="G74-IM-LUG" firstAttribute="top" secondItem="sxW-cm-xee" secondAttribute="top" id="e0p-Ub-Zbq"/>
@@ -1147,6 +1166,14 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ww-rg-joP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="392" y="-30"/>
+        </scene>
+        <!--help_view_controller-->
+        <scene sceneID="Lde-rm-bWm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="DQD-hA-Lme" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlR-kD-I8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-925"/>
         </scene>
     </scenes>
     <resources>
