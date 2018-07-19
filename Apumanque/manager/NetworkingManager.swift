@@ -237,9 +237,7 @@ class NetworkingManager {
                         guard let fileId = newsFileJSON["id"].int else { continue }
                         let newsFile = NewsFile.find(byId: fileId, on: context) ?? NewsFile(context: context)
                         _ = newsFile.setData(from: newsFileJSON)
-                        if newsFile.objectID.isTemporaryID {
-                            newsSingle.addToNewsFiles(newsFile)
-                        }
+                        newsFile.news = newsSingle
                     }
                 }
                 completion(News.all(on: context))

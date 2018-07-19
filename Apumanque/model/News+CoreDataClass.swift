@@ -36,6 +36,7 @@ public class News: NSManagedObject {
     }
     
     func setData(from json: JSON) -> Bool {
+        id = String(json["id"].intValue)
         title = json["title"].string
         content = json["content"].string
         start = json["start"].string != nil ? Date.parse(stringDate: json["start"].stringValue, format: "yyyy-MM-dd'T'HH:mm:ssZ") as NSDate? : nil

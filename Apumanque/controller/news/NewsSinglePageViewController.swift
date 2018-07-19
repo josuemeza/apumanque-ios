@@ -20,17 +20,19 @@ class NewsSinglePageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
-        dataSource = self
         if !images.isEmpty {
-            presentGallery(with: images)
+            createPages(with: images)
             setViewControllers([pages.first!], direction: .forward, animated: false, completion: nil)
+            if pages.count > 1 {
+                delegate = self
+                dataSource = self
+            }
         }
     }
     
     // MARK: - Methods
     
-    private func presentGallery(with images: [URL]) {
+    private func createPages(with images: [URL]) {
         pages = []
         for image in images {
             let page = NewsSinglePageItemViewController()
