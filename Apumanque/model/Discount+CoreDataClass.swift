@@ -34,6 +34,7 @@ public class Discount: NSManagedObject {
     
     var valueColor: ValueColor? {
         get {
+            if let floorString = store?.floor, Int(floorString) == 0 { return ValueColor.orange }
             guard let color = tagColor else { return nil }
             return ValueColor(rawValue: color)
         }

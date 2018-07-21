@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 // MARK: - SessionManager singleton definition
 class SessionManager {
@@ -36,14 +37,15 @@ class SessionManager {
         })
     }
     
-    func logout(completion: @escaping () -> Void) {
-        if let context = currentUser?.managedObjectContext {
-            let userDiscounts = currentUser?.discounts?.allObjects as? [Discount]
+    func logout() {
+        if let user = currentUser, let context = currentUser?.managedObjectContext {
+            let userDiscounts = user.discounts?.allObjects as? [Discount]
             for discount in userDiscounts ?? [] {
                 context.delete(discount)
             }
+            context.delete(user)
+            currentUser = nil
         }
-        currentUser = nil
     }
     
     // MARK: - Singleton definition
