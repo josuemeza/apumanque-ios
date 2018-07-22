@@ -1134,7 +1134,7 @@
         <!--Store View Controller-->
         <scene sceneID="CuM-et-4Qu">
             <objects>
-                <viewController id="uhf-AJ-6pM" customClass="StoreViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="store_single_view_controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhf-AJ-6pM" customClass="StoreViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="BCE-1C-mf8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

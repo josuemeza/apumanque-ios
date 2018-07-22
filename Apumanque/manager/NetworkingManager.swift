@@ -140,28 +140,20 @@ class NetworkingManager {
         }
     }
     
-    func spetialSales(completion: @escaping Callback<[Discount]>) {
+    private func spetialSales(to url: String, with headers: HTTPHeaders, featured: Bool, completion: @escaping Callback<[Discount]>) {
         guard let context = context else { completion(nil) ; return }
-        Discount.all(featured: false, on: context)?.forEach { discount in context.delete(discount) }
-        let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/"
-        let token = SessionManager.singleton.isLogged ? SessionManager.singleton.currentUser!.token! : SessionManager.singleton.defaultToken!
-        let headers: HTTPHeaders = ["Authorization": "token \(token)"]
-        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+        let urlAttributes = featured ? "?code=featuredProduct" : ""
+        Alamofire.request("\(url)\(urlAttributes)", method: .get, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
                 guard let discountsJSON = JSON(value)["results"].array else { completion(nil) ; return }
                 var discounts = [Discount]()
                 for discountJSON in discountsJSON {
                     let discount = Discount(context: context)
-                    if let user = SessionManager.singleton.currentUser {
-                        if discount.setData(from: discountJSON["id_special_sale"], featured: false) {
-                            discount.addToUsers(user)
-                            discounts.append(discount)
-                        }
-                    } else {
-                        if discount.setData(from: discountJSON, featured: false) {
-                            discounts.append(discount)
-                        }
+                    let json = discountJSON["id_special_sale"].exists() ? discountJSON["id_special_sale"] : discountJSON
+                    if discount.setData(from: json, featured: false) {
+                        discount.featured = featured
+                        discounts.append(discount)
                     }
                 }
                 completion(discounts)
@@ -171,35 +163,31 @@ class NetworkingManager {
         }
     }
     
-    func featuredSpetialSales(completion: @escaping Callback<[Discount]>) {
-        guard let context = context else { completion(nil) ; return }
-        Discount.all(featured: true, on: context)?.forEach { discount in context.delete(discount) }
-        let endpoint = "/basicmall/api/\(SessionManager.singleton.isLogged ? "user_" : "")special_sales/?code=featuredProduct"
-        let token = SessionManager.singleton.isLogged ? SessionManager.singleton.currentUser!.token! : SessionManager.singleton.defaultToken!
-        let headers: HTTPHeaders = ["Authorization": "token \(token)"]
-        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                guard let discountsJSON = JSON(value)["results"].array else { completion(nil) ; return }
-                var discounts = [Discount]()
-                for discountJSON in discountsJSON {
-                    let discount = Discount(context: context)
-                    if let user = SessionManager.singleton.currentUser {
-                        if discount.setData(from: discountJSON, featured: true) {
-                            discount.addToUsers(user)
-                            discounts.append(discount)
-                        }
-                    } else {
-                        if discount.setData(from: discountJSON, featured: true) {
-                            discounts.append(discount)
-                        }
-                    }
+    func userDiscounts(featured: Bool, completion: @escaping Callback<[Discount]>) {
+        if let user = SessionManager.singleton.currentUser {
+            var discounts = user.discounts?.allObjects as? [Discount] ?? []
+            discounts = discounts.filter { discount in discount.user == user && discount.featured == featured }
+            discounts.forEach { discount in context?.delete(discount) }
+            let endpoint = "/basicmall/api/user_special_sales/"
+            let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
+            spetialSales(to: "\(apiUrl)\(endpoint)", with: headers, featured: featured) { discounts in
+                discounts?.forEach { discount in
+                    discount.user = user
                 }
                 completion(discounts)
-            case .failure(let responseError):
-                print(responseError.localizedDescription)
             }
         }
+    }
+    
+    func discounts(featured: Bool, completion: @escaping Callback<[Discount]>) {
+        if let context = context {
+            var discounts = Discount.all(featured: featured, on: context) ?? []
+            discounts = discounts.filter { discount in discount.user == nil }
+            discounts.forEach { discount in context.delete(discount) }
+        }
+        let endpoint = "/basicmall/api/special_sales/"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.defaultToken!)"]
+        spetialSales(to: "\(apiUrl)\(endpoint)", with: headers, featured: featured, completion: completion)
     }
     
     func campaings(completion: @escaping Callback<[Campaing]>) {
@@ -249,9 +237,7 @@ class NetworkingManager {
                         guard let fileId = newsFileJSON["id"].int else { continue }
                         let newsFile = NewsFile.find(byId: fileId, on: context) ?? NewsFile(context: context)
                         _ = newsFile.setData(from: newsFileJSON)
-                        if newsFile.objectID.isTemporaryID {
-                            newsSingle.addToNewsFiles(newsFile)
-                        }
+                        newsFile.news = newsSingle
                     }
                 }
                 completion(News.all(on: context))

@@ -24,6 +24,7 @@ class DiscountsViewController: ViewController {
     private var defaultSegmentedControlTopConstraintValue: CGFloat!
     private(set) var storeCategory: StoreCategory?
     private(set) var discounts: [Discount]!
+    private(set) var storeForSegue: Store?
     var isSegmentedControlHidden: Bool {
         get {
             return listSegmentedControl.isHidden
@@ -67,6 +68,10 @@ class DiscountsViewController: ViewController {
                 let storeCategories = segue.destination as! StoreCategoriesViewController
                 storeCategories.delegate = self
                 viewController = storeCategories
+            } else if segue.destination is StoreViewController {
+                let storeViewController = segue.destination as! StoreViewController
+                storeViewController.store = storeForSegue
+                viewController = storeViewController
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
@@ -90,19 +95,21 @@ class DiscountsViewController: ViewController {
     }
     
     func initDiscountList() {
+        discounts = []
         if let storeCategory = storeCategory {
             let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
-            discounts = stores.map { store in
+            let collection: [[Discount]] = stores.map { store in
                 let discounts = store.discounts?.allObjects as? [Discount] ?? []
                 return discounts.filter { discount in discount.active && !discount.featured }
-                }.reduce([], +) as! [Discount]
+            }
+            discounts = collection.reduce([], +)
         } else {
             discounts = Discount.all(featured: false, on: managedObjectContext) ?? []
         }
-        if let user = Session.currentUser, listSegmentedControl.selectedSegmentIndex == 1 {
-            discounts = discounts.filter { discount in
-                ((discount.users?.allObjects as? [User])?.index(of: user) ?? -1) >= 0
-            }
+        if listSegmentedControl.selectedSegmentIndex == 1, Session.isLogged {
+            discounts = discounts.filter { discount in discount.user?.id == Session.currentUser!.id! }
+        } else {
+            discounts = discounts.filter { discount in discount.user == nil }
         }
         sortDiscounts()
         tableView.reloadData()
@@ -157,6 +164,8 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.titleLabel.text = discount.resume ?? discount.title
             cell.storeLabel.text = discount.store?.name
             cell.expirationLabel.text = expireMessage
+            cell.store = discount.store
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -196,6 +205,17 @@ extension DiscountsViewController: DiscountCategoryTableViewCellDelegate {
         storeCategory = nil
         initDiscountList()
         tableView.reloadData()
+    }
+    
+}
+
+// MARK: -
+// MARK: - My discount table view cell delegate
+extension DiscountsViewController: MyDiscountTableViewCellDelegate {
+    
+    func myDiscountTableViewCell(_ cell: MyDiscountTableViewCell, didSelectSegueFor store: Store?) {
+        storeForSegue = store
+        performSegue(withIdentifier: "discounts_to_store_segue", sender: nil)
     }
     
 }

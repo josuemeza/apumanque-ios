@@ -21,7 +21,14 @@ class NewsSingleViewController: BlurredViewController {
     // MARK: - Attributes
     
     var news: News!
-    fileprivate var images = [URL]()
+    fileprivate var images: [URL] {
+        get {
+            if let nsSet = news.newsFiles, let newsFiles = nsSet.allObjects as? [NewsFile] {
+                return newsFiles.compactMap { newsFile in  URL(string: newsFile.url!) }
+            }
+            return []
+        }
+    }
     
     // MARK: - Actions
     
@@ -34,9 +41,6 @@ class NewsSingleViewController: BlurredViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         build()
-        if let nsSet = news.newsFiles, let newsFiles = nsSet.allObjects as? [NewsFile] {
-            images = newsFiles.compactMap { newsFile in  URL(string: newsFile.url!) }
-        }
         titleLabel.text = news.title
         subtitleLabel.text = news.start?.toDate.string(format: "yyyy")
         contentLabel.text = news.content?.parsedOnDocument

@@ -36,39 +36,36 @@ class FeaturedViewController: BlurredViewController {
                 let storeCategories = segue.destination as! StoreCategoriesViewController
                 storeCategories.delegate = self
                 viewController = storeCategories
+            } else if segue.destination is FeaturedSingleViewController {
+                let featuredSingle = segue.destination as! FeaturedSingleViewController
+                featuredSingle.featured = discounts[tableView.indexPathForSelectedRow?.row ?? 0]
+                viewController = featuredSingle
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
             viewController.backgroundImage = view.takeScreenshot()
         }
-        if segue.destination is DiscountViewController {
-            let viewController = segue.destination as! DiscountViewController
-            viewController.discount = discounts[tableView.indexPathForSelectedRow?.row ?? 0]
-        }
     }
     
     // MARK: - Methods
     
-    func sortDiscounts() {
+    func initDiscountList() {
+        if let storeCategory = storeCategory {
+            let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
+            let collection: [[Discount]] = stores.map { store in
+                let discounts = store.discounts?.allObjects as? [Discount] ?? []
+                return discounts.filter { discount in discount.active && discount.featured }
+            }
+            discounts = collection.reduce([], +)
+        } else {
+            discounts = Discount.all(featured: true, on: managedObjectContext) ?? []
+        }
         discounts.sort { left, right in
             if let leftDate = left.startDate?.toDate as Date?, let rightDate = right.startDate?.toDate as Date? {
                 return leftDate > rightDate
             }
             return false
         }
-    }
-    
-    func initDiscountList() {
-        if let storeCategory = storeCategory {
-            let stores: [Store] = storeCategory.stores?.allObjects as? [Store] ?? []
-            discounts = stores.map { store in
-                let discounts = store.discounts?.allObjects as? [Discount] ?? []
-                return discounts.filter { discount in discount.active && discount.featured }
-                }.reduce([], +) as! [Discount]
-        } else {
-            discounts = Discount.all(featured: true, on: managedObjectContext) ?? []
-        }
-        sortDiscounts()
         tableView.reloadData()
     }
 
@@ -90,7 +87,8 @@ extension FeaturedViewController: UITableViewDataSource, UITableViewDelegate {
             cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
         }
         cell.storeNameLabel.text = discount.store?.name
-        cell.valueLabel.text = discount.valueText
+        let value = Int(discount.valuePercent!)?.formattedWithSeparator
+        cell.valueLabel.text = value != nil ? "$\(value!)" : "S/V"
         cell.valueLabelContainer.backgroundColor = discount.valueColor?.color ?? .clear
         return cell
     }
@@ -129,12 +127,7 @@ extension FeaturedViewController: StoreCategoriesViewControllerDelegate {
     
     func storeCategories(_ controller: StoreCategoriesViewController, didSelectCategory category: StoreCategory) {
         storeCategory = category
-        let stores: [Store] = storeCategory?.stores?.allObjects as? [Store] ?? []
-        discounts = stores.map { store in
-            let discounts = store.discounts?.allObjects as? [Discount] ?? []
-            return discounts.filter { discount in discount.active }
-            }.reduce([], +) as! [Discount]
-        sortDiscounts()
+        initDiscountList()
         tableView.reloadData()
     }
     

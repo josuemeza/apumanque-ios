@@ -177,7 +177,7 @@ extension EditProfileViewController {
     }
     
     fileprivate func phoneValidationErrors() -> [String]? {
-        let phoneRule = ValidationRulePattern(pattern: "+?\\d{6,15}", error: ValidationError.phoneError)
+        let phoneRule = ValidationRulePattern(pattern: "\\+?\\d{6,15}", error: ValidationError.phoneError)
         let result = textFieldPhone.validate(rule: phoneRule)
         switch result {
         case .valid: return nil

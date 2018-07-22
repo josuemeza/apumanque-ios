@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 // MARK: - SessionManager singleton definition
 class SessionManager {
@@ -25,8 +26,8 @@ class SessionManager {
             if let result = result {
                 self.currentUser = result.user
                 self.currentUser?.token = result.token
-                NetworkingManager.singleton.spetialSales { _ in
-                    NetworkingManager.singleton.featuredSpetialSales { _ in
+                NetworkingManager.singleton.userDiscounts(featured: false) { _ in
+                    NetworkingManager.singleton.userDiscounts(featured: true) { _ in
                         completion(true)
                     }
                 }
@@ -36,12 +37,14 @@ class SessionManager {
         })
     }
     
-    func logout(completion: @escaping () -> Void) {
-        currentUser = nil
-        NetworkingManager.singleton.spetialSales { _ in
-            NetworkingManager.singleton.featuredSpetialSales { _ in
-                completion()
+    func logout() {
+        if let user = currentUser, let context = currentUser?.managedObjectContext {
+            let userDiscounts = user.discounts?.allObjects as? [Discount]
+            for discount in userDiscounts ?? [] {
+                context.delete(discount)
             }
+            context.delete(user)
+            currentUser = nil
         }
     }
     
