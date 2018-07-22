@@ -57,6 +57,7 @@
 		F2CE050A20C8BF83006565AC /* BikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE050920C8BF83006565AC /* BikeViewController.swift */; };
 		F2CE050C20C8BF92006565AC /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE050B20C8BF92006565AC /* ParkingViewController.swift */; };
 		F2CE050E20C8BFCC006565AC /* BabycarriageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE050D20C8BFCC006565AC /* BabycarriageViewController.swift */; };
+		F2CE96A22104ED59002FA9BE /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE96A12104ED59002FA9BE /* CouponViewController.swift */; };
 		F2DCC4A720BA79730018B086 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DCC4A620BA79730018B086 /* User.storyboard */; };
 		F2DCC4AB20BA88BC0018B086 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DCC4AA20BA88BC0018B086 /* Common.storyboard */; };
 		F2E0BED620CF5C31003D2AF8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */; };
@@ -181,6 +182,7 @@
 		F2CE050920C8BF83006565AC /* BikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeViewController.swift; sourceTree = "<group>"; };
 		F2CE050B20C8BF92006565AC /* ParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
 		F2CE050D20C8BFCC006565AC /* BabycarriageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabycarriageViewController.swift; sourceTree = "<group>"; };
+		F2CE96A12104ED59002FA9BE /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		F2DCC4A620BA79730018B086 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		F2DCC4AA20BA88BC0018B086 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
 		F2E0BED520CF5C31003D2AF8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				F20620D520B1CB5F00D5BA3C /* DiscountsViewController.swift */,
 				FA4E25BE20C0B3140067151E /* DiscountViewController.swift */,
+				F2CE96A12104ED59002FA9BE /* CouponViewController.swift */,
 			);
 			path = discounts;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				F27A9DBC2100529C00C97BBD /* AnswerViewController.swift in Sources */,
 				FA1F947320F25BFF00B5AF6D /* UISearchBar.swift in Sources */,
 				FAA2154D20AD17020034A4B5 /* UIColor.swift in Sources */,
+				F2CE96A22104ED59002FA9BE /* CouponViewController.swift in Sources */,
 				F20620C820AE97A200D5BA3C /* TutorialContentViewController.swift in Sources */,
 				FAF1AC2A20AC993600F01D59 /* ContactViewController.swift in Sources */,
 				FA1E82C320BCFC0800B69D2B /* SessionManager.swift in Sources */,
