@@ -88,6 +88,14 @@ class SearchViewController: ViewController {
                     if let text = searchBar.text?.lowercased(), !text.isEmpty {
                         if store.name?.lowercased().range(of: text) != nil {
                             return store
+                        } else if store.number?.range(of: text) != nil {
+                            return store
+                        } else if let tags = store.tags {
+                            for tag in tags.components(separatedBy: ",") {
+                                if tag.lowercased().range(of: text) != nil {
+                                    return store
+                                }
+                            }
                         }
                         return nil
                     } else {
