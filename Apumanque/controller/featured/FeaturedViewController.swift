@@ -36,14 +36,14 @@ class FeaturedViewController: BlurredViewController {
                 let storeCategories = segue.destination as! StoreCategoriesViewController
                 storeCategories.delegate = self
                 viewController = storeCategories
+            } else if segue.destination is FeaturedSingleViewController {
+                let featuredSingle = segue.destination as! FeaturedSingleViewController
+                featuredSingle.featured = discounts[tableView.indexPathForSelectedRow?.row ?? 0]
+                viewController = featuredSingle
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
             viewController.backgroundImage = view.takeScreenshot()
-        }
-        if segue.destination is DiscountViewController {
-            let viewController = segue.destination as! DiscountViewController
-            viewController.discount = discounts[tableView.indexPathForSelectedRow?.row ?? 0]
         }
     }
     
@@ -87,7 +87,8 @@ extension FeaturedViewController: UITableViewDataSource, UITableViewDelegate {
             cell.backgroundImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
         }
         cell.storeNameLabel.text = discount.store?.name
-        cell.valueLabel.text = discount.valueText
+        let value = Int(discount.valuePercent!)?.formattedWithSeparator
+        cell.valueLabel.text = value != nil ? "$\(value!)" : "S/V"
         cell.valueLabelContainer.backgroundColor = discount.valueColor?.color ?? .clear
         return cell
     }
