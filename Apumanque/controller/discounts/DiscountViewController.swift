@@ -23,6 +23,8 @@ class DiscountViewController: BlurredViewController {
     @IBOutlet weak var documentDetailContainerView: UIView!
     @IBOutlet weak var documentDetailSeparatorView: UIView!
     
+    private var user: User!
+    
     // MARK: - Attributes
     
     var discount: Discount!
@@ -41,7 +43,26 @@ class DiscountViewController: BlurredViewController {
     // MARK: - Actions
     
     @IBAction func getDiscountAction(_ sender: Any) {
-        // TODO: implements
+        
+        if Session.isLogged{
+            if Session.currentUser?.rut == nil {
+                print("ES NULO")
+                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
+                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
+                    
+                }))
+                
+                self.present(alert, animated: true)
+            } else {
+             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+            }
+        } else {
+            performSegue(withIdentifier: "discount_to_login_segue", sender: nil)
+        }
+        
+        
+        
     }
     @IBAction func detailExpandAction(_ sender: Any) {
         documentDetailViewIsHidden = !documentDetailViewIsHidden
@@ -62,6 +83,9 @@ class DiscountViewController: BlurredViewController {
 //        storePhoneLabel.text = discount.store?.phone
         storeDiscounts = discount.store?.discounts?.allObjects as? [Discount] ?? []
         storeDiscounts.remove(discount)
+        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
