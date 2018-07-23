@@ -16,7 +16,8 @@ class EditProfileViewController: BlurredViewController {
     @IBOutlet weak var imageViewProfilePhoto: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelLastName: UILabel!
-    @IBOutlet weak var labelRut: UILabel!
+    @IBOutlet weak var textFieldRut: UITextField!
+    @IBOutlet weak var labelErrorRut: UILabel!
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPhone: UITextField!
     @IBOutlet weak var textFieldBirthdate: UITextField!
@@ -34,6 +35,7 @@ class EditProfileViewController: BlurredViewController {
     @IBAction func buttonUpdateDataTap(_ sender: Any) {
         if validFields() {
             let user = Session.currentUser!
+            user.rut = textFieldRut.text
             user.email = textFieldEmail.text
             user.phone = textFieldPhone.text
             user.address = textFieldAddress.text
@@ -67,6 +69,7 @@ class EditProfileViewController: BlurredViewController {
         initUserData()
         buttonUpdateData.layer.cornerRadius = 30
         buttonUpdateData.clipsToBounds = true
+        labelErrorRut.text = ""
         labelErrorEmail.text = ""
         labelErrorPhone.text = ""
         labelErrorAddress.text = ""
@@ -89,7 +92,7 @@ class EditProfileViewController: BlurredViewController {
         if let user = Session.currentUser {
             labelName.text = user.firstName
             labelLastName.text = user.lastName
-            labelRut.text = user.rut
+            textFieldRut.text = user.rut
             textFieldEmail.text = user.email
             textFieldPhone.text = user.phone
             textFieldBirthdate.text = (user.birthday as Date?)?.string(format: "dd-MM-yyyy")
@@ -145,6 +148,7 @@ class EditProfileViewController: BlurredViewController {
 extension EditProfileViewController {
     
     enum ValidationError: String, Error {
+        case rutError = "El campo debe contener un RUT válido"
         case emailError = "El campo debe contener un email"
         case phoneError = "El campo debe contener un teléfono válido"
         var message: String { return self.rawValue }
@@ -152,6 +156,12 @@ extension EditProfileViewController {
     
     fileprivate func validFields() -> Bool {
         var valid = true
+        if let textFieldRutErrors = rutValidationErrors() {
+            labelErrorRut.text = textFieldRutErrors.joined(separator: ", ")
+            valid = false
+        } else {
+            labelErrorRut.text = ""
+        }
         if let textFieldEmailErrors = emailValidationErrors() {
             labelErrorEmail.text = textFieldEmailErrors.joined(separator: ", ")
             valid = false
@@ -165,6 +175,16 @@ extension EditProfileViewController {
             labelErrorPhone.text = ""
         }
         return valid
+    }
+    
+    fileprivate func rutValidationErrors() -> [String]? {
+        if textFieldRut.text?.isEmpty ?? false { return nil }
+        let rutRule = ValidationRulePattern(pattern: "^0*(\\d*)\\-?([\\dkK])$", error: ValidationError.rutError)
+        let result = textFieldRut.validate(rule: rutRule)
+        switch result {
+        case .valid: return nil
+        case .invalid(let errors): return (errors as! [ValidationError]).map { error in error.message }
+        }
     }
     
     fileprivate func emailValidationErrors() -> [String]? {
