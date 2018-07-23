@@ -215,6 +215,7 @@ extension HomeViewController: UISearchBarDelegate {
             searchBar.showsCancelButton = true
             searchBar.cancelButton?.setTitle("Cancelar", for: .normal)
         }
+        searchResultView.isHidden = false
         view.bringSubview(toFront: searchResultView)
     }
     
@@ -226,6 +227,7 @@ extension HomeViewController: UISearchBarDelegate {
         searchBar.text = ""
         searchBar.resignFirstResponder()
         searchBar.showsCancelButton = false
+        searchResultView.isHidden = true
         view.bringSubview(toFront: tableView)
         searchResultViewController.resultFiltered(by: "")
     }

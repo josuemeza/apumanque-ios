@@ -136,7 +136,6 @@ extension HelpViewCommonController: UISearchBarDelegate {
         searchBar.showsCancelButton = false
         searchResultView.isHidden = true
         view.sendSubview(toBack: searchBar)
-//        view.bringSubview(toFront: tableView)
         searchResultViewController.resultFiltered(by: "")
     }
     
