@@ -51,8 +51,8 @@ class DiscountsViewController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initDiscountList()
         isSegmentedControlHidden = !Session.isLogged
+        initDiscountList()
     }
 
     // MARK: - Navigation view controller methods
@@ -87,8 +87,14 @@ class DiscountsViewController: ViewController {
     
     func sortDiscounts() {
         discounts.sort { left, right in
-            if let leftDate = left.startDate?.toDate as Date?, let rightDate = right.startDate?.toDate as Date? {
-                return leftDate < rightDate
+            if listSegmentedControl.selectedSegmentIndex == 0 {
+                if let leftDate = left.startDate?.toDate, let rightDate = right.startDate?.toDate {
+                    return leftDate > rightDate
+                }
+            } else {
+                if let leftDate = left.createdAt?.toDate, let rightDate = right.createdAt?.toDate {
+                    return leftDate > rightDate
+                }
             }
             return false
         }
@@ -126,6 +132,10 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if !Session.isLogged && listSegmentedControl.selectedSegmentIndex == 1 {
+            listSegmentedControl.selectedSegmentIndex = 0
+            initDiscountList()
+        }
         switch listSegmentedControl.selectedSegmentIndex {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "discount_list_item_cell", for: indexPath) as! DiscountTableViewCell

@@ -2,7 +2,7 @@
 //  Discount+CoreDataProperties.swift
 //  
 //
-//  Created by Josue Meza Peña on 18-07-18.
+//  Created by Josue Meza Peña on 22-07-18.
 //
 //
 
@@ -29,6 +29,7 @@ extension Discount {
     @NSManaged public var tagColor: String?
     @NSManaged public var title: String?
     @NSManaged public var valuePercent: String?
+    @NSManaged public var createdAt: NSDate?
     @NSManaged public var store: Store?
     @NSManaged public var user: User?
 
