@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Campaing" representedClassName="Campaing" syncable="YES">
         <attribute name="code" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="contentCampaign" optional="YES" attributeType="String" syncable="YES"/>
@@ -102,6 +102,25 @@
         <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="discounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Discount" inverseName="user" inverseEntity="Discount" syncable="YES"/>
     </entity>
+    <entity name="UserScores" representedClassName="UserScores" syncable="YES" codeGenerationType="class">
+        <attribute name="barcolorcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bgcolorcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentCampaign" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="finishDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="imageCampaign" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lower" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="multiplicator" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nameType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tickets" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ticketsCampaign" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="upper" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userScoreCampaign" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userScoreId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Campaing" positionX="99" positionY="324" width="128" height="180"/>
         <element name="Discount" positionX="520" positionY="-18" width="128" height="270"/>
@@ -114,5 +133,6 @@
         <element name="StoreCategory" positionX="286" positionY="360" width="128" height="135"/>
         <element name="StoreSearch" positionX="97" positionY="137" width="128" height="88"/>
         <element name="User" positionX="718" positionY="-18" width="128" height="240"/>
+        <element name="UserScores" positionX="306" positionY="135" width="128" height="300"/>
     </elements>
 </model>

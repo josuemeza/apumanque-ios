@@ -248,6 +248,24 @@ class NetworkingManager {
         }
     }
     
+    func sendDiscount(id_special_sale: String, completion: @escaping Callback<JSON>){
+        let endpoint = "/basicmall/api/user_special_sales/"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
+        let parameters: Parameters = ["id_special_sale": id_special_sale]
+        Alamofire.request("\(apiUrl)\(endpoint)", method: .post, parameters: parameters, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("DESCUENTO OBTENIDO")
+                print(json)
+                completion(json)
+            case .failure(let responseError):
+                print(responseError.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
+    
     func requestData(completion: @escaping Callback<JSON>) {
         guard let context = context else { completion(nil) ; return }
         Help.all(on: context)?.forEach { help in context.delete(help) }

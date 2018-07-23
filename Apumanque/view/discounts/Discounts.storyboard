@@ -1211,7 +1211,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zV-dT-02h">
-                                                        <rect key="frame" x="78" y="36" width="258" height="36"/>
+                                                        <rect key="frame" x="78" y="36" width="258" height="35"/>
                                                         <string key="text">¡ FELICIDADES !
 DISFRUTA DE TU DESCUENTO</string>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
@@ -1219,22 +1219,22 @@ DISFRUTA DE TU DESCUENTO</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30% de descuento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-4w-7ho">
-                                                        <rect key="frame" x="38" y="79" width="338" height="24"/>
+                                                        <rect key="frame" x="38" y="78" width="338" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                                         <color key="textColor" red="0.85490196078431369" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W60-D2-Nsz">
-                                                        <rect key="frame" x="132.66666666666666" y="116" width="148.99999999999997" height="87"/>
+                                                        <rect key="frame" x="132.66666666666666" y="114.33333333333334" width="148.99999999999997" height="87"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CÓDIGO DESCUENTO:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-Lp-hHZ">
-                                                                <rect key="frame" x="13.33333333333335" y="13.000000000000002" width="122.66666666666669" height="28.666666666666671"/>
+                                                                <rect key="frame" x="13.33333333333335" y="13" width="122.66666666666669" height="28"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vltc00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l46-Kc-gFp">
-                                                                <rect key="frame" x="13" y="41.666666666666657" width="123" height="40.666666666666657"/>
+                                                                <rect key="frame" x="13" y="41" width="123" height="39.666666666666657"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="34"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1253,38 +1253,38 @@ DISFRUTA DE TU DESCUENTO</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-kc-Tsc">
-                                                        <rect key="frame" x="22" y="233" width="370" height="1"/>
+                                                        <rect key="frame" x="22" y="231.33333333333331" width="370" height="1"/>
                                                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="HZy-39-HM0"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-wp-K8I">
-                                                        <rect key="frame" x="28" y="253.00000000000003" width="358" height="14.333333333333343"/>
+                                                        <rect key="frame" x="28" y="251.33333333333331" width="358" height="14"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="María José Errázurriz Buenaventuranzas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYk-gq-yyZ">
-                                                        <rect key="frame" x="28" y="267.33333333333331" width="358" height="14.333333333333314"/>
+                                                        <rect key="frame" x="28" y="265.33333333333331" width="358" height="14"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIR-lO-26t">
-                                                        <rect key="frame" x="28" y="291.66666666666669" width="358" height="14.333333333333314"/>
+                                                        <rect key="frame" x="28" y="289.33333333333331" width="358" height="14"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.345.678-9" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kau-06-z1e">
-                                                        <rect key="frame" x="28" y="306" width="358" height="14.333333333333314"/>
+                                                        <rect key="frame" x="28" y="303.33333333333331" width="358" height="14"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-V7-5lO">
-                                                        <rect key="frame" x="19" y="345.33333333333331" width="376" height="182.99999999999994"/>
+                                                        <rect key="frame" x="19" y="342.33333333333331" width="376" height="182.99999999999994"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-N4-M2H">
                                                                 <rect key="frame" x="157.66666666666666" y="13" width="61" height="61"/>
@@ -1294,13 +1294,13 @@ DISFRUTA DE TU DESCUENTO</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-ez-Un9">
-                                                                <rect key="frame" x="18" y="85.666666666666686" width="340" height="34"/>
+                                                                <rect key="frame" x="18" y="85.666666666666686" width="340" height="32.666666666666657"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnF-zA-axQ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="16.333333333333332"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-Dh-feW">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="16.333333333333332"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="100" id="zFd-3x-wZD"/>
                                                                                 </constraints>
@@ -1309,7 +1309,7 @@ DISFRUTA DE TU DESCUENTO</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="María José Errázuriz" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v75-BY-dZB">
-                                                                                <rect key="frame" x="100" y="0.0" width="240" height="17"/>
+                                                                                <rect key="frame" x="100" y="0.0" width="240" height="16.333333333333332"/>
                                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1317,10 +1317,10 @@ DISFRUTA DE TU DESCUENTO</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-ia-lKx">
-                                                                        <rect key="frame" x="0.0" y="17" width="340" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="16.333333333333314" width="340" height="16.333333333333329"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-mi-rRD">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="16.333333333333332"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="100" id="0o8-rO-ZL4"/>
                                                                                 </constraints>
@@ -1329,7 +1329,7 @@ DISFRUTA DE TU DESCUENTO</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.345.578-9" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZT-db-31k">
-                                                                                <rect key="frame" x="100" y="0.0" width="240" height="17"/>
+                                                                                <rect key="frame" x="100" y="0.0" width="240" height="16.333333333333332"/>
                                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1339,7 +1339,7 @@ DISFRUTA DE TU DESCUENTO</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Descuento válido hasta el 31 de Abril del 2017" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-1J-GUV">
-                                                                <rect key="frame" x="17" y="146.66666666666669" width="342" height="13.333333333333343"/>
+                                                                <rect key="frame" x="17" y="145.33333333333331" width="342" height="13"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="11"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1422,6 +1422,14 @@ DISFRUTA DE TU DESCUENTO</string>
                     </view>
                     <connections>
                         <outlet property="borderView" destination="W60-D2-Nsz" id="3aw-dy-5Jv"/>
+                        <outlet property="codeDiscount" destination="l46-Kc-gFp" id="wRx-ij-4mi"/>
+                        <outlet property="dateDiscount" destination="1JA-1J-GUV" id="VzN-ry-ATZ"/>
+                        <outlet property="imageDiscount" destination="gSV-N4-M2H" id="n9h-xO-FfO"/>
+                        <outlet property="storeLocation" destination="XZT-db-31k" id="lRs-bz-NvT"/>
+                        <outlet property="storeName" destination="v75-BY-dZB" id="GWF-C6-Tbz"/>
+                        <outlet property="titleDiscount" destination="7ov-4w-7ho" id="HeR-Gr-Yoj"/>
+                        <outlet property="userName" destination="iYk-gq-yyZ" id="gOB-75-Vzl"/>
+                        <outlet property="userRut" destination="kau-06-z1e" id="a0q-s7-Tt1"/>
                         <outlet property="viewMenuName" destination="Sxd-V7-5lO" id="gCP-Q2-Ukw"/>
                     </connections>
                 </viewController>
@@ -1453,6 +1461,6 @@ DISFRUTA DE TU DESCUENTO</string>
         <image name="placeholder-image" width="600" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S7X-Cz-8ac"/>
+        <segue reference="Q9r-mM-cF2"/>
     </inferredMetricsTieBreakers>
 </document>
