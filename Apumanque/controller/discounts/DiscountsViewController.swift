@@ -51,8 +51,8 @@ class DiscountsViewController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initDiscountList()
         isSegmentedControlHidden = !Session.isLogged
+        initDiscountList()
     }
 
     // MARK: - Navigation view controller methods
@@ -132,6 +132,10 @@ extension DiscountsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if !Session.isLogged && listSegmentedControl.selectedSegmentIndex == 1 {
+            listSegmentedControl.selectedSegmentIndex = 0
+            initDiscountList()
+        }
         switch listSegmentedControl.selectedSegmentIndex {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "discount_list_item_cell", for: indexPath) as! DiscountTableViewCell
