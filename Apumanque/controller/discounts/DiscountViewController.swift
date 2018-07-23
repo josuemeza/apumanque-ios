@@ -45,18 +45,23 @@ class DiscountViewController: BlurredViewController {
     @IBAction func getDiscountAction(_ sender: Any) {
         
         if Session.isLogged{
-            if Session.currentUser?.rut == nil {
-                print("ES NULO")
-                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
-                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
-                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
-                    
-                }))
-                
-                self.present(alert, animated: true)
-            } else {
-             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
-            }
+//            if Session.currentUser?.rut == nil {
+//                print("ES NULO")
+//                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
+//                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+//                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
+//
+//                }))
+//
+//                self.present(alert, animated: true)
+//            } else {
+//             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+//            }
+            
+            performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+            
+            
+            
         } else {
             performSegue(withIdentifier: "discount_to_login_segue", sender: nil)
         }
@@ -93,9 +98,22 @@ class DiscountViewController: BlurredViewController {
             guard let indexPath = storeDiscountsCollectionView.indexPathsForSelectedItems?.first else { return }
             let viewController = segue.destination as! DiscountViewController
             viewController.discount = storeDiscounts[indexPath.row]
+        } else if segue.destination is CouponViewController {
+            let couponViewController = segue.destination as! CouponViewController
+            couponViewController.discount = discount
+//            let indexPath = tableView.indexPathForSelectedRow!
+//            let help = helpArray[indexPath.row]
+//            helpViewController.help = help
         }
     }
 
+    
+//    let helpViewController = segue.destination as! AnswerViewController
+//    let indexPath = tableView.indexPathForSelectedRow!
+//    let help = helpArray[indexPath.row]
+//    helpViewController.help = help
+    
+    
 }
 
 extension DiscountViewController: UICollectionViewDataSource, UICollectionViewDelegate {
