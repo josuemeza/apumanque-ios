@@ -30,7 +30,7 @@ public class Campaing: NSManagedObject {
             imageUrl = json["images"][1]["image"].string
             title = json["title"].string
             pdfFile = json["pdf_file"].string
-            startDate = json["start_date"].string != nil ? Date.parse(stringDate: json["finish_date"].stringValue, format: "yyyy-MM-dd") as NSDate? : nil
+            startDate = json["start_date"].string != nil ? Date.parse(stringDate: json["start_date"].stringValue, format: "yyyy-MM-dd") as NSDate? : nil
             title = json["title"].string
             id = String(json["id"].intValue)
         return true

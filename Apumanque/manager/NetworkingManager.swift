@@ -256,12 +256,49 @@ class NetworkingManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("DESCUENTO OBTENIDO")
                 print(json)
                 completion(json)
             case .failure(let responseError):
                 print(responseError.localizedDescription)
                 completion(nil)
+            }
+        }
+    }
+    
+//    func getUserScoresTwo(completion: @escaping Callback<UserScores>){
+//        guard let context = context else { completion(nil) ; return }
+//        let endpoint = "/basicmall/api/user_scores/"
+//        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
+//        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                print(json)
+//                completion(UserScores(context: context))
+//            case .failure(let responseError):
+//                print(responseError.localizedDescription)
+//                completion(nil)
+//            }
+//        }
+//    }
+    
+    func getUserScores(completion: @escaping Callback<UserScores>) {
+        guard let context = context else { completion(nil) ; return }
+        let endpoint = "/basicmall/api/user_scores/"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
+        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)["results"][0]
+                let userScores = UserScores(context: context)
+                userScores.setData(from: json)
+                print("TOKEN \(SessionManager.singleton.currentUser!.token!)")
+                print("SCORES \(value)")
+                print("SCORES 123456789 \(json["pdf_file"].string)")
+                completion(userScores)
+                
+            case .failure(let responseError):
+                print(responseError.localizedDescription)
             }
         }
     }
@@ -275,12 +312,13 @@ class NetworkingManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                for helpJSON in json["results"][0]["config"][1]["menues"][2]["options"].array ?? [] {
+                for helpJSON in json["results"][0]["config"][1]["menues"][1]["options"].array ?? [] {
                     let help = Help(context: context)
                     _ = help.setData(from: helpJSON)
                 }
                 completion(json)
             case .failure(let responseError):
+                print("ERROR")
                 print(responseError.localizedDescription)
                 completion(nil)
             }
