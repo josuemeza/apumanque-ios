@@ -150,7 +150,10 @@ class NetworkingManager {
                 var discounts = [Discount]()
                 for discountJSON in discountsJSON {
                     let discount = Discount(context: context)
-                    let json = discountJSON["id_special_sale"].exists() ? discountJSON["id_special_sale"] : discountJSON
+                    var json = discountJSON["id_special_sale"].exists() ? discountJSON["id_special_sale"] : discountJSON
+                    if discountJSON["id_special_sale"].exists() {
+                        json["created"] = discountJSON["created"]
+                    }
                     if discount.setData(from: json, featured: false) {
                         discount.featured = featured
                         discounts.append(discount)

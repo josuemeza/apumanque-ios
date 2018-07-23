@@ -26,6 +26,7 @@ class SessionManager {
             if let result = result {
                 self.currentUser = result.user
                 self.currentUser?.token = result.token
+                print("User token: \(result.token)")
                 NetworkingManager.singleton.userDiscounts(featured: false) { _ in
                     NetworkingManager.singleton.userDiscounts(featured: true) { _ in
                         completion(true)

@@ -87,8 +87,14 @@ class DiscountsViewController: ViewController {
     
     func sortDiscounts() {
         discounts.sort { left, right in
-            if let leftDate = left.startDate?.toDate as Date?, let rightDate = right.startDate?.toDate as Date? {
-                return leftDate < rightDate
+            if listSegmentedControl.selectedSegmentIndex == 0 {
+                if let leftDate = left.startDate?.toDate, let rightDate = right.startDate?.toDate {
+                    return leftDate > rightDate
+                }
+            } else {
+                if let leftDate = left.createdAt?.toDate, let rightDate = right.createdAt?.toDate {
+                    return leftDate > rightDate
+                }
             }
             return false
         }
