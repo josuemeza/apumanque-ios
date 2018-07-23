@@ -14,6 +14,13 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var menuViewProfile: UIView!
     @IBOutlet weak var circularProgress: UICircularProgressRingView!
     @IBOutlet weak var blurBackground: UIVisualEffectView!
+    @IBOutlet weak var nameProfile: UILabel!
+    @IBOutlet weak var typeProfile: UILabel!
+    @IBOutlet weak var couponCampaign: UILabel!
+    @IBOutlet weak var levelProfile: UILabel!
+    @IBOutlet weak var multiplicatorProfile: UILabel!
+    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet var backgroundColorView: UIView!
     
     var isLogin: Bool = false
     
@@ -38,10 +45,26 @@ class ProfileViewController: ViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         if Session.isLogged{
-            blurBackground.isHidden = true
+            NetworkingManager.singleton.getUserScores { data in
+                if let json = data {
+                    print(json)
+                    self.nameProfile.text = "\(self.Session.currentUser!.firstName!) \(self.Session.currentUser!.lastName!)"
+                    self.typeProfile.text = "Ciudadano \(json.nameType!)"
+                    self.couponCampaign.text = String(json.ticketsCampaign)
+                    self.levelProfile.text = "Nivel actual: Nivel \(json.level)"
+                    if Double(json.multiplicator!)! > 1.0 {
+                        self.multiplicatorProfile.text = "Recibes \(json.multiplicator!) cupones por cada $10.000.- de compras"
+                    } else{
+                        self.multiplicatorProfile.text = "Recibes \(json.multiplicator!) cupon por cada $10.000.- de compras"
+                    }
+                    self.circularProgress.value = CGFloat(json.percentage)
+                    self.backgroundColorView.backgroundColor = self.hexStringToUIColor(hex: json.bgcolorcode!)
+                    self.blurBackground.isHidden = true
+                }
+            }
         } else {
+            self.blurBackground.isHidden = false
             if isLogin {
                 tabBarController?.selectedIndex = 0
                 isLogin = false
@@ -124,4 +147,30 @@ extension ProfileViewController: MenuViewControllerDelegate {
         }
     }
     
+}
+
+// MARK: -
+// MARK: - Methods Background Color
+extension ProfileViewController {
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 }

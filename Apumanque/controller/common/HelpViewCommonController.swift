@@ -46,6 +46,8 @@ class HelpViewCommonController: ViewController {
         navigationItem.rightBarButtonItem = barButtonItem
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
