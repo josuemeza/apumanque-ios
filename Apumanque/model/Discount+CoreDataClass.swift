@@ -86,8 +86,8 @@ public class Discount: NSManagedObject {
         conditions = json["conditions"].string
         active = json["is_active"].bool ?? false
         imageUrl = json["images"][0]["image"].string
-        startDate = json["start_date"].string != nil ? Date.parse(stringDate: json["start_date"].stringValue, format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ") as NSDate? : nil
-        expireDate = json["expire_date"].string != nil ? Date.parse(stringDate: json["expire_date"].stringValue, format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ") as NSDate? : nil
+        startDate = json["start_date"].string != nil ? Date.parse(stringDate: json["start_date"].stringValue, format: "yyyy-MM-dd'T'HH:mm:ssZ") as NSDate? : nil
+        expireDate = json["expire_date"].string != nil ? Date.parse(stringDate: json["expire_date"].stringValue, format: "yyyy-MM-dd'T'HH:mm:ssZ") as NSDate? : nil
         store = Store.find(byId: json["id_store"]["id"].intValue, on: context)
         return true
     }

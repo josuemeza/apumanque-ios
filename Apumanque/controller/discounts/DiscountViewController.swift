@@ -45,23 +45,18 @@ class DiscountViewController: BlurredViewController {
     @IBAction func getDiscountAction(_ sender: Any) {
         
         if Session.isLogged{
-//            if Session.currentUser?.rut == nil {
-//                print("ES NULO")
-//                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
-//                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
-//                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
-//
-//                }))
-//
-//                self.present(alert, animated: true)
-//            } else {
-//             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
-//            }
-            
-            performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
-            
-            
-            
+            if Session.currentUser?.rut == nil {
+                print("ES NULO")
+                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
+                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
+                    
+                }))
+                
+                self.present(alert, animated: true)
+            } else {
+             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+            }
         } else {
             performSegue(withIdentifier: "discount_to_login_segue", sender: nil)
         }
@@ -94,26 +89,25 @@ class DiscountViewController: BlurredViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DiscountViewController {
-            guard let indexPath = storeDiscountsCollectionView.indexPathsForSelectedItems?.first else { return }
-            let viewController = segue.destination as! DiscountViewController
-            viewController.discount = storeDiscounts[indexPath.row]
-        } else if segue.destination is CouponViewController {
-            let couponViewController = segue.destination as! CouponViewController
-            couponViewController.discount = discount
-//            let indexPath = tableView.indexPathForSelectedRow!
-//            let help = helpArray[indexPath.row]
-//            helpViewController.help = help
+        
+        if segue.destination is BlurredViewController {
+            let viewController: BlurredViewController
+            if segue.destination is DiscountViewController {
+                guard let indexPath = storeDiscountsCollectionView.indexPathsForSelectedItems?.first else { return }
+                let storeDiscountsController = segue.destination as! DiscountViewController
+                storeDiscountsController.discount = storeDiscounts[indexPath.row]
+                viewController = storeDiscountsController
+            } else if segue.destination is StoreViewController {
+                let storeController = segue.destination as! StoreViewController
+                storeController.store = discount.store!
+                viewController = storeController
+            } else {
+                viewController = segue.destination as! BlurredViewController
+            }
+            viewController.backgroundImage = backgroundImage
         }
     }
 
-    
-//    let helpViewController = segue.destination as! AnswerViewController
-//    let indexPath = tableView.indexPathForSelectedRow!
-//    let help = helpArray[indexPath.row]
-//    helpViewController.help = help
-    
-    
 }
 
 extension DiscountViewController: UICollectionViewDataSource, UICollectionViewDelegate {
