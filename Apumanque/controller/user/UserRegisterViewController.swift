@@ -177,6 +177,7 @@ extension UserRegisterViewController {
     }
     
     fileprivate func rutValidationErrors() -> [String]? {
+        if textFieldRut.text?.isEmpty ?? false { return nil }
         let rutRule = ValidationRulePattern(pattern: "^0*(\\d*)\\-?([\\dkK])$", error: ValidationError.rutError)
         let result = textFieldRut.validate(rule: rutRule)
         switch result {
