@@ -15,12 +15,13 @@ class HomeViewController: ViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchFieldContainer: UIView!
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchResultView: UIView!
     
     // MARK: - Attributes
     
+    var searchResultViewController: SearchResultViewController!
     var homeCategories = [HomeCategory]()
     
     // MARK: - View controller methods
@@ -28,7 +29,16 @@ class HomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeCategories = ApplicationManager.singleton.homeCategories
-        searchFieldContainer.roundOut(radious: 8)
+        setGradientNavigationBar(with: UIColor.black.toImage())
+        ({
+            // Search bar setup
+            searchBar.cancelButton?.setTitle("Cancelar", for: .normal)
+            searchBar.textField?.background = UIColor.clear.toImage()
+            searchBar.imageView?.backgroundColor = .clear
+            searchBar.imageView?.tintColor = .clear
+            searchBar.textField?.textColor = .white
+            searchBar.textField?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2)
+        })()
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
 //        view.addGestureRecognizer(tapGesture)
         
@@ -50,6 +60,7 @@ class HomeViewController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        searchResultViewController.reloadData()
     }
     
     // MARK: - Navigation view controller methods
@@ -60,7 +71,11 @@ class HomeViewController: ViewController {
             viewController.delegate = self
         } else if segue.destination is BlurredViewController {
             let viewController: BlurredViewController
-            if segue.identifier == "home_to_winner_segue" {
+            if segue.destination is StoreViewController {
+                let storeViewController = segue.destination as! StoreViewController
+                storeViewController.store = sender as! Store
+                viewController = storeViewController
+            } else if segue.identifier == "home_to_winner_segue" {
                 let destination = segue.destination as! NewsViewController
                 destination.isContestDefault = true
                 viewController = destination
@@ -68,14 +83,19 @@ class HomeViewController: ViewController {
                 viewController = segue.destination as! BlurredViewController
             }
             viewController.backgroundImage = view.takeScreenshot()
+        } else if segue.destination is SearchResultViewController {
+            let viewController = segue.destination as! SearchResultViewController
+            viewController.managedObjectContext = managedObjectContext
+            viewController.delegate = self
+            searchResultViewController = viewController
         }
     }
     
     // MARK: - Methods
     
-    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
-        searchTextField.resignFirstResponder()
-    }
+//    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+//        searchTextField.resignFirstResponder()
+//    }
     
 }
 
@@ -170,6 +190,44 @@ extension HomeViewController: MenuViewControllerDelegate {
         case .help:
             performSegue(withIdentifier: "home_to_help_segue", sender: nil)
         }
+    }
+    
+}
+
+// MARK: - Search result delegate
+extension HomeViewController: SearchResultViewControllerDelegate {
+    
+    func searchResultViewController(_ controller: SearchResultViewController, didSelectSearchStore store: Store) {
+        performSegue(withIdentifier: "home_to_store_segue", sender: store)
+    }
+    
+    func searchResultViewController(_ controller: SearchResultViewController, didSelectRecentSearchStore store: Store) {
+        performSegue(withIdentifier: "home_to_store_segue", sender: store)
+    }
+    
+}
+
+// MARK: - Search bar delegate
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        if !searchBar.showsCancelButton {
+            searchBar.showsCancelButton = true
+            searchBar.cancelButton?.setTitle("Cancelar", for: .normal)
+        }
+        view.bringSubview(toFront: searchResultView)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchResultViewController.resultFiltered(by: searchText.lowercased())
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+        view.bringSubview(toFront: tableView)
+        searchResultViewController.resultFiltered(by: "")
     }
     
 }
