@@ -89,10 +89,22 @@ class DiscountViewController: BlurredViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DiscountViewController {
-            guard let indexPath = storeDiscountsCollectionView.indexPathsForSelectedItems?.first else { return }
-            let viewController = segue.destination as! DiscountViewController
-            viewController.discount = storeDiscounts[indexPath.row]
+        
+        if segue.destination is BlurredViewController {
+            let viewController: BlurredViewController
+            if segue.destination is DiscountViewController {
+                guard let indexPath = storeDiscountsCollectionView.indexPathsForSelectedItems?.first else { return }
+                let storeDiscountsController = segue.destination as! DiscountViewController
+                storeDiscountsController.discount = storeDiscounts[indexPath.row]
+                viewController = storeDiscountsController
+            } else if segue.destination is StoreViewController {
+                let storeController = segue.destination as! StoreViewController
+                storeController.store = discount.store!
+                viewController = storeController
+            } else {
+                viewController = segue.destination as! BlurredViewController
+            }
+            viewController.backgroundImage = backgroundImage
         }
     }
 

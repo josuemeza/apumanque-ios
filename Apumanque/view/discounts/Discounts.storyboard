@@ -772,6 +772,9 @@
                                                                                     <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <segue destination="Mxh-UB-ohI" kind="show" id="ee1-UX-6rz"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condiciones comerciales" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-6R-oCd">
                                                                             <rect key="frame" x="21" y="547" width="356" height="28.666666666666629"/>
@@ -1425,6 +1428,14 @@ DISFRUTA DE TU DESCUENTO</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47y-NY-MW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2592.753623188406" y="-1118.4782608695652"/>
+        </scene>
+        <!--store_single_view_controller-->
+        <scene sceneID="Zxn-E1-ePd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="store_single_view_controller" id="Mxh-UB-ohI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7N-1N-Tl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="-580"/>
         </scene>
         <!--login_view_controller-->
         <scene sceneID="JAf-LI-fch">
