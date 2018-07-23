@@ -11,7 +11,6 @@ import CoreData
 
 protocol SearchResultViewControllerDelegate {
     
-    func searchResultViewController(_ controller: SearchResultViewController, reloadTableWithFilter filter: String)
     func searchResultViewController(_ controller: SearchResultViewController, didSelectSearchStore store: Store)
     func searchResultViewController(_ controller: SearchResultViewController, didSelectRecentSearchStore store: Store)
 }
@@ -21,6 +20,7 @@ class SearchResultViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - Attributes
     
@@ -74,7 +74,7 @@ class SearchResultViewController: UIViewController {
                 }.sorted { left, right in
                         left.name ?? "" < right.name ?? ""
                 }
-                if !filteredStores.isEmpty {
+                if !filteredStores.isEmpty && !sectionNames.contains(categoryName) {
                     stores[categoryName] = filteredStores
                     sectionNames.append(categoryName)
                 }
@@ -89,7 +89,12 @@ class SearchResultViewController: UIViewController {
             sectionNames.insert("", at: 0)
         }
         tableView.reloadData()
-        delegate?.searchResultViewController(self, reloadTableWithFilter: searchFilter)
+        if !recentSearchStores.isEmpty {
+            tableViewTopConstraint.constant = -46
+        } else {
+            tableViewTopConstraint.constant = 0
+        }
+        view.layoutIfNeeded()
     }
     
     private func saveSearch(of store: Store) {
@@ -108,7 +113,10 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section > 0 ? stores[sectionNames[section]]?.count ?? 0 : 1
+        if !recentSearchStores.isEmpty && section == 0 {
+            return 1
+        }
+        return stores[sectionNames[section]]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

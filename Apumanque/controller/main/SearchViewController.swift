@@ -13,7 +13,6 @@ class SearchViewController: ViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var searchResultViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - Attributes
     
@@ -70,15 +69,6 @@ class SearchViewController: ViewController {
 }
 
 extension SearchViewController: SearchResultViewControllerDelegate {
-    
-    func searchResultViewController(_ controller: SearchResultViewController, reloadTableWithFilter filter: String) {
-        if !searchResultViewController.recentSearchStores.isEmpty {
-            searchResultViewTopConstraint.constant = -46
-        } else {
-            searchResultViewTopConstraint.constant = 0
-        }
-        view.layoutIfNeeded()
-    }
     
     func searchResultViewController(_ controller: SearchResultViewController, didSelectSearchStore store: Store) {
         performSegue(withIdentifier: "search_to_store_segue", sender: store)
