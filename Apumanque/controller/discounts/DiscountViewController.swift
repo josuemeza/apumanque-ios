@@ -46,16 +46,25 @@ class DiscountViewController: BlurredViewController {
         
         if Session.isLogged{
             if Session.currentUser?.rut == nil {
-                print("ES NULO")
-                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: .actionSheet)
-                alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
-                alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
-                    
-                }))
                 
-                self.present(alert, animated: true)
+                let alert = UIAlertController(title: "Para obtener tu cupón de descuento debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+                let finish = UIAlertAction(title: "Salir sin obtener cupón", style: .default, handler: { action in
+                    
+                })
+                let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
+                    
+                    
+                })
+                
+                finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                alert.addAction(uploadOther)
+                alert.addAction(finish)
+                
+                self.present(alert, animated: true, completion: nil)
+                
             } else {
-             performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
             }
         } else {
             performSegue(withIdentifier: "discount_to_login_segue", sender: nil)
@@ -69,7 +78,7 @@ class DiscountViewController: BlurredViewController {
     }
     
     // MARK: - View controller methods
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         build(withOpaqueNavigationBar: true)
@@ -80,7 +89,7 @@ class DiscountViewController: BlurredViewController {
         valueLabel.backgroundColor = discount.valueColor?.color ?? .clear
         expireDateLabel.text = (discount.expireDate as Date?)?.string(format: "dd/MM/yy")
         storeNameLabel.text = discount.store?.name
-//        storePhoneLabel.text = discount.store?.phone
+        //        storePhoneLabel.text = discount.store?.phone
         storeDiscounts = discount.store?.discounts?.allObjects as? [Discount] ?? []
         storeDiscounts.remove(discount)
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
@@ -107,7 +116,7 @@ class DiscountViewController: BlurredViewController {
             viewController.backgroundImage = backgroundImage
         }
     }
-
+    
 }
 
 extension DiscountViewController: UICollectionViewDataSource, UICollectionViewDelegate {
