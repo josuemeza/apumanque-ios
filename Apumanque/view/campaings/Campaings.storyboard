@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N7Z-3a-BsP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4av-8R-bcf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,9 +29,6 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="ePc-tD-MCh" kind="relationship" relationship="rootViewController" id="ERb-oa-W9J"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEX-XZ-tJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,9 +51,6 @@
                                             <constraint firstAttribute="width" constant="30" id="E2p-V4-lXi"/>
                                             <constraint firstAttribute="height" constant="30" id="iBt-Yg-n5C"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="h13-ej-xYi" kind="show" identifier="campaings_to_login_segue" id="J7n-uW-iSP"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmB-pk-MM4" userLabel="To register">
                                         <rect key="frame" x="30" y="0.0" width="30" height="30"/>
@@ -64,9 +58,6 @@
                                             <constraint firstAttribute="width" constant="30" id="Pzs-mR-5uo"/>
                                             <constraint firstAttribute="height" constant="30" id="xAT-zg-TbS"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="DGB-Hi-sEV" kind="show" identifier="campaings_to_register_segue" id="goO-1A-fag"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-Wy-Veh" userLabel="To edit">
                                         <rect key="frame" x="60" y="0.0" width="30" height="30"/>
@@ -74,9 +65,6 @@
                                             <constraint firstAttribute="width" constant="30" id="2jP-je-1PS"/>
                                             <constraint firstAttribute="height" constant="30" id="rAR-cb-P1z"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="PVt-4d-VvK" kind="show" identifier="campaings_to_edit_segue" id="Whi-rZ-1iS"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-SO-5Nk" userLabel="To contact">
                                         <rect key="frame" x="90" y="0.0" width="30" height="30"/>
@@ -84,9 +72,6 @@
                                             <constraint firstAttribute="height" constant="30" id="Xiw-KQ-LKe"/>
                                             <constraint firstAttribute="width" constant="30" id="n7F-Xp-yms"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" animates="NO" modalPresentationStyle="overFullScreen" id="AvN-BS-Eam"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su5-25-S2q" userLabel="To service">
                                         <rect key="frame" x="120" y="0.0" width="30" height="30"/>
@@ -94,9 +79,6 @@
                                             <constraint firstAttribute="width" constant="30" id="CLd-OF-xeT"/>
                                             <constraint firstAttribute="height" constant="30" id="HEl-lr-Zga"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="HB4-aJ-XaI" kind="show" identifier="home_to_services_segue" id="jly-17-wjv"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsA-8q-aXc" userLabel="To stores">
                                         <rect key="frame" x="150" y="0.0" width="30" height="30"/>
@@ -104,9 +86,6 @@
                                             <constraint firstAttribute="height" constant="30" id="2dg-L6-sty"/>
                                             <constraint firstAttribute="width" constant="30" id="TXI-0R-fjP"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="AWG-JR-OUn" kind="show" identifier="home_to_stores_segue" id="m1l-Vc-quM"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kU-xt-ybr" userLabel="To featured">
                                         <rect key="frame" x="180" y="0.0" width="30" height="30"/>
@@ -114,9 +93,6 @@
                                             <constraint firstAttribute="width" constant="30" id="Nfh-rm-fyO"/>
                                             <constraint firstAttribute="height" constant="30" id="Q1q-CC-QLD"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="DPj-0j-CO4" kind="show" identifier="home_to_featured_segue" id="uVI-bX-djz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-aq-IEA" userLabel="To news">
                                         <rect key="frame" x="150" y="0.0" width="30" height="30"/>
@@ -124,9 +100,6 @@
                                             <constraint firstAttribute="height" constant="30" id="BDm-7D-PPF"/>
                                             <constraint firstAttribute="width" constant="30" id="nNT-u7-GkK"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="O1c-qm-pFg" kind="show" identifier="campaings_to_news_segue" id="z6r-ji-LRG"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQX-dF-uLp" userLabel="To campaign">
                                         <rect key="frame" x="210" y="0.0" width="30" height="30"/>
@@ -134,9 +107,6 @@
                                             <constraint firstAttribute="width" constant="30" id="10m-5f-ri8"/>
                                             <constraint firstAttribute="height" constant="30" id="SUx-r0-ieR"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="0un-yP-a6Z" kind="show" id="0Og-Qt-Vud"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDL-Z6-pVC" userLabel="To help">
                                         <rect key="frame" x="240" y="0.0" width="30" height="30"/>
@@ -145,9 +115,6 @@
                                             <constraint firstAttribute="width" constant="30" id="i6k-nU-iOX"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="byk-T6-rt6" kind="show" identifier="campaings_to_help_segue" id="s1p-hc-x5f"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,13 +144,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subir Boleta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGs-gR-EAy">
-                                <rect key="frame" x="20" y="88" width="340" height="48"/>
+                                <rect key="frame" x="20" y="44" width="340" height="48"/>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participa en nuestra Campaña vigente" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wym-uz-MQy">
-                                <rect key="frame" x="20" y="145" width="340" height="67"/>
+                                <rect key="frame" x="20" y="101" width="340" height="67"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -237,7 +204,6 @@
                                 </state>
                                 <connections>
                                     <action selector="uploadInvoiceButtonTap:" destination="ePc-tD-MCh" eventType="touchUpInside" id="RwX-kJ-2LG"/>
-                                    <segue destination="9GX-Os-ZOF" kind="show" id="Big-V1-YFY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,11 +234,6 @@
                         <viewLayoutGuide key="safeArea" id="EYj-oc-DjC"/>
                     </view>
                     <navigationItem key="navigationItem" id="OPz-ak-GGz">
-                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="5Pn-J4-AbG">
-                            <connections>
-                                <segue destination="eP1-Av-xIH" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="3b3-fZ-Al4"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="logo" id="ed0-E1-lNB"/>
                     </navigationItem>
                     <connections>
@@ -290,7 +251,7 @@
                 <viewControllerPlaceholder storyboardName="Services" referencedIdentifier="services_view_controller" id="HB4-aJ-XaI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIX-13-Har" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2550" y="-461"/>
+            <point key="canvasLocation" x="-3191" y="469"/>
         </scene>
         <!--stores_view_controller-->
         <scene sceneID="z4s-Yf-Wd3">
@@ -298,7 +259,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="stores_view_controller" id="AWG-JR-OUn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4j-r5-9JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2561" y="-404"/>
+            <point key="canvasLocation" x="-3202" y="521"/>
         </scene>
         <!--featured_view_controller-->
         <scene sceneID="TK0-d6-SD4">
@@ -306,7 +267,7 @@
                 <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="featured_view_controller" id="DPj-0j-CO4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALs-JK-SQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562" y="-358"/>
+            <point key="canvasLocation" x="-3190" y="568"/>
         </scene>
         <!--menu_view_controller-->
         <scene sceneID="wkK-Ep-Jqo">
@@ -314,7 +275,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="menu_view_controller" id="eP1-Av-xIH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awm-1H-TKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2564" y="-523"/>
+            <point key="canvasLocation" x="-3206" y="417"/>
         </scene>
         <!--login_view_controller-->
         <scene sceneID="Qjf-vL-DFA">
@@ -322,7 +283,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="login_view_controller" id="h13-ej-xYi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJg-ya-pY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2566" y="-574"/>
+            <point key="canvasLocation" x="-3208" y="367"/>
         </scene>
         <!--register_view_controller-->
         <scene sceneID="8sA-zh-FDS">
@@ -330,7 +291,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="register_view_controller" id="DGB-Hi-sEV" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpL-b7-NX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2553" y="-640"/>
+            <point key="canvasLocation" x="-3194" y="323"/>
         </scene>
         <!--edit_user_view_controller-->
         <scene sceneID="kXc-cJ-SO4">
@@ -338,7 +299,7 @@
                 <viewControllerPlaceholder storyboardName="User" referencedIdentifier="edit_user_view_controller" id="PVt-4d-VvK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcd-BM-OmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2546" y="-694"/>
+            <point key="canvasLocation" x="-3188" y="266"/>
         </scene>
         <!--contact_view_controller-->
         <scene sceneID="XUZ-Z6-W7L">
@@ -346,12 +307,12 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="contact_view_controller" id="L4s-mx-cur" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCt-9W-iSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2554" y="-748"/>
+            <point key="canvasLocation" x="-3195" y="216"/>
         </scene>
-        <!--Campaña vigente-->
+        <!--Upload Invoice View Controller-->
         <scene sceneID="Nth-JX-0x1">
             <objects>
-                <viewController id="9GX-Os-ZOF" customClass="UploadInvoiceViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="upload_invoice_view_controller" id="9GX-Os-ZOF" customClass="UploadInvoiceViewController" customModule="Apumanque" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVb-4q-VqO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -718,24 +679,144 @@
                                     <constraint firstAttribute="bottom" secondItem="PCg-3N-F2X" secondAttribute="bottom" id="xIR-K3-k4u"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImR-Si-L0b" userLabel="To login">
+                                <rect key="frame" x="0.0" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="JNg-25-bDi"/>
+                                    <constraint firstAttribute="height" constant="30" id="hY6-CN-TFm"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="h13-ej-xYi" kind="show" identifier="campaings_to_login_segue" id="aeE-vm-u8E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLv-Fv-T92" userLabel="To register">
+                                <rect key="frame" x="30" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="AP9-0j-SrU"/>
+                                    <constraint firstAttribute="height" constant="30" id="kGz-X5-FKI"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="DGB-Hi-sEV" kind="show" identifier="campaings_to_register_segue" id="cVD-hq-8zQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-gB-JQO" userLabel="To edit">
+                                <rect key="frame" x="60" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UK6-5B-H6h"/>
+                                    <constraint firstAttribute="width" constant="30" id="tEt-at-wE1"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PVt-4d-VvK" kind="show" id="dez-zF-CjA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whC-9W-XLN" userLabel="To contact">
+                                <rect key="frame" x="90" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L1I-Gj-WTH"/>
+                                    <constraint firstAttribute="width" constant="30" id="amg-gm-tft"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="L4s-mx-cur" kind="presentation" identifier="campaings_to_contact_segue" id="M3Z-y3-ceW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-it-OJi" userLabel="To service">
+                                <rect key="frame" x="120" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6G3-DN-dH1"/>
+                                    <constraint firstAttribute="width" constant="30" id="nqw-bm-SQS"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="HB4-aJ-XaI" kind="show" identifier="campaings_to_services_segue" id="CtC-w2-dYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-4B-DjP" userLabel="To stores">
+                                <rect key="frame" x="150" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="MIt-r3-wfC"/>
+                                    <constraint firstAttribute="height" constant="30" id="Vlh-7q-h5C"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="AWG-JR-OUn" kind="show" identifier="campaings_to_stores_segue" id="HW6-k1-cvG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-tL-S4v" userLabel="To featured">
+                                <rect key="frame" x="180" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6ng-aL-8qJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="J8H-af-8Fu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="DPj-0j-CO4" kind="show" identifier="campaings_to_featured_segue" id="h8t-Co-PUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGQ-Kb-396" userLabel="To news">
+                                <rect key="frame" x="150" y="94" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="UvU-pw-J89"/>
+                                    <constraint firstAttribute="height" constant="30" id="ram-hq-HWa"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="O1c-qm-pFg" kind="show" identifier="campaings_to_news_segue" id="0rG-76-PRa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOX-B6-AHw" userLabel="To help">
+                                <rect key="frame" x="240" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="j3J-FY-gI4"/>
+                                    <constraint firstAttribute="width" constant="30" id="vcp-Wy-WPr"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="byk-T6-rt6" kind="show" identifier="campaings_to_help_segue" id="nAS-2h-7Z9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4l7-7F-8OP" userLabel="To campaign">
+                                <rect key="frame" x="210" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0k1-li-FVF"/>
+                                    <constraint firstAttribute="height" constant="30" id="o9X-G8-uc6"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="0un-yP-a6Z" kind="show" identifier="campaings_to_valid_campaign_segue" id="uvY-lx-WfJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="whC-9W-XLN" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="0a9-g7-bIh"/>
+                            <constraint firstItem="mOX-B6-AHw" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="0fY-W4-np3"/>
+                            <constraint firstItem="k8D-tL-S4v" firstAttribute="leading" secondItem="kGQ-Kb-396" secondAttribute="trailing" id="1P4-nL-Quq"/>
+                            <constraint firstItem="k8D-tL-S4v" firstAttribute="leading" secondItem="Awo-4B-DjP" secondAttribute="trailing" id="1la-Pe-NWW"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="1vj-38-v4r"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="bottom" secondItem="jY7-Nd-6Da" secondAttribute="bottom" id="6SI-Uq-B2D"/>
+                            <constraint firstItem="ImR-Si-L0b" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="7qF-Xl-2x8"/>
                             <constraint firstItem="jCZ-cH-RHc" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="top" id="80Q-9J-Dq9"/>
                             <constraint firstItem="jY7-Nd-6Da" firstAttribute="trailing" secondItem="jCZ-cH-RHc" secondAttribute="trailing" id="8Mj-10-yLJ"/>
+                            <constraint firstItem="UDf-it-OJi" firstAttribute="leading" secondItem="whC-9W-XLN" secondAttribute="trailing" id="9Ng-3g-yxu"/>
+                            <constraint firstItem="4l7-7F-8OP" firstAttribute="leading" secondItem="k8D-tL-S4v" secondAttribute="trailing" id="9mv-rZ-5Ab"/>
+                            <constraint firstItem="vLv-Fv-T92" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="Awc-7j-86e"/>
+                            <constraint firstItem="mOX-B6-AHw" firstAttribute="leading" secondItem="4l7-7F-8OP" secondAttribute="trailing" id="C5U-da-NnH"/>
+                            <constraint firstItem="AT4-gB-JQO" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="C78-vf-Pbj"/>
+                            <constraint firstItem="Awo-4B-DjP" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="F7o-1Q-fNI"/>
+                            <constraint firstItem="whC-9W-XLN" firstAttribute="leading" secondItem="AT4-gB-JQO" secondAttribute="trailing" id="HH4-gy-bcB"/>
+                            <constraint firstItem="vLv-Fv-T92" firstAttribute="leading" secondItem="ImR-Si-L0b" secondAttribute="trailing" id="IdI-x7-sxY"/>
+                            <constraint firstItem="k8D-tL-S4v" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="KCY-G1-4PS"/>
                             <constraint firstItem="jY7-Nd-6Da" firstAttribute="bottom" secondItem="h24-WC-etj" secondAttribute="bottom" id="NTL-kp-Sh8"/>
                             <constraint firstItem="h24-WC-etj" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="OQk-3L-LQw"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="top" id="Q10-cg-MjZ"/>
                             <constraint firstItem="jY7-Nd-6Da" firstAttribute="trailing" secondItem="h24-WC-etj" secondAttribute="trailing" id="Qd3-hy-kaV"/>
+                            <constraint firstItem="Awo-4B-DjP" firstAttribute="leading" secondItem="UDf-it-OJi" secondAttribute="trailing" id="RWk-Rb-8Gz"/>
                             <constraint firstItem="h24-WC-etj" firstAttribute="top" secondItem="ZVb-4q-VqO" secondAttribute="bottom" id="Sdk-hP-nUw"/>
+                            <constraint firstItem="UDf-it-OJi" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="SkC-eI-XcD"/>
+                            <constraint firstItem="AT4-gB-JQO" firstAttribute="leading" secondItem="vLv-Fv-T92" secondAttribute="trailing" id="SwP-1z-U5q"/>
+                            <constraint firstItem="ImR-Si-L0b" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="TN5-Rc-OHq"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="WoE-dL-vG2"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="trailing" secondItem="jY7-Nd-6Da" secondAttribute="trailing" id="Xx3-pY-M7e"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="cGj-Bu-xGo"/>
                             <constraint firstItem="jcv-7r-g3f" firstAttribute="trailing" secondItem="jY7-Nd-6Da" secondAttribute="trailing" id="h8h-A2-4vC"/>
                             <constraint firstItem="jCZ-cH-RHc" firstAttribute="leading" secondItem="jY7-Nd-6Da" secondAttribute="leading" id="kFc-Cg-ib6"/>
                             <constraint firstItem="rtF-dt-Qyn" firstAttribute="bottom" secondItem="jY7-Nd-6Da" secondAttribute="bottom" id="lPZ-O5-UO9"/>
+                            <constraint firstItem="kGQ-Kb-396" firstAttribute="top" secondItem="Awo-4B-DjP" secondAttribute="bottom" id="nCg-99-MTn"/>
+                            <constraint firstItem="4l7-7F-8OP" firstAttribute="top" secondItem="jY7-Nd-6Da" secondAttribute="top" id="zop-K5-fqS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jY7-Nd-6Da"/>
                         <variation key="default">
@@ -744,8 +825,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Campaña vigente" id="H1u-VM-z0s">
-                        <barButtonItem key="rightBarButtonItem" id="mro-8g-LKJ"/>
+                    <navigationItem key="navigationItem" id="H1u-VM-z0s">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="TXJ-hU-GjZ">
+                            <connections>
+                                <segue destination="eP1-Av-xIH" kind="presentation" modalPresentationStyle="overFullScreen" id="djz-lW-Hbw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="logo" id="mro-8g-LKJ"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="850"/>
                     <connections>
@@ -762,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDr-qT-hon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4055" y="549"/>
+            <point key="canvasLocation" x="-3895.1999999999998" y="512.74362818590714"/>
         </scene>
         <!--dialog_rut_view_controller-->
         <scene sceneID="Shu-7I-vhE">
@@ -770,7 +856,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="dialog_rut_view_controller" id="im8-9a-yzK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-Bj-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3274" y="549"/>
+            <point key="canvasLocation" x="-3844" y="1077"/>
         </scene>
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">
@@ -781,10 +867,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K30-ez-iKj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-m4-Iki">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grn-Um-Sf8">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="934"/>
@@ -945,7 +1031,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsz-uV-VFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2567.1999999999998" y="705.24737631184416"/>
+            <point key="canvasLocation" x="-1628" y="705.24737631184416"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="Dzo-a7-OyA">
@@ -1064,7 +1150,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGm-ck-S3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4055" y="1604"/>
+            <point key="canvasLocation" x="-4526" y="1603"/>
         </scene>
         <!--news_view_controller-->
         <scene sceneID="YNT-Q9-q0f">
@@ -1072,7 +1158,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 <viewControllerPlaceholder storyboardName="News" referencedIdentifier="news_view_controller" id="O1c-qm-pFg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXj-kr-HMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2580" y="-310"/>
+            <point key="canvasLocation" x="-3207" y="628"/>
         </scene>
         <!--news_view_controller-->
         <scene sceneID="T0b-Vc-vuY">
@@ -1088,7 +1174,25 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="help_view_controller" id="byk-T6-rt6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9P7-3A-Ba3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2584" y="-260"/>
+            <point key="canvasLocation" x="-3211" y="733"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="INs-e5-3nF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4av-8R-bcf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbe-EG-3c3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9GX-Os-ZOF" kind="relationship" relationship="rootViewController" id="xxz-Yg-q5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUh-T8-RUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4791" y="430"/>
         </scene>
     </scenes>
     <resources>
@@ -1101,6 +1205,6 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
         <image name="photo_invoice_two" width="375" height="302"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Og-Qt-Vud"/>
+        <segue reference="Wra-sa-8f7"/>
     </inferredMetricsTieBreakers>
 </document>

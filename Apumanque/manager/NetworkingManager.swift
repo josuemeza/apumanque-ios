@@ -110,6 +110,7 @@ class NetworkingManager {
                 }
                 completion(stores)
             case .failure(let responseError):
+                print("EL error es aqui store")
                 print(responseError.localizedDescription)
                 completion(nil)
             }
@@ -134,6 +135,7 @@ class NetworkingManager {
                 }
                 completion(storeCategories)
             case .failure(let responseError):
+                print("EL error es aqui store categories")
                 print(responseError.localizedDescription)
                 completion(nil)
             }
@@ -161,6 +163,7 @@ class NetworkingManager {
                 }
                 completion(discounts)
             case .failure(let responseError):
+                print("EL error es aqui special sales")
                 print(responseError.localizedDescription)
             }
         }
@@ -245,6 +248,7 @@ class NetworkingManager {
                 }
                 completion(News.all(on: context))
             case .failure(let responseError):
+                print("EL error es aqui news")
                 print(responseError.localizedDescription)
                 completion(nil)
             }
@@ -267,23 +271,6 @@ class NetworkingManager {
             }
         }
     }
-    
-//    func getUserScoresTwo(completion: @escaping Callback<UserScores>){
-//        guard let context = context else { completion(nil) ; return }
-//        let endpoint = "/basicmall/api/user_scores/"
-//        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
-//        Alamofire.request("\(apiUrl)\(endpoint)", method: .get, headers: headers).responseJSON { response in
-//            switch response.result {
-//            case .success(let value):
-//                let json = JSON(value)
-//                print(json)
-//                completion(UserScores(context: context))
-//            case .failure(let responseError):
-//                print(responseError.localizedDescription)
-//                completion(nil)
-//            }
-//        }
-//    }
     
     func getUserScores(completion: @escaping Callback<UserScores>) {
         guard let context = context else { completion(nil) ; return }

@@ -34,13 +34,14 @@ public class Store: NSManagedObject {
         floor = json["floor"].string
         name = json["name"].string
         number = json["number"].string
-        phone = json["phone"].string
+        phone = json["phone_number"].string
         tags = json["tags"].string
         web = json["web"].string
         idNode = json["id_node"].string
         road = json["road"].string
         detail = json["description"].string
         code = json["code"].string
+        image = json["images"][0]["image"].string
         for categoryJSON in json["categories"].array ?? [] {
             guard let id = categoryJSON["id"].int else { continue }
             guard let storeCategory = StoreCategory.find(byId: String(id), on: context) else { continue }

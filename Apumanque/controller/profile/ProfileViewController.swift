@@ -37,11 +37,6 @@ class ProfileViewController: ViewController {
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage (named: "logo"), for: .normal)
-        let barButtonItem = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = barButtonItem
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,6 +92,9 @@ class ProfileViewController: ViewController {
         
     }
     
+    @IBAction func editUserAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "profile_to_edit_user_segue", sender: nil)
+    }
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
