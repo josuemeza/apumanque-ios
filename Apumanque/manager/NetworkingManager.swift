@@ -110,7 +110,6 @@ class NetworkingManager {
                 }
                 completion(stores)
             case .failure(let responseError):
-                print("EL error es aqui store")
                 print(responseError.localizedDescription)
                 completion(nil)
             }

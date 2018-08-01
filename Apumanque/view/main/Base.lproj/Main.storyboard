@@ -1085,7 +1085,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DNq-Db-Bxj">
-                                                                <rect key="frame" x="0.0" y="674.5" width="375" height="300"/>
+                                                                <rect key="frame" x="80" y="674.5" width="295" height="300"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="300" id="aMW-2N-xxu"/>
@@ -1213,7 +1213,7 @@
                                                             <constraint firstItem="W9V-no-6e2" firstAttribute="top" secondItem="aa2-To-Xo7" secondAttribute="bottom" constant="5" id="TzL-xD-rah"/>
                                                             <constraint firstItem="LWI-FI-AJY" firstAttribute="leading" secondItem="Vqx-Tj-9gl" secondAttribute="trailing" constant="10" id="WK3-i0-Ejw"/>
                                                             <constraint firstItem="La5-dM-hxI" firstAttribute="top" secondItem="egB-uT-1ey" secondAttribute="bottom" constant="42" id="Y52-7o-WY6"/>
-                                                            <constraint firstItem="DNq-Db-Bxj" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" id="YqG-m4-XBS"/>
+                                                            <constraint firstItem="DNq-Db-Bxj" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="80" id="YqG-m4-XBS"/>
                                                             <constraint firstItem="Vqx-Tj-9gl" firstAttribute="top" secondItem="6qE-mj-6CO" secondAttribute="bottom" constant="10" id="ZdC-Up-jho"/>
                                                             <constraint firstItem="egB-uT-1ey" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="20" id="Zmh-IT-0bB"/>
                                                             <constraint firstItem="jpz-sy-koj" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="91" id="bHh-uQ-I2x"/>
@@ -1710,7 +1710,7 @@
         <image name="tab_ticket_icon" width="15" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MLm-na-aGk"/>
+        <segue reference="BbB-Jw-iin"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

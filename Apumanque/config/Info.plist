@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Usamos tu libreria para Subir las Boletas.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Tu locación es usada para guiarte hacia la tienda o servicio de tu interés dentro del Mall. Esta función no consumirá batería extra, ya que utilizamos sólo bluetooth. </string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Tu locación es usada para guiarte hacia la tienda o servicio de tu interés dentro del Mall. Esta función no consumirá batería extra, ya que utilizamos sólo bluetooth. </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Usamos tu camara para Subir las Boletas.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Usamos bluetooth para ubicarte en el Mall</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
