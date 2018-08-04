@@ -348,6 +348,13 @@
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7zp-jy-NpF">
+                                                                            <rect key="frame" x="119.5" y="116.5" width="12" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="18" id="IvX-Sd-QXP"/>
+                                                                                <constraint firstAttribute="width" constant="12" id="pIG-1F-d6p"/>
+                                                                            </constraints>
+                                                                        </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local 12 - Piso 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAv-xV-wSY">
                                                                             <rect key="frame" x="139.5" y="116" width="120" height="18"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
@@ -405,10 +412,12 @@
                                                                         <constraint firstItem="yAv-xV-wSY" firstAttribute="centerX" secondItem="qe6-BV-QjJ" secondAttribute="centerX" id="6aN-k6-V9S"/>
                                                                         <constraint firstAttribute="trailing" secondItem="qDT-gC-NaF" secondAttribute="trailing" constant="12" id="Df4-ry-LfA"/>
                                                                         <constraint firstItem="efj-6L-bcW" firstAttribute="top" secondItem="yAv-xV-wSY" secondAttribute="bottom" constant="44" id="GSn-VM-o6T"/>
+                                                                        <constraint firstItem="7zp-jy-NpF" firstAttribute="top" secondItem="kWo-UL-Ebd" secondAttribute="bottom" constant="39" id="GSu-Wx-Jom"/>
                                                                         <constraint firstAttribute="trailing" secondItem="efj-6L-bcW" secondAttribute="trailing" constant="12" id="NRk-02-9Ix"/>
                                                                         <constraint firstItem="yAv-xV-wSY" firstAttribute="top" secondItem="kWo-UL-Ebd" secondAttribute="bottom" constant="39" id="UZI-ko-pR8"/>
                                                                         <constraint firstItem="kWo-UL-Ebd" firstAttribute="centerX" secondItem="qe6-BV-QjJ" secondAttribute="centerX" id="Zkb-i9-UA7"/>
                                                                         <constraint firstItem="kWo-UL-Ebd" firstAttribute="top" secondItem="qe6-BV-QjJ" secondAttribute="top" constant="20" id="d27-KF-t1G"/>
+                                                                        <constraint firstItem="yAv-xV-wSY" firstAttribute="leading" secondItem="7zp-jy-NpF" secondAttribute="trailing" constant="8" id="dD3-1U-FhO"/>
                                                                         <constraint firstAttribute="trailing" secondItem="kWo-UL-Ebd" secondAttribute="trailing" constant="61" id="lhH-B4-Oda"/>
                                                                         <constraint firstItem="efj-6L-bcW" firstAttribute="leading" secondItem="qe6-BV-QjJ" secondAttribute="leading" constant="12" id="p2i-aC-s8e"/>
                                                                         <constraint firstItem="qDT-gC-NaF" firstAttribute="top" secondItem="efj-6L-bcW" secondAttribute="bottom" constant="10" id="t24-Os-qOA"/>
@@ -593,6 +602,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mark_icon" width="12" height="17"/>
         <image name="placeholder-image" width="600" height="450"/>
     </resources>
 </document>
