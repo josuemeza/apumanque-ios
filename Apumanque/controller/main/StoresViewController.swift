@@ -44,7 +44,11 @@ class StoresViewController: BlurredViewController {
                     return store
                 }
             }
-            var grouped = Dictionary(grouping: filtered, by: { store in store.name?.first ?? "-" })
+            var grouped = Dictionary(grouping: filtered) { store -> Character in
+                var prefix = store.name?.prefix(1).uppercased() ?? "-"
+                prefix = Double(prefix) != nil ? "#" : prefix
+                return prefix.folding(options: .diacriticInsensitive, locale: .current).first!
+            }
             grouped.forEach { (key, value) in
                 grouped[key] = value.sorted { left, right in left.name ?? "" < right.name ?? "" }
             }
