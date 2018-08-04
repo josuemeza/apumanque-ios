@@ -28,23 +28,11 @@ class ValidCampaingsViewController: ViewController {
         if let url = campaings.imageUrl {
             imageCampaings.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
         }
-        contentCampaingsLabel.text = htmlString(text: campaings.contentCampaign!)
+        contentCampaingsLabel.text = campaings.contentCampaign?.parsedOnDocument
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         
         
-    }
-    
-    func htmlString(text: String) -> String{
-        do {
-            let doc: Document = try SwiftSoup.parse(text)
-            return try doc.text()
-        } catch Exception.Error(let type, let message) {
-            print(message)
-        } catch {
-            print("error")
-        }
-        return ""
     }
     
     @IBAction func lastWinnersAction(_ sender: Any) {
@@ -67,6 +55,7 @@ class ValidCampaingsViewController: ViewController {
         if segue.identifier == "campaign_to_winner_segue" {
             let destination = segue.destination as! NewsViewController
             destination.isContestDefault = true
-        }    }
+        }
+    }
 
 }
