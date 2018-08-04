@@ -40,10 +40,12 @@ class StoreViewController: BlurredViewController {
         categoryLabel.text = categories.map { category in category.name ?? "S/N" }.joined(separator: ", ")
         addressLabel.text = "Local \(store.number ?? "S/N") - Piso \(store.floor ?? "S/N")"
         phoneLabel.text = store.phone
+        debugPrint("aqui en la tienda \(store.image) ")
         webLabel.text = store.web
         emailLabel.text = store.email
         tagsLabel.text = store.tags
         discounts = store.discounts?.allObjects as? [Discount] ?? []
+        logoImageView.sd_setImage(with: URL(string: store.image!), placeholderImage: UIImage(named: "placeholder-image"))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -44,11 +44,12 @@ class CampaingsViewController: ViewController {
     
 
     @IBAction func uploadInvoiceButtonTap(_ sender: Any) {
-        
+        tabBarController?.selectedIndex = 2
     }
     
     
     @IBAction func seeCampaingsButtonTap(_ sender: Any) {
+        
     }
     
     
@@ -56,47 +57,13 @@ class CampaingsViewController: ViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is MenuViewController {
-            let viewController = segue.destination as! MenuViewController
-            viewController.delegate = self
-        }
+//        if segue.destination is MenuViewController {
+//            let viewController = segue.destination as! MenuViewController
+//            viewController.delegate = self
+//        }
     }
 
 
 }
 
-// MARK: -
-// MARK: - Menu view controller delegate
-extension CampaingsViewController: MenuViewControllerDelegate {
-    
-    func menuViewController(_ controller: MenuViewController, didSelect selection: MenuViewSelection) {
-        switch selection {
-        case .login:
-            performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
-        case .logout: ()
-        case .editUser:
-            performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
-        case .contact:
-            performSegue(withIdentifier: "campaings_to_contact_segue", sender: nil)
-        case .register:
-            performSegue(withIdentifier: "campaings_to_register_segue", sender: nil)
-        case .discounts:
-            tabBarController?.selectedIndex = 1
-        case .featured:
-            performSegue(withIdentifier: "home_to_featured_segue", sender: nil)
-        case .services:
-            performSegue(withIdentifier: "home_to_services_segue", sender: nil)
-        case .stores:
-            performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
-        case .news:
-            performSegue(withIdentifier: "campaings_to_news_segue", sender: nil)
-        case .campaign:
-            performSegue(withIdentifier: "campaings_to_valid_campaign_segue", sender: nil)
-        case .invoices:
-            tabBarController?.selectedIndex = 2
-        case .help:
-            performSegue(withIdentifier: "campaings_to_help_segue", sender: nil)
-        }
-    }
-    
-}
+

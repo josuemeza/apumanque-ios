@@ -20,4 +20,10 @@ target 'Apumanque' do
   pod 'UICircularProgressRing'
   # Left align layout for collection view ( https://github.com/mokagio/UICollectionViewLeftAlignedLayout )
   pod 'UICollectionViewLeftAlignedLayout'
+  # Firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging’
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 end

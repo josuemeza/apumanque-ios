@@ -22,6 +22,8 @@ class DiscountViewController: BlurredViewController {
     @IBOutlet weak var documentExpandButtonIconImageView: UIImageView!
     @IBOutlet weak var documentDetailContainerView: UIView!
     @IBOutlet weak var documentDetailSeparatorView: UIView!
+    @IBOutlet weak var conditionsLabel: UILabel!
+    @IBOutlet weak var resumeLabel: UILabel!
     
     private var user: User!
     
@@ -52,8 +54,7 @@ class DiscountViewController: BlurredViewController {
                     
                 })
                 let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
-                    
-                    
+                    self.performSegue(withIdentifier: "discounts_to_edit_segue", sender: nil)
                 })
                 
                 finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
@@ -92,6 +93,8 @@ class DiscountViewController: BlurredViewController {
         //        storePhoneLabel.text = discount.store?.phone
         storeDiscounts = discount.store?.discounts?.allObjects as? [Discount] ?? []
         storeDiscounts.remove(discount)
+        conditionsLabel.text = discount.conditions
+        resumeLabel.text = discount.resume
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         

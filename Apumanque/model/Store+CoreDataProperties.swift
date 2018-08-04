@@ -2,7 +2,7 @@
 //  Store+CoreDataProperties.swift
 //  
 //
-//  Created by Josue Meza Peña on 10-07-18.
+//  Created by Jimmy Hernandez on 31-07-18.
 //
 //
 
@@ -29,6 +29,7 @@ extension Store {
     @NSManaged public var road: String?
     @NSManaged public var tags: String?
     @NSManaged public var web: String?
+    @NSManaged public var image: String?
     @NSManaged public var categories: NSSet?
     @NSManaged public var discounts: NSSet?
 

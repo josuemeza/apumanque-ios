@@ -75,10 +75,6 @@ class HomeViewController: ViewController {
                 let storeViewController = segue.destination as! StoreViewController
                 storeViewController.store = sender as! Store
                 viewController = storeViewController
-            } else if segue.identifier == "home_to_winner_segue" {
-                let destination = segue.destination as! NewsViewController
-                destination.isContestDefault = true
-                viewController = destination
             } else {
                 viewController = segue.destination as! BlurredViewController
             }
@@ -127,7 +123,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             performSegue(withIdentifier: "home_to_stores_segue", sender: nil)
         case 1:
             print("Cliente frecuente")
-            performSegue(withIdentifier: "home_to_winner_segue", sender: nil)
+            performSegue(withIdentifier: "home_to_client_segue", sender: nil)
         case 2:
             print("Descuentos")
             tabBarController?.selectedIndex = 1
