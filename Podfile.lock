@@ -79,7 +79,7 @@ DEPENDENCIES:
   - Validator
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Firebase
     - FirebaseAnalytics
@@ -127,4 +127,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f2863b19661a7220ebc292d128a1c1f48b364eb0
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
