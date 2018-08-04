@@ -10,9 +10,21 @@ import UIKit
 
 class FeaturedTableViewCell: UITableViewCell {
     
+    // MARK: - Attributes
+    
+    private var initiatedGradient: Bool = false
+    
     // MARK: - Outlets
     
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var gradientView: UIView! {
+        didSet {
+            if !initiatedGradient {
+                _ = gradientView.gradient(colours: [.clear, .black], position: 0.8)
+                initiatedGradient = true
+            }
+        }
+    }
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
