@@ -566,7 +566,7 @@
                                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.18086389959999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <blurEffect style="light"/>
                                                                     </visualEffectView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese los numeros" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osM-UN-32U">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourDigits" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese los numeros" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osM-UN-32U">
                                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="36"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -36,13 +36,14 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     var imageSelectedOrChosen = false
     var isPhotoOriginal = false
     var currentString = ""
-    let hud = JGProgressHUD(style: .light)
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textFieldAmountPurchase.delegate = self
+        textFieldNumberInvoice.delegate = self
         
         campaings = Campaing.unitCampaing(on: managedObjectContext)
         if let url = campaings.imageUrl {
@@ -94,6 +95,10 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
         imageInvoiceCampaign.addGestureRecognizer(tapImage)
         imageInvoiceCampaign.isUserInteractionEnabled = true
         
+        let tapKeyboard = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tapKeyboard.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapKeyboard)
+        
     }
     
     
@@ -134,13 +139,56 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     }
     
     @IBAction func saveAndContinueButtonTap(_ sender: Any) {
-        print("JIMMY")
-        guard imageSelectedOrChosen else {
+        
+        guard let img = imageInvoiceCampaign.image else {
+            let hud = JGProgressHUD(style: .dark)
             hud.indicatorView = JGProgressHUDErrorIndicatorView()
             hud.textLabel.text = "Imagen no Valida"
             hud.show(in: self.view)
             hud.dismiss(afterDelay: 2.0)
-            
+            return
+        }
+    
+        guard imageSelectedOrChosen else {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Imagen no Valida"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            return
+        }
+        
+        guard isPhotoOriginal else {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Imagen no Valida"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            return
+        }
+        
+        if textFieldAmountPurchase.text == "" && textFieldAmountPurchase.text == "$" && textFieldAmountPurchase.text == "$0" {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Ingrese Monto Valido"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
+        guard let amount = textFieldAmountPurchase.text else {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Ingrese Monto Valido"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            return
+        }
+        
+        guard let digits = textFieldNumberInvoice.text, digits.count == 4 else {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Ingrese Últimos 4 digitos boleta correctamente"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
             return
         }
         
@@ -229,7 +277,6 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     }
     
     // MARK: - Navigation
-    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MenuViewController {
@@ -328,8 +375,8 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
                 currentString += string
                 formatCurrency(string: currentString)
             default:
-                let array = string.characters
-                var currentStringArray = currentString.characters
+                let array = string
+                var currentStringArray = currentString
                 if array.count == 0 && currentStringArray.count != 0 {
                     currentStringArray.removeLast()
                     currentString = ""
@@ -344,6 +391,45 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
             
         }
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField.restorationIdentifier == "amount" {
+            if let number = textFieldAmountPurchase.text {
+                if number != "" && number != "$" && number != "$0" {
+                    textFieldAmountPurchase.clearButtonMode = .never
+                    textFieldAmountPurchase.rightViewMode = .never
+                } else {
+                    textFieldAmountPurchase.clearButtonMode = .always
+                    textFieldAmountPurchase.rightViewMode = .always
+                    textFieldAmountPurchase.textColor = .red
+                }
+            } else {
+                textFieldAmountPurchase.clearButtonMode = .always
+                textFieldAmountPurchase.rightViewMode = .always
+                textFieldAmountPurchase.textColor = .red
+            }
+            textFieldAmountPurchase.resignFirstResponder()
+        }
+        
+        if textField.restorationIdentifier == "fourDigits" {
+            if let digits = textFieldNumberInvoice.text {
+                if digits != "" && digits.count == 4  {
+                    textFieldNumberInvoice.clearButtonMode = .never
+                    textFieldNumberInvoice.rightViewMode = .never
+                } else {
+                    textFieldNumberInvoice.clearButtonMode = .always
+                    textFieldNumberInvoice.rightViewMode = .always
+                    textFieldNumberInvoice.textColor = .red
+                }
+            } else {
+                textFieldNumberInvoice.clearButtonMode = .always
+                textFieldNumberInvoice.rightViewMode = .always
+                textFieldNumberInvoice.textColor = .red
+            }
+            textFieldNumberInvoice.resignFirstResponder()
+        }
     }
     
 }
