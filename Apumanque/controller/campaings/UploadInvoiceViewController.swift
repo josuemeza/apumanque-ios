@@ -8,9 +8,10 @@
 
 import UIKit
 import Photos
+import JGProgressHUD
 
-class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+class UploadInvoiceViewController: ViewController, UINavigationControllerDelegate {
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var saveAndContinueButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
@@ -34,31 +35,35 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
     var photoFromCamera = false
     var imageSelectedOrChosen = false
     var isPhotoOriginal = false
+    var currentString = ""
+    let hud = JGProgressHUD(style: .light)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textFieldAmountPurchase.delegate = self
+        
         campaings = Campaing.unitCampaing(on: managedObjectContext)
         if let url = campaings.imageUrl {
             imageViewUploadInvoice.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder-image"))
         }
-
+        
         contentView.roundOut(radious: 10)
         saveAndContinueButton.roundOut(radious: 28)
         
         print("CAMPANIAS \(Session.currentUser?.rut)")
         
-//        let view = UIView()
-//        let button = UIButton(type: .system)
-//        button.semanticContentAttribute = .forceRightToLeft
-//        button.setImage(UIImage(named: "right-icon-white"), for: .normal)
-//        button.setTitle("Ayuda", for: .normal)
-//        button.addTarget(self, action: #selector(openHelp), for: .touchUpInside)
-//        button.sizeToFit()
-//        view.addSubview(button)
-//        view.frame = button.bounds
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: view)
+        //        let view = UIView()
+        //        let button = UIButton(type: .system)
+        //        button.semanticContentAttribute = .forceRightToLeft
+        //        button.setImage(UIImage(named: "right-icon-white"), for: .normal)
+        //        button.setTitle("Ayuda", for: .normal)
+        //        button.addTarget(self, action: #selector(openHelp), for: .touchUpInside)
+        //        button.sizeToFit()
+        //        view.addSubview(button)
+        //        view.frame = button.bounds
+        //        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: view)
         
         helpButton.layer.cornerRadius = 12
         helpButton.layer.borderWidth = 1
@@ -92,35 +97,35 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
     }
     
     
-
+    
     /*
-    override func viewDidAppear(_ animated: Bool) {
-        if Session.isLogged{
-            if Session.currentUser?.rut == nil {
-                
-                let alert = UIAlertController(title: "Para participar en la promoción, debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-                let finish = UIAlertAction(title: "Salir sin resgistrar RUT", style: .default, handler: { action in
-                    self.tabBarController?.selectedIndex = 0
-                })
-                let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
-//                    self.performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
-                })
-                
-                finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-                uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-                alert.addAction(uploadOther)
-                alert.addAction(finish)
-                
-                self.present(alert, animated: true, completion: nil)
-                
-            } else {
-                //                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
-            }
-        } else {
-                        performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
-        }
-    }
-    */
+     override func viewDidAppear(_ animated: Bool) {
+     if Session.isLogged{
+     if Session.currentUser?.rut == nil {
+     
+     let alert = UIAlertController(title: "Para participar en la promoción, debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+     let finish = UIAlertAction(title: "Salir sin resgistrar RUT", style: .default, handler: { action in
+     self.tabBarController?.selectedIndex = 0
+     })
+     let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
+     //                    self.performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
+     })
+     
+     finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+     uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+     alert.addAction(uploadOther)
+     alert.addAction(finish)
+     
+     self.present(alert, animated: true, completion: nil)
+     
+     } else {
+     //                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+     }
+     } else {
+     performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
+     }
+     }
+     */
     
     //MARK: Button Action
     
@@ -129,6 +134,16 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func saveAndContinueButtonTap(_ sender: Any) {
+        print("JIMMY")
+        guard imageSelectedOrChosen else {
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Imagen no Valida"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            
+            return
+        }
+        
     }
     
     @IBAction func getDateButtonTap(_ sender: Any) {
@@ -165,8 +180,8 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
     @objc
     func choseOrTakePhotoTapped() {
         
-//        last4Digits.resignFirstResponder()
-//        amountTextField.resignFirstResponder()
+        //        last4Digits.resignFirstResponder()
+        //        amountTextField.resignFirstResponder()
         let alertController = UIAlertController(title: "Elige de dónde obtener la foto de tu boleta", message: nil, preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "Sacar foto con la cámara", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             self.takePhoto()
@@ -203,8 +218,18 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
         present(picker, animated: true)
     }
     
+    //Format text amount
+    func formatCurrency(string: String) {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.currency
+        formatter.locale = NSLocale(localeIdentifier: "es_CL") as Locale!
+        formatter.maximumFractionDigits = 0;
+        let numberFromField = (NSString(string: currentString).doubleValue)
+        textFieldAmountPurchase.text = formatter.string(from: numberFromField as NSNumber);
+    }
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MenuViewController {
@@ -213,7 +238,7 @@ class UploadInvoiceViewController: ViewController, UIImagePickerControllerDelega
         }
     }
     
-
+    
 }
 
 // MARK: -
@@ -252,8 +277,8 @@ extension UploadInvoiceViewController: MenuViewControllerDelegate {
     
 }
 
-//MARK: - UIIMAGE
-extension UploadInvoiceViewController {
+//MARK: - UIImagePickerDelegate Methods
+extension UploadInvoiceViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -263,7 +288,6 @@ extension UploadInvoiceViewController {
             self.imageInvoiceCampaign.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 126)
         }
         if photoFromCamera {
-            print("Mago: Its Original! Taken")
             imageSelectedOrChosen = true
             isPhotoOriginal = true
         } else {
@@ -276,17 +300,15 @@ extension UploadInvoiceViewController {
                     let imageData: NSData = data! as NSData
                     if let imageSource = CGImageSourceCreateWithData(imageData, nil), let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as? NSDictionary, let tiff = imageProperties["{TIFF}"] as? NSDictionary, let make = tiff["Make"] as? String {
                         if make == "Apple" {
-                            print("Mago: Is Original! Chosen")
                             self.imageSelectedOrChosen = true
                             self.isPhotoOriginal = true
-                            print("Mago")
-//                            guard let storeName = self.storeNameTextField.text, !storeName.isEmpty, let amount = self.amountTextField.text, !amount.isEmpty, let digits = self.last4Digits.text, !digits.isEmpty, digits.characters.count == 4, self.imageSelectedOrChosen else {
-//                                self.sendButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
-//                                self.sendButton.isEnabled = false
-//                                return
-//                            }
-//                            self.sendButton.setTitleColor(.white, for: UIControlState.normal)
-//                            self.sendButton.isEnabled = true
+                            //                            guard let storeName = self.storeNameTextField.text, !storeName.isEmpty, let amount = self.amountTextField.text, !amount.isEmpty, let digits = self.last4Digits.text, !digits.isEmpty, digits.characters.count == 4, self.imageSelectedOrChosen else {
+                            //                                self.sendButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
+                            //                                self.sendButton.isEnabled = false
+                            //                                return
+                            //                            }
+                            //                            self.sendButton.setTitleColor(.white, for: UIControlState.normal)
+                            //                            self.sendButton.isEnabled = true
                         }
                     }
                 })
@@ -294,4 +316,34 @@ extension UploadInvoiceViewController {
         }
         dismiss(animated: true)
     }
+}
+
+//MARK: TextFieldDelegate Methods
+extension UploadInvoiceViewController: UITextFieldDelegate{
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.restorationIdentifier == "amount" {
+            switch string {
+            case "0","1","2","3","4","5","6","7","8","9":
+                currentString += string
+                formatCurrency(string: currentString)
+            default:
+                let array = string.characters
+                var currentStringArray = currentString.characters
+                if array.count == 0 && currentStringArray.count != 0 {
+                    currentStringArray.removeLast()
+                    currentString = ""
+                    for character in currentStringArray {
+                        currentString += String(character)
+                    }
+                    formatCurrency(string: currentString)
+                }
+            }
+//            textFieldDidChange()
+            return false
+            
+        }
+        return true
+    }
+    
 }

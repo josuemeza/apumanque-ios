@@ -46,6 +46,7 @@ PODS:
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GTMSessionFetcher/Core (1.1.15)
+  - JGProgressHUD (2.0.3)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - JGProgressHUD
   - SDWebImage
   - SwiftSoup
   - SwiftyEssentials
@@ -91,6 +93,7 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleToolboxForMac
     - GTMSessionFetcher
+    - JGProgressHUD
     - leveldb-library
     - nanopb
     - Protobuf
@@ -114,6 +117,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: f2863b19661a7220ebc292d128a1c1f48b364eb0
+PODFILE CHECKSUM: 1192061297e82ff75958d655e1a81e60b66724a1
 
 COCOAPODS: 1.5.0

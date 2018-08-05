@@ -519,7 +519,7 @@
                                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.18086389959999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <blurEffect style="light"/>
                                                                     </visualEffectView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFd-nH-0Ke">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="amount" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el monto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFd-nH-0Ke">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -530,6 +530,9 @@
                                                                                 <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="9GX-Os-ZOF" id="1wh-dV-7dg"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -633,7 +636,6 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="saveAndContinueButtonTap:" destination="9GX-Os-ZOF" eventType="touchUpInside" id="TGl-1l-bNA"/>
-                                                                    <segue destination="im8-9a-yzK" kind="presentation" modalPresentationStyle="overFullScreen" id="tbz-dm-9bm"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -903,7 +905,7 @@
                 <viewControllerPlaceholder storyboardName="Common" referencedIdentifier="dialog_rut_view_controller" id="im8-9a-yzK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-Bj-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3844" y="1077"/>
+            <point key="canvasLocation" x="-3230" y="1244"/>
         </scene>
         <!--Valid Campaings View Controller-->
         <scene sceneID="hp7-hy-47G">
@@ -1197,7 +1199,7 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGm-ck-S3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4526" y="1603"/>
+            <point key="canvasLocation" x="-3895" y="1790"/>
         </scene>
         <!--news_view_controller-->
         <scene sceneID="YNT-Q9-q0f">
