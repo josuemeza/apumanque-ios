@@ -33,6 +33,7 @@
 		F23AC1A520F19F8900D21F8E /* ValidCampaingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23AC1A420F19F8900D21F8E /* ValidCampaingsViewController.swift */; };
 		F24B48FE20F25B8000ACE518 /* Campaing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24B48FD20F25B8000ACE518 /* Campaing+CoreDataClass.swift */; };
 		F24B490020F25B8500ACE518 /* Campaing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24B48FF20F25B8500ACE518 /* Campaing+CoreDataProperties.swift */; };
+		F2512DC4211760E30073A569 /* InternetAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2512DC3211760E30073A569 /* InternetAvailable.swift */; };
 		F251C81C20CCF02C00718811 /* Campaings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F251C81B20CCF02C00718811 /* Campaings.storyboard */; };
 		F251C81F20CCF43300718811 /* CampaingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C81E20CCF43300718811 /* CampaingsViewController.swift */; };
 		F251C82220CE19E300718811 /* UploadInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */; };
@@ -163,6 +164,7 @@
 		F23AC1A420F19F8900D21F8E /* ValidCampaingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidCampaingsViewController.swift; sourceTree = "<group>"; };
 		F24B48FD20F25B8000ACE518 /* Campaing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Campaing+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F24B48FF20F25B8500ACE518 /* Campaing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Campaing+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F2512DC3211760E30073A569 /* InternetAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailable.swift; sourceTree = "<group>"; };
 		F251C81B20CCF02C00718811 /* Campaings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Campaings.storyboard; sourceTree = "<group>"; };
 		F251C81E20CCF43300718811 /* CampaingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaingsViewController.swift; sourceTree = "<group>"; };
 		F251C82120CE19E300718811 /* UploadInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInvoiceViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,14 @@
 				F206211820B66C8600D5BA3C /* SF-Pro-Text-SemiboldItalic.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		F2512DC2211760D10073A569 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F2512DC3211760E30073A569 /* InternetAvailable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F251C81A20CCF01400718811 /* campaings */ = {
@@ -716,6 +726,7 @@
 		FAF6C73D20ABB11800DD1CD1 /* Apumanque */ = {
 			isa = PBXGroup;
 			children = (
+				F2512DC2211760D10073A569 /* Helpers */,
 				F20620FD20B66C1C00D5BA3C /* fonts */,
 				FAF1AC1A20AC5E1000F01D59 /* extension */,
 				FAF1AC0B20ABB2BE00F01D59 /* assets */,
@@ -931,6 +942,7 @@
 				FAB20C0120C35EE800A62485 /* DiscountOfStoreCollectionViewCell.swift in Sources */,
 				FA5767D520F4792700C142D8 /* StoreSearch+CoreDataClass.swift in Sources */,
 				F2559DE02105B6DB0069C482 /* InvoicesViewController.swift in Sources */,
+				F2512DC4211760E30073A569 /* InternetAvailable.swift in Sources */,
 				FA36A6AF20FC8CBD008B861C /* NewsListTitleCollectionViewCell.swift in Sources */,
 				F20620CC20B08EDD00D5BA3C /* PruebaViewController.swift in Sources */,
 				F2C720E920CC46B200E2C50E /* DesignableView.swift in Sources */,
@@ -1136,7 +1148,10 @@
 				DEVELOPMENT_TEAM = J854JSQ8BD;
 				INFOPLIST_FILE = "$(SRCROOT)/Apumanque/config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rinno.ApumanqueBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1153,7 +1168,10 @@
 				DEVELOPMENT_TEAM = J854JSQ8BD;
 				INFOPLIST_FILE = "$(SRCROOT)/Apumanque/config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rinno.ApumanqueBeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -42,6 +42,8 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     var imageSelectedOrChosen = false
     var isPhotoOriginal = false
     var currentString = ""
+    var isStoreValid = false
+    var storeID = ""
     
     
     
@@ -160,6 +162,15 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     
     @IBAction func saveAndContinueButtonTap(_ sender: Any) {
         
+        guard isInternetAvailable() else {
+            let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "No Tienes Conexion a internet"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            return
+        }
+        
         guard let img = imageInvoiceCampaign.image else {
             let hud = JGProgressHUD(style: .dark)
             hud.indicatorView = JGProgressHUDErrorIndicatorView()
@@ -211,6 +222,22 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
             hud.dismiss(afterDelay: 2.0)
             return
         }
+        
+        guard let storeName = textFieldNameStore.text, isStoreValid else {
+             let hud = JGProgressHUD(style: .dark)
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.textLabel.text = "Ingresa Nombre Tienda Valido"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            return
+        }
+        
+        for store in stores {
+            if store.name == storeName {
+                storeID = store.id!
+            }
+        }
+        
         
     }
     
@@ -437,6 +464,29 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField.restorationIdentifier == "storeName" {
+            isStoreValid = true
+            for storeName in stores.map({$0.name}) {
+                if textField.text == storeName {
+                    isStoreValid = true
+                    textFieldNameStore.clearButtonMode = .never
+                    textFieldNameStore.rightViewMode = .never
+                }
+            }
+            if !isStoreValid {
+                isStoreValid = false
+                textFieldNameStore.clearButtonMode = .always
+                textFieldNameStore.rightViewMode = .always
+                textFieldNameStore.textColor = .red
+            }
+            if textField.text == "" {
+                isStoreValid = false
+                textFieldNameStore.clearButtonMode = .always
+                textFieldNameStore.rightViewMode = .always
+                textFieldNameStore.textColor = .red
+            }
+        }
         
         if textField.restorationIdentifier == "amount" {
             if let number = textFieldAmountPurchase.text {
