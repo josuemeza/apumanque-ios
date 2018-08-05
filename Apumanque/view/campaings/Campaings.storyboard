@@ -358,7 +358,7 @@
                                                                 <blurEffect style="dark"/>
                                                             </visualEffectView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participa y gana" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79Y-6a-VHk">
-                                                                <rect key="frame" x="124.5" y="20" width="110.5" height="17"/>
+                                                                <rect key="frame" x="125" y="20" width="110.5" height="17"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -390,7 +390,7 @@
                                                                         <color key="backgroundColor" white="1" alpha="0.18024553569999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <blurEffect style="light"/>
                                                                     </visualEffectView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese nombre del local" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-wF-8MX">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="storeName" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese nombre del local" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-wF-8MX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -638,12 +638,30 @@
                                                                     <action selector="saveAndContinueButtonTap:" destination="9GX-Os-ZOF" eventType="touchUpInside" id="TGl-1l-bNA"/>
                                                                 </connections>
                                                             </button>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vvH-fc-w4F">
+                                                                <rect key="frame" x="8" y="180" width="343" height="252"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="252" id="0IU-2V-978"/>
+                                                                </constraints>
+                                                                <prototypes>
+                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="YUx-gh-Bsi">
+                                                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YUx-gh-Bsi" id="KYW-bb-R3S">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                        </tableViewCellContentView>
+                                                                    </tableViewCell>
+                                                                </prototypes>
+                                                            </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="wCI-3J-dGE" firstAttribute="top" secondItem="n6Y-RS-hEC" secondAttribute="bottom" constant="20" id="0wr-eS-5rF"/>
                                                             <constraint firstItem="pPb-Th-RQh" firstAttribute="top" secondItem="wCI-3J-dGE" secondAttribute="bottom" constant="18" id="11G-1i-yKi"/>
                                                             <constraint firstItem="cER-eK-bi1" firstAttribute="top" secondItem="79Y-6a-VHk" secondAttribute="bottom" constant="15" id="14G-7R-gnH"/>
+                                                            <constraint firstItem="vvH-fc-w4F" firstAttribute="leading" secondItem="8LL-wM-S8A" secondAttribute="leading" constant="8" id="1ue-XD-9Gv"/>
                                                             <constraint firstItem="mpO-DE-423" firstAttribute="top" secondItem="pPb-Th-RQh" secondAttribute="bottom" constant="26.5" id="36M-Su-SOy"/>
                                                             <constraint firstItem="qw3-ZD-Pl7" firstAttribute="top" secondItem="lCv-37-Or7" secondAttribute="bottom" constant="7" id="6BY-MR-XAZ"/>
                                                             <constraint firstItem="fA1-SX-twI" firstAttribute="top" secondItem="qw3-ZD-Pl7" secondAttribute="bottom" constant="20" id="73M-Fp-XGr"/>
@@ -652,6 +670,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="5uv-dw-3O4" secondAttribute="trailing" constant="7" id="AnR-RQ-zzE"/>
                                                             <constraint firstAttribute="trailing" secondItem="AKO-Dd-nYJ" secondAttribute="trailing" constant="7" id="AoD-eG-duL"/>
                                                             <constraint firstItem="n6Y-RS-hEC" firstAttribute="top" secondItem="fA1-SX-twI" secondAttribute="bottom" constant="7" id="BgT-b2-cmJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vvH-fc-w4F" secondAttribute="trailing" constant="8" id="G16-hK-KfM"/>
                                                             <constraint firstAttribute="trailing" secondItem="n6Y-RS-hEC" secondAttribute="trailing" constant="112" id="Ih3-s2-WcF"/>
                                                             <constraint firstItem="daB-4O-tfd" firstAttribute="top" secondItem="8LL-wM-S8A" secondAttribute="top" id="KDn-07-7GK"/>
                                                             <constraint firstAttribute="trailing" secondItem="cER-eK-bi1" secondAttribute="trailing" constant="40" id="N2n-Jf-1xK"/>
@@ -669,6 +688,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="daB-4O-tfd" secondAttribute="trailing" id="agU-Fc-RBm"/>
                                                             <constraint firstItem="5uv-dw-3O4" firstAttribute="top" secondItem="AKO-Dd-nYJ" secondAttribute="bottom" constant="20" id="cVV-lc-r5V"/>
                                                             <constraint firstAttribute="trailing" secondItem="fA1-SX-twI" secondAttribute="trailing" constant="7" id="ccH-y3-hVh"/>
+                                                            <constraint firstItem="vvH-fc-w4F" firstAttribute="top" secondItem="AKO-Dd-nYJ" secondAttribute="bottom" constant="8.5" id="dT2-Hm-AYx"/>
                                                             <constraint firstAttribute="trailing" secondItem="lCv-37-Or7" secondAttribute="trailing" constant="7" id="eYc-L4-KTY"/>
                                                             <constraint firstItem="79Y-6a-VHk" firstAttribute="top" secondItem="8LL-wM-S8A" secondAttribute="top" constant="20" id="evh-C7-A7D"/>
                                                             <constraint firstItem="daB-4O-tfd" firstAttribute="leading" secondItem="8LL-wM-S8A" secondAttribute="leading" id="hUe-Wx-ouR"/>
@@ -882,12 +902,14 @@
                         <outlet property="datePicker" destination="HmO-Dm-wwx" id="P20-yW-bcH"/>
                         <outlet property="dateView" destination="A3S-p6-K82" id="ghL-fD-M8a"/>
                         <outlet property="getDateButton" destination="cAU-a0-gQu" id="wzC-I2-6uO"/>
+                        <outlet property="heightConstraint" destination="0IU-2V-978" id="2Ya-W9-MH5"/>
                         <outlet property="helpButton" destination="Xar-LO-Vmx" id="Chk-Fc-jlV"/>
                         <outlet property="imageInvoiceCampaign" destination="pPb-Th-RQh" id="eVN-N2-pKi"/>
                         <outlet property="imageViewUploadInvoice" destination="jCZ-cH-RHc" id="fD6-si-Uf1"/>
                         <outlet property="nameStoreView" destination="AKO-Dd-nYJ" id="tey-Bx-Jzq"/>
                         <outlet property="numberInvoiceView" destination="n6Y-RS-hEC" id="i8i-ED-6Sd"/>
                         <outlet property="saveAndContinueButton" destination="mpO-DE-423" id="K1a-nI-iir"/>
+                        <outlet property="tableView" destination="vvH-fc-w4F" id="fZZ-DN-yIB"/>
                         <outlet property="textFieldAmountPurchase" destination="hFd-nH-0Ke" id="K6b-pB-ped"/>
                         <outlet property="textFieldBuyDate" destination="hwG-xM-xnk" id="lN9-1G-SJR"/>
                         <outlet property="textFieldNameStore" destination="1ks-wF-8MX" id="eAH-am-pmX"/>

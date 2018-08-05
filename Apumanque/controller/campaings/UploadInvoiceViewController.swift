@@ -30,8 +30,14 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     @IBOutlet weak var dateConstraint: NSLayoutConstraint!
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var imageInvoiceCampaign: UIImageView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
     private var campaings: Campaing!
+    private(set) var stores = [Store]()
+    var autoComplete = [String]()
+    var autoCompletePosibilities = [String]()
+    var autoCompletePosibilitiesTMP = [Store]()
     var photoFromCamera = false
     var imageSelectedOrChosen = false
     var isPhotoOriginal = false
@@ -42,8 +48,22 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stores = Store.all(on: managedObjectContext) ?? []
+        
+        autoCompletePosibilitiesTMP = stores
+        autoCompletePosibilitiesTMP = autoCompletePosibilitiesTMP.filter{$0.floor  != "0"}
+        
+        autoCompletePosibilities = autoCompletePosibilitiesTMP.map{$0.name!}
+        
+        print("TIENDA \(stores[0].name)")
         textFieldAmountPurchase.delegate = self
         textFieldNumberInvoice.delegate = self
+        textFieldNameStore.delegate = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isHidden = true
+        tableView.layer.cornerRadius = 5
         
         campaings = Campaing.unitCampaing(on: managedObjectContext)
         if let url = campaings.imageUrl {
@@ -276,6 +296,20 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
         textFieldAmountPurchase.text = formatter.string(from: numberFromField as NSNumber);
     }
     
+    func searchAutocompleteEntriesWith(substring: String) {
+        autoComplete.removeAll(keepingCapacity: false)
+        
+        for key in autoCompletePosibilities {
+            
+            let myString: NSString! = key.lowercased() as NSString
+            let substringRange: NSRange! = myString.range(of: substring.lowercased())
+            if substringRange.location == 0 {
+                autoComplete.append(key)
+            }
+        }
+        tableView.reloadData()
+    }
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -390,6 +424,15 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
             return false
             
         }
+        
+        if textField.restorationIdentifier == "storeName" {
+            let substring = (textField.text! as NSString).replacingCharacters(in: range, with: string.lowercased())
+            searchAutocompleteEntriesWith(substring: substring.lowercased())
+            if string.count > 0 {
+                tableView.isHidden = false
+            }
+        }
+        
         return true
     }
     
@@ -431,5 +474,37 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
             textFieldNumberInvoice.resignFirstResponder()
         }
     }
+    
+    
+    
+}
+
+//MARK: - UITableView methods
+extension UploadInvoiceViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if autoComplete.count > 4 {
+            let h = 44 * 4
+            heightConstraint.constant = CGFloat(h)
+            return 4
+        } else {
+            let h = 44 * autoComplete.count
+            heightConstraint.constant = CGFloat(h)
+            return autoComplete.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+        cell.textLabel!.text = autoComplete[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        textFieldNameStore.text = selectedCell.textLabel!.text!
+        tableView.isHidden = true
+        view.endEditing(true)
+    }
+    
     
 }
