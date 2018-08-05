@@ -73,13 +73,13 @@ extension UIView {
      - colours: Array with colours to apply on gradient.
      - locations: Percentage location of color apparition.
      */
-    func gradient(colours: [UIColor], horizontal: Bool = false, locations: [NSNumber]? = nil) -> CAGradientLayer {
+    func gradient(colours: [UIColor], position: Double = 0.5, horizontal: Bool = false, locations: [NSNumber]? = nil) -> CAGradientLayer {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = self.bounds
         gradient.colors = colours.map { $0.cgColor }
         if horizontal {
-            gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-            gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.startPoint = CGPoint(x: 0.0, y: position)
+            gradient.endPoint = CGPoint(x: 1.0, y: position)
         }
         self.layer.insertSublayer(gradient, at: 0)
         return gradient

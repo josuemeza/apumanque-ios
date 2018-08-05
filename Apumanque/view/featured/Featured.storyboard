@@ -127,6 +127,10 @@
                                                                                 <constraint firstAttribute="height" constant="183" id="fqv-BZ-2PO"/>
                                                                             </constraints>
                                                                         </imageView>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OU2-5O-7Di">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="183"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallina mantequillera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4P-Ga-B65">
                                                                             <rect key="frame" x="12" y="145.5" width="215" height="20.5"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
@@ -150,15 +154,19 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="trailing" secondItem="L4P-Ga-B65" secondAttribute="trailing" constant="108" id="4SZ-wg-mvO"/>
                                                                         <constraint firstItem="jNc-ZN-b9S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L4P-Ga-B65" secondAttribute="trailing" id="61W-7y-n95"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="OU2-5O-7Di" secondAttribute="bottom" id="9FW-no-c1m"/>
                                                                         <constraint firstItem="wuA-Fg-EPW" firstAttribute="top" secondItem="csG-SU-gGi" secondAttribute="top" id="DOn-Hk-kaw"/>
                                                                         <constraint firstAttribute="bottom" secondItem="jNc-ZN-b9S" secondAttribute="bottom" constant="11" id="Dad-CT-hVf"/>
+                                                                        <constraint firstItem="OU2-5O-7Di" firstAttribute="leading" secondItem="csG-SU-gGi" secondAttribute="leading" id="JYw-rZ-f8z"/>
                                                                         <constraint firstAttribute="trailing" secondItem="jNc-ZN-b9S" secondAttribute="trailing" constant="13" id="KMl-E2-Yyl"/>
                                                                         <constraint firstAttribute="trailing" secondItem="wuA-Fg-EPW" secondAttribute="trailing" id="aG2-dw-zr0"/>
+                                                                        <constraint firstItem="OU2-5O-7Di" firstAttribute="top" secondItem="csG-SU-gGi" secondAttribute="top" id="afq-pQ-K1b"/>
                                                                         <constraint firstAttribute="bottom" secondItem="L4P-Ga-B65" secondAttribute="bottom" constant="17" id="akh-JW-fD2"/>
                                                                         <constraint firstItem="4Uz-Sm-drd" firstAttribute="leading" secondItem="csG-SU-gGi" secondAttribute="leading" constant="12" id="bud-Tg-Y2E"/>
                                                                         <constraint firstItem="wuA-Fg-EPW" firstAttribute="leading" secondItem="csG-SU-gGi" secondAttribute="leading" id="dox-hw-QwZ"/>
                                                                         <constraint firstItem="4Uz-Sm-drd" firstAttribute="top" secondItem="csG-SU-gGi" secondAttribute="top" constant="15" id="mmR-WO-CJx"/>
                                                                         <constraint firstAttribute="bottom" secondItem="wuA-Fg-EPW" secondAttribute="bottom" id="oyL-di-nxy"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="OU2-5O-7Di" secondAttribute="trailing" id="pA0-p7-Few"/>
                                                                         <constraint firstItem="L4P-Ga-B65" firstAttribute="leading" secondItem="csG-SU-gGi" secondAttribute="leading" constant="12" id="qa8-HF-XgY"/>
                                                                         <constraint firstAttribute="trailing" secondItem="4Uz-Sm-drd" secondAttribute="trailing" constant="12" id="wbR-bB-mNh"/>
                                                                     </constraints>
@@ -179,6 +187,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
                                                             <outlet property="backgroundImageView" destination="wuA-Fg-EPW" id="i39-WC-k0H"/>
+                                                            <outlet property="gradientView" destination="OU2-5O-7Di" id="kOX-BN-XLX"/>
                                                             <outlet property="storeNameLabel" destination="4Uz-Sm-drd" id="Obl-0c-lZC"/>
                                                             <outlet property="titleLabel" destination="L4P-Ga-B65" id="3t5-h6-2Vd"/>
                                                             <outlet property="valueLabel" destination="jNc-ZN-b9S" id="gH0-GC-6L1"/>
