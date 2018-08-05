@@ -58,7 +58,7 @@ class LoadingViewController: ViewController {
             let category = HomeCategory(context: managedObjectContext)
             category.title = item["name"].string
             category.subtitle = item["texts"][0]["description"].string
-            let imageUrl = item["icons"][0]["file"]["image_resolutions"]["image_128"].stringValue
+            let imageUrl = item["icons"][0]["file"]["file"].stringValue
             downloads.append(imageUrl)
             debugPrint(imageUrl)
             NetworkingManager.singleton.downloadFile(on: imageUrl, completion: { data in

@@ -26,4 +26,6 @@ target 'Apumanque' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  #Simple progress HUD for iOS (https://github.com/JonasGessner/JGProgressHUD)
+  pod 'JGProgressHUD'
 end

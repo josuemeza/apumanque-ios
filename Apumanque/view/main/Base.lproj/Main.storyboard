@@ -995,7 +995,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6I-bZ-fmv">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="w6I-bZ-fmv">
                                                                 <rect key="frame" x="91" y="279.5" width="12" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="12" id="qTl-br-m8g"/>
@@ -1008,10 +1008,10 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6qE-mj-6CO">
-                                                                <rect key="frame" x="91" y="307.5" width="14" height="18"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6qE-mj-6CO">
+                                                                <rect key="frame" x="91" y="307.5" width="14" height="16"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="18" id="FYZ-Tv-mET"/>
+                                                                    <constraint firstAttribute="height" constant="16" id="FYZ-Tv-mET"/>
                                                                     <constraint firstAttribute="width" constant="14" id="dQO-uh-8SW"/>
                                                                 </constraints>
                                                             </imageView>
@@ -1021,10 +1021,10 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vqx-Tj-9gl">
-                                                                <rect key="frame" x="91" y="335.5" width="14" height="18"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desktop_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vqx-Tj-9gl">
+                                                                <rect key="frame" x="91" y="337.5" width="14" height="14"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="18" id="C2a-cm-rmR"/>
+                                                                    <constraint firstAttribute="height" constant="14" id="C2a-cm-rmR"/>
                                                                     <constraint firstAttribute="width" constant="14" id="thT-4P-Vgy"/>
                                                                 </constraints>
                                                             </imageView>
@@ -1034,10 +1034,10 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-sy-koj">
-                                                                <rect key="frame" x="91" y="363.5" width="14" height="18"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-sy-koj">
+                                                                <rect key="frame" x="91" y="365.5" width="14" height="12"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="18" id="3fv-G2-G4c"/>
+                                                                    <constraint firstAttribute="height" constant="12" id="3fv-G2-G4c"/>
                                                                     <constraint firstAttribute="width" constant="14" id="S0m-a4-ENJ"/>
                                                                 </constraints>
                                                             </imageView>
@@ -1214,7 +1214,7 @@
                                                             <constraint firstItem="LWI-FI-AJY" firstAttribute="leading" secondItem="Vqx-Tj-9gl" secondAttribute="trailing" constant="10" id="WK3-i0-Ejw"/>
                                                             <constraint firstItem="La5-dM-hxI" firstAttribute="top" secondItem="egB-uT-1ey" secondAttribute="bottom" constant="42" id="Y52-7o-WY6"/>
                                                             <constraint firstItem="DNq-Db-Bxj" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="80" id="YqG-m4-XBS"/>
-                                                            <constraint firstItem="Vqx-Tj-9gl" firstAttribute="top" secondItem="6qE-mj-6CO" secondAttribute="bottom" constant="10" id="ZdC-Up-jho"/>
+                                                            <constraint firstItem="Vqx-Tj-9gl" firstAttribute="top" secondItem="6qE-mj-6CO" secondAttribute="bottom" constant="14" id="ZdC-Up-jho"/>
                                                             <constraint firstItem="egB-uT-1ey" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="20" id="Zmh-IT-0bB"/>
                                                             <constraint firstItem="jpz-sy-koj" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="91" id="bHh-uQ-I2x"/>
                                                             <constraint firstItem="7Xk-mO-8XC" firstAttribute="centerX" secondItem="ypg-Zu-saZ" secondAttribute="centerX" id="bQR-Vp-g58"/>
@@ -1222,7 +1222,7 @@
                                                             <constraint firstItem="DNq-Db-Bxj" firstAttribute="top" secondItem="7Xk-mO-8XC" secondAttribute="bottom" constant="42" id="e5T-ca-99E"/>
                                                             <constraint firstItem="egB-uT-1ey" firstAttribute="top" secondItem="y5o-Gf-Tyd" secondAttribute="bottom" constant="35" id="euZ-0k-0TU"/>
                                                             <constraint firstItem="W9V-no-6e2" firstAttribute="centerX" secondItem="ypg-Zu-saZ" secondAttribute="centerX" id="fLr-bA-zmA"/>
-                                                            <constraint firstItem="jpz-sy-koj" firstAttribute="top" secondItem="Vqx-Tj-9gl" secondAttribute="bottom" constant="10" id="ffx-M5-FBv"/>
+                                                            <constraint firstItem="jpz-sy-koj" firstAttribute="top" secondItem="Vqx-Tj-9gl" secondAttribute="bottom" constant="14" id="ffx-M5-FBv"/>
                                                             <constraint firstItem="y3e-od-AdN" firstAttribute="top" secondItem="Vwz-hI-MAf" secondAttribute="bottom" constant="23" id="hbi-Rp-rj6"/>
                                                             <constraint firstItem="mMC-Wk-qLY" firstAttribute="leading" secondItem="w6I-bZ-fmv" secondAttribute="trailing" constant="10" id="laU-CH-ELt"/>
                                                             <constraint firstItem="w6I-bZ-fmv" firstAttribute="leading" secondItem="ypg-Zu-saZ" secondAttribute="leading" constant="91" id="liX-FJ-PLX"/>
@@ -1696,11 +1696,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="desktop_icon" width="16" height="16"/>
         <image name="home_table_cell_1" width="187" height="55"/>
         <image name="left-icon-white" width="17" height="17"/>
         <image name="logo" width="26" height="39"/>
         <image name="logo-splash" width="384" height="582"/>
+        <image name="mail_icon" width="16" height="13"/>
+        <image name="mark_icon" width="12" height="17"/>
         <image name="menu_icon" width="24" height="24"/>
+        <image name="phone_icon" width="14" height="14"/>
         <image name="placeholder-image" width="600" height="450"/>
         <image name="right-icon-white" width="17" height="17"/>
         <image name="tab_discount_icon" width="24" height="24"/>
