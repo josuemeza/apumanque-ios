@@ -765,7 +765,7 @@
                                     <constraint firstAttribute="width" constant="30" id="tEt-at-wE1"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="PVt-4d-VvK" kind="show" id="dez-zF-CjA"/>
+                                    <segue destination="PVt-4d-VvK" kind="show" identifier="campaings_to_edit_user_segue" id="dez-zF-CjA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whC-9W-XLN" userLabel="To contact">

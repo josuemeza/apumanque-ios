@@ -292,6 +292,44 @@ class NetworkingManager {
         }
     }
     
+    func sendInvoices(image: UIImage? = nil, id_store: String,  purchase_date: String, value: String, last_digits: String, device: String, completion: @escaping Callback<JSON>){
+        print("BOLETA BOLETA")
+        let endpoint = "/basicmall/api/tickets/"
+        let requestURL = "\(apiUrl)\(endpoint)"
+        let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            if let strictImage = image {
+                let startName = Date.now().string(format: "yyyy-MM-dd'T'HH-mm-ssZ")
+                if let jpeg = UIImageJPEGRepresentation(strictImage, 1) {
+                    multipartFormData.append(jpeg, withName: "image", fileName: "\(startName)-upload.jpg", mimeType: "image/jpeg")
+                }
+            }
+            multipartFormData.append(id_store.data(using: String.Encoding.utf8)!, withName: "id_store")
+            multipartFormData.append(purchase_date.data(using: String.Encoding.utf8)!, withName: "purchase_date")
+            multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: "value")
+            multipartFormData.append(last_digits.data(using: String.Encoding.utf8)!, withName: "last_digits")
+            multipartFormData.append(device.data(using: String.Encoding.utf8)!, withName: "device")
+        }, to: requestURL, headers: headers, encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.validate(statusCode: 200..<500).responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        let json = JSON(value)
+                        print(json)
+                        completion(json)
+                    case .failure(let responseError):
+                        print(responseError.localizedDescription)
+                        completion(nil)
+                    }
+                }
+            case .failure(let encodingError):
+                print(encodingError.localizedDescription)
+            }
+        })
+    }
+    
     func requestData(completion: @escaping Callback<JSON>) {
         guard let context = context else { completion(nil) ; return }
         Help.all(on: context)?.forEach { help in context.delete(help) }
