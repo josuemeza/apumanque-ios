@@ -21,6 +21,12 @@ class ValidCampaingsViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "logo"), for: .normal)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+        
         campaings = Campaing.unitCampaing(on: managedObjectContext)
         lastWinnersButton.roundOut(radious: 28.0)
         legalAspects.roundOut(radious: 28.0)

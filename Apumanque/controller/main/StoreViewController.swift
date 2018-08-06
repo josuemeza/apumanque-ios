@@ -46,6 +46,10 @@ class StoreViewController: BlurredViewController {
         tagsLabel.text = store.tags
         discounts = store.discounts?.allObjects as? [Discount] ?? []
         logoImageView.sd_setImage(with: URL(string: store.image!), placeholderImage: UIImage(named: "placeholder-image"))
+        
+        let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

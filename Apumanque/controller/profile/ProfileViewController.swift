@@ -27,6 +27,11 @@ class ProfileViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "logo"), for: .normal)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+        
         // Do any additional setup after loading the view.
         menuViewProfile.roundOut(radious: 10)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

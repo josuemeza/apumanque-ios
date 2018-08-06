@@ -579,6 +579,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD6-d1-vow">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xp5-ip-SQV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.25063344594594594" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q6c-il-1ds">
                                 <rect key="frame" x="168" y="610" width="39" height="37"/>
                             </pageControl>
@@ -634,9 +638,12 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="rtL-L8-CRn" firstAttribute="top" secondItem="3wB-wh-hqT" secondAttribute="bottom" constant="18" id="07c-G1-4Ve"/>
+                            <constraint firstItem="Xp5-ip-SQV" firstAttribute="trailing" secondItem="8Pw-5f-Pt4" secondAttribute="trailing" id="0Vl-D6-WGx"/>
                             <constraint firstItem="KD6-d1-vow" firstAttribute="top" secondItem="pxg-zI-48d" secondAttribute="top" id="1QW-JN-6co"/>
+                            <constraint firstItem="rtL-L8-CRn" firstAttribute="top" secondItem="Xp5-ip-SQV" secondAttribute="bottom" id="2F9-Ic-vub"/>
                             <constraint firstAttribute="trailing" secondItem="KD6-d1-vow" secondAttribute="trailing" id="E22-vK-sYi"/>
                             <constraint firstAttribute="trailing" secondItem="3wB-wh-hqT" secondAttribute="trailing" constant="20" id="Ef9-8I-XHv"/>
+                            <constraint firstItem="Xp5-ip-SQV" firstAttribute="leading" secondItem="8Pw-5f-Pt4" secondAttribute="leading" id="FgR-TN-f2j"/>
                             <constraint firstItem="KD6-d1-vow" firstAttribute="leading" secondItem="pxg-zI-48d" secondAttribute="leading" id="QjL-dZ-VAx"/>
                             <constraint firstItem="rtL-L8-CRn" firstAttribute="top" secondItem="bEY-8c-jh9" secondAttribute="bottom" constant="18" id="VvM-4I-3xG"/>
                             <constraint firstItem="Q6c-il-1ds" firstAttribute="top" secondItem="kFt-NX-c4q" secondAttribute="bottom" constant="64" id="WOM-hs-1EP"/>
@@ -646,6 +653,7 @@
                             <constraint firstItem="rtL-L8-CRn" firstAttribute="top" secondItem="Q6c-il-1ds" secondAttribute="bottom" constant="20" id="dTu-Br-QgG"/>
                             <constraint firstAttribute="trailing" secondItem="Gle-vh-Icc" secondAttribute="trailing" constant="37" id="r7T-ju-oa4"/>
                             <constraint firstItem="kFt-NX-c4q" firstAttribute="centerX" secondItem="pxg-zI-48d" secondAttribute="centerX" id="rVc-az-2xP"/>
+                            <constraint firstItem="Xp5-ip-SQV" firstAttribute="top" secondItem="pxg-zI-48d" secondAttribute="top" id="rqj-vw-Qzs"/>
                             <constraint firstItem="Q6c-il-1ds" firstAttribute="centerX" secondItem="pxg-zI-48d" secondAttribute="centerX" id="uNw-mX-p8E"/>
                             <constraint firstItem="rtL-L8-CRn" firstAttribute="top" secondItem="KD6-d1-vow" secondAttribute="bottom" id="wFj-8F-umd"/>
                         </constraints>
@@ -662,7 +670,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvR-Yy-L31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="-564"/>
+            <point key="canvasLocation" x="149.59999999999999" y="-564.46776611694156"/>
         </scene>
         <!--Tutorial Page View Controller-->
         <scene sceneID="LCx-xb-hVy">
