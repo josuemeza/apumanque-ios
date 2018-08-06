@@ -57,8 +57,8 @@ class DiscountViewController: BlurredViewController {
                     self.performSegue(withIdentifier: "discounts_to_edit_segue", sender: nil)
                 })
                 
-                finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-                uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                finish.setValue(UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                uploadOther.setValue(UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
                 alert.addAction(uploadOther)
                 alert.addAction(finish)
                 
@@ -94,7 +94,7 @@ class DiscountViewController: BlurredViewController {
         storeDiscounts = discount.store?.discounts?.allObjects as? [Discount] ?? []
         storeDiscounts.remove(discount)
         conditionsLabel.text = discount.conditions
-        resumeLabel.text = discount.resume
+        resumeLabel.text = discount.detail
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
         

@@ -11,7 +11,7 @@ import UIKit
 class TutorialPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     var pageImages = ["splash_1", "splash_2", "splash_3"]
-    var pageContentText = ["¡Participa y gana con nuestras Campañas Vigentes! ", "Sube de nivel y acumula más cupones en cada Campaña. \n¡Más cupones, más probabilidades de ganar!", "Obtén suculentos descuentos y productos en promoción."]
+    var pageContentText = ["¡Participa y gana con nuestras Campañas Vigentes! ", "Sube de nivel y acumula más cupones en cada Campaña. \n\n¡Más cupones, más probabilidades de ganar!", "Obtén suculentos descuentos y productos en promoción"]
     
     func forward(index: Int) {
         if let nextViewController = contentViewController(at: index + 1) {

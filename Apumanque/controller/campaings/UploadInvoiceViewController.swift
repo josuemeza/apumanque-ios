@@ -59,7 +59,6 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
         
         autoCompletePosibilities = autoCompletePosibilitiesTMP.map{$0.name!}
         
-        print("TIENDA \(stores[0].name)")
         textFieldAmountPurchase.delegate = self
         textFieldNumberInvoice.delegate = self
         textFieldNameStore.delegate = self
@@ -76,19 +75,6 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
         
         contentView.roundOut(radious: 10)
         saveAndContinueButton.roundOut(radious: 28)
-        
-        print("CAMPANIAS \(Session.currentUser?.rut)")
-        
-        //        let view = UIView()
-        //        let button = UIButton(type: .system)
-        //        button.semanticContentAttribute = .forceRightToLeft
-        //        button.setImage(UIImage(named: "right-icon-white"), for: .normal)
-        //        button.setTitle("Ayuda", for: .normal)
-        //        button.addTarget(self, action: #selector(openHelp), for: .touchUpInside)
-        //        button.sizeToFit()
-        //        view.addSubview(button)
-        //        view.frame = button.bounds
-        //        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: view)
         
         helpButton.layer.cornerRadius = 12
         helpButton.layer.borderWidth = 1
@@ -140,8 +126,8 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
                     self.performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
                 })
                 
-                finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-                uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                finish.setValue(UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                uploadOther.setValue(UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
                 alert.addAction(uploadOther)
                 alert.addAction(finish)
                 
