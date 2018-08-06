@@ -35,6 +35,7 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     
     private var campaings: Campaing!
     private(set) var stores = [Store]()
+    private var selectedImage: UIImage?
     var autoComplete = [String]()
     var autoCompletePosibilities = [String]()
     var autoCompletePosibilitiesTMP = [Store]()
@@ -44,6 +45,7 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     var currentString = ""
     var isStoreValid = false
     var storeID = ""
+    
     
     
     
@@ -125,34 +127,34 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
     
     
     
-    /*
-     override func viewDidAppear(_ animated: Bool) {
-     if Session.isLogged{
-     if Session.currentUser?.rut == nil {
-     
-     let alert = UIAlertController(title: "Para participar en la promoción, debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-     let finish = UIAlertAction(title: "Salir sin resgistrar RUT", style: .default, handler: { action in
-     self.tabBarController?.selectedIndex = 0
-     })
-     let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
-     //                    self.performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
-     })
-     
-     finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-     uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
-     alert.addAction(uploadOther)
-     alert.addAction(finish)
-     
-     self.present(alert, animated: true, completion: nil)
-     
-     } else {
-     //                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
-     }
-     } else {
-     performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
-     }
-     }
-     */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Session.isLogged{
+            if Session.currentUser?.rut == nil {
+                
+                let alert = UIAlertController(title: "Para participar en la promoción, debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+                let finish = UIAlertAction(title: "Salir sin resgistrar RUT", style: .default, handler: { action in
+                    self.tabBarController?.selectedIndex = 0
+                })
+                let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in
+                    self.performSegue(withIdentifier: "campaings_to_edit_user_segue", sender: nil)
+                })
+                
+                finish.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                uploadOther.setValue(UIColor(red:255.00, green:0.00, blue:0.00, alpha:1.0), forKey: "titleTextColor")
+                alert.addAction(uploadOther)
+                alert.addAction(finish)
+                
+                self.present(alert, animated: true, completion: nil)
+                
+            } else {
+                //                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
+            }
+        } else {
+            performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
+        }
+    }
+    
     
     //MARK: Button Action
     
@@ -179,7 +181,7 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
             hud.dismiss(afterDelay: 2.0)
             return
         }
-    
+        
         guard imageSelectedOrChosen else {
             let hud = JGProgressHUD(style: .dark)
             hud.indicatorView = JGProgressHUDErrorIndicatorView()
@@ -224,7 +226,7 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
         }
         
         guard let storeName = textFieldNameStore.text, isStoreValid else {
-             let hud = JGProgressHUD(style: .dark)
+            let hud = JGProgressHUD(style: .dark)
             hud.indicatorView = JGProgressHUDErrorIndicatorView()
             hud.textLabel.text = "Ingresa Nombre Tienda Valido"
             hud.show(in: self.view)
@@ -238,6 +240,25 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
             }
         }
         
+        var amountStr = self.textFieldAmountPurchase.text?.replacingOccurrences(of: "$", with: "")
+        amountStr = amountStr?.replacingOccurrences(of: ".", with: "")
+        let amountNumber = amountStr!
+        
+        let date = self.datePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "es_CL")
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let strDate = dateFormatter.string(from: date)
+        let FechaCompra = strDate
+        
+        print("ENVIANDO BOLETA")
+        NetworkingManager.singleton.sendInvoices(image: selectedImage, id_store: storeID, purchase_date: FechaCompra, value: amountNumber, last_digits: textFieldNumberInvoice.text!, device: "iOS", completion: {data in
+            if let json = data{
+                print("PASO EL DESCUENTO")
+                print(json)
+            }
+        })
+        print("PASO EL DESCUENTO 2")
         
     }
     
@@ -394,6 +415,7 @@ extension UploadInvoiceViewController: UIImagePickerControllerDelegate {
             //self.invoiceImageButton.imageView?.image = img
             self.imageInvoiceCampaign.image = img
             self.imageInvoiceCampaign.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 126)
+            self.selectedImage = img
         }
         if photoFromCamera {
             imageSelectedOrChosen = true
@@ -447,7 +469,7 @@ extension UploadInvoiceViewController: UITextFieldDelegate{
                     formatCurrency(string: currentString)
                 }
             }
-//            textFieldDidChange()
+            //            textFieldDidChange()
             return false
             
         }
