@@ -140,7 +140,7 @@
                                     <constraint firstItem="BQX-dF-uLp" firstAttribute="top" secondItem="JjV-Z4-DJz" secondAttribute="top" id="y5d-aT-HS0"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash3" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-Yx-NAa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campania_vigente" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-Yx-NAa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaña Vigente" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGs-gR-EAy">
@@ -1267,9 +1267,9 @@ Para participar, el cliente debe registrar sus boletas de compras en los módulo
         </scene>
     </scenes>
     <resources>
-        <image name="Splash3" width="375" height="667"/>
         <image name="camera_campaings_background" width="97" height="97"/>
         <image name="campaings_background" width="375" height="881"/>
+        <image name="campania_vigente" width="375" height="667"/>
         <image name="logo" width="26" height="39"/>
         <image name="menu_icon" width="24" height="24"/>
         <image name="photo_invoice" width="375" height="375"/>

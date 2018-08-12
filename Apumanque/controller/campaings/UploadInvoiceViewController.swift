@@ -134,11 +134,13 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
                 self.present(alert, animated: true, completion: nil)
                 
             } else {
+                print("token \(SessionManager.singleton.currentUser!.token!)")
                 //                performSegue(withIdentifier: "discount_to_coupon_segue", sender: nil)
             }
         } else {
             performSegue(withIdentifier: "campaings_to_login_segue", sender: nil)
         }
+        
     }
     
     

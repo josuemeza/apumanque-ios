@@ -298,6 +298,8 @@ class NetworkingManager {
         let requestURL = "\(apiUrl)\(endpoint)"
         let headers: HTTPHeaders = ["Authorization": "token \(SessionManager.singleton.currentUser!.token!)"]
         
+        
+        
         Alamofire.upload(multipartFormData: { multipartFormData in
             if let strictImage = image {
                 let startName = Date.now().string(format: "yyyy-MM-dd'T'HH-mm-ssZ")

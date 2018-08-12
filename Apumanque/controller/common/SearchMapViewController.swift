@@ -34,7 +34,7 @@ class SearchMapViewController: ViewController {
         
         autoCompletePosibilities = autoCompletePosibilitiesTMP.map{$0.name!}
         
-        print("TIENDA \(stores[0].name)")
+        print("TIENDA \(stores[0].id)")
         
         textFieldNameStore.delegate = self
         tableView.delegate = self

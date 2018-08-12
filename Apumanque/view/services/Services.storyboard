@@ -50,7 +50,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qli-QL-EMZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coches_services" translatesAutoresizingMaskIntoConstraints="NO" id="R36-se-SFT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servicios_main" translatesAutoresizingMaskIntoConstraints="NO" id="R36-se-SFT">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-2t-T0J">
@@ -839,11 +839,11 @@ Para una mayor seguridad, contamos con lockers donde podrás guardar objetos de 
         <image name="bike_background" width="375" height="667"/>
         <image name="bike_icon" width="32" height="31"/>
         <image name="coche_icon" width="31" height="30"/>
-        <image name="coches_services" width="375" height="667"/>
         <image name="keeper_background" width="375" height="667"/>
         <image name="keeper_icon" width="21" height="30"/>
         <image name="parking_background" width="375" height="667"/>
         <image name="parking_icon" width="36" height="37"/>
+        <image name="servicios_main" width="375" height="667"/>
         <image name="wheelchair_background" width="375" height="667"/>
         <image name="wheelchair_icon" width="31" height="26"/>
     </resources>
