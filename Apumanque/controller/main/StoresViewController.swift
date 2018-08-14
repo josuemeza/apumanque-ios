@@ -25,7 +25,10 @@ class StoresViewController: BlurredViewController {
     
     private var sectionNames: [Character] {
         get {
-            return groupedStores.keys.sorted()
+            var names = groupedStores.keys.sorted()
+            guard let index = names.index(of: "#") else { return names }
+            names.append(names.remove(at: index))
+            return names
         }
     }
     private var groupedStores: [Character: [Store]] {
@@ -52,6 +55,7 @@ class StoresViewController: BlurredViewController {
             grouped.forEach { (key, value) in
                 grouped[key] = value.sorted { left, right in left.name ?? "" < right.name ?? "" }
             }
+            
             return grouped
         }
     }
