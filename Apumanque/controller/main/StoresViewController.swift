@@ -55,7 +55,6 @@ class StoresViewController: BlurredViewController {
             grouped.forEach { (key, value) in
                 grouped[key] = value.sorted { left, right in left.name ?? "" < right.name ?? "" }
             }
-            
             return grouped
         }
     }

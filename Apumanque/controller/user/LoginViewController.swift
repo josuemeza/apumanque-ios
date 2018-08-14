@@ -29,6 +29,7 @@ class LoginViewController: BlurredViewController {
 //        if validFields() {
             guard let email = emailTextField.text else { return }
             guard let password = passwordTextField.text else { return }
+            User.all(on: managedObjectContext)?.forEach { user in managedObjectContext.delete(user) }
             Session.login(username: email, password: password) { success in
                 if success {
                     self.navigationController?.popViewController(animated: true)
