@@ -22,6 +22,8 @@ class StoreViewController: BlurredViewController {
     @IBOutlet weak var webLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
+    @IBOutlet weak var titleDiscountLabel: UILabel!
+    @IBOutlet weak var discountsCollectionConstraint: NSLayoutConstraint!
     
     // MARK: - Attributes
     
@@ -49,6 +51,11 @@ class StoreViewController: BlurredViewController {
         
         let backButton = UIBarButtonItem(title: "Volver", style: .done, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
+        print("DISCOUNT STORES \(discounts.count)")
+        if (discounts.count == 0){
+            discountsCollectionConstraint.constant = 0.0
+            titleDiscountLabel.isHidden = true
+        }
         
     }
     

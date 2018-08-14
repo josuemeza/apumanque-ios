@@ -1288,12 +1288,14 @@
                     <connections>
                         <outlet property="addressLabel" destination="mMC-Wk-qLY" id="sgY-aJ-ADX"/>
                         <outlet property="categoryLabel" destination="W9V-no-6e2" id="E6d-7x-Iee"/>
+                        <outlet property="discountsCollectionConstraint" destination="aMW-2N-xxu" id="sFn-aR-TIR"/>
                         <outlet property="discountsCollectionView" destination="DNq-Db-Bxj" id="0vq-2W-zWF"/>
                         <outlet property="emailLabel" destination="y5o-Gf-Tyd" id="7sx-Yd-onN"/>
                         <outlet property="logoImageView" destination="n4X-pq-1Em" id="axR-3F-gwg"/>
                         <outlet property="nameLabel" destination="Vwz-hI-MAf" id="rgh-A4-SOA"/>
                         <outlet property="phoneLabel" destination="NdT-PZ-wJo" id="vYA-wi-jHU"/>
                         <outlet property="tagsLabel" destination="p4X-GT-heC" id="rP3-7d-Xzw"/>
+                        <outlet property="titleDiscountLabel" destination="7Xk-mO-8XC" id="2AE-Q2-TQX"/>
                         <outlet property="webLabel" destination="LWI-FI-AJY" id="woV-ae-zcf"/>
                     </connections>
                 </viewController>

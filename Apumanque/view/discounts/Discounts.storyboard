@@ -569,6 +569,13 @@
                                             <constraint firstAttribute="height" constant="416" id="dPO-uG-i3S"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-cP-gpn" customClass="GradientHigherView" customModule="Apumanque" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="0Ev-4H-YcW"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-9y-6AC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1936"/>
                                         <subviews>
@@ -630,13 +637,13 @@
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento válido hasta el" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-fq-OhF">
-                                                                            <rect key="frame" x="111.33333333333333" y="24.666666666666686" width="176.33333333333337" height="17"/>
+                                                                            <rect key="frame" x="111.66666666666667" y="24.666666666666686" width="176.33333333333331" height="17"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/4/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-Qj-hn6">
-                                                                            <rect key="frame" x="175" y="41.666666666666686" width="49" height="17"/>
+                                                                            <rect key="frame" x="175.33333333333334" y="41.666666666666686" width="49" height="17"/>
                                                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -907,7 +914,7 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuentos del Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IML-fX-Vzu">
-                                                                        <rect key="frame" x="109.33333333333333" y="357" width="195.66666666666669" height="22.666666666666686"/>
+                                                                        <rect key="frame" x="109.66666666666667" y="357" width="195.66666666666663" height="22.666666666666686"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1051,13 +1058,16 @@ Recuerda siempre revisar las “Condiciones generales” y los “Locales adheri
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="a1M-cP-gpn" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="Hda-2Q-prF"/>
                                     <constraint firstAttribute="bottom" secondItem="ldZ-9y-6AC" secondAttribute="bottom" id="KWW-qb-i6T"/>
+                                    <constraint firstItem="a1M-cP-gpn" firstAttribute="top" secondItem="sxW-cm-xee" secondAttribute="top" id="KxP-tL-vi5"/>
                                     <constraint firstItem="G74-IM-LUG" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="M99-Vo-uJ8"/>
                                     <constraint firstItem="ldZ-9y-6AC" firstAttribute="leading" secondItem="sxW-cm-xee" secondAttribute="leading" id="Nss-oL-gxz"/>
                                     <constraint firstAttribute="trailing" secondItem="G74-IM-LUG" secondAttribute="trailing" id="biz-we-RTL"/>
                                     <constraint firstAttribute="trailing" secondItem="ldZ-9y-6AC" secondAttribute="trailing" id="c9F-O2-Ozm"/>
                                     <constraint firstItem="G74-IM-LUG" firstAttribute="top" secondItem="sxW-cm-xee" secondAttribute="top" id="e0p-Ub-Zbq"/>
                                     <constraint firstItem="ldZ-9y-6AC" firstAttribute="top" secondItem="sxW-cm-xee" secondAttribute="top" id="gXz-JX-ver"/>
+                                    <constraint firstAttribute="trailing" secondItem="a1M-cP-gpn" secondAttribute="trailing" id="o8H-HK-IEj"/>
                                 </constraints>
                             </view>
                         </subviews>

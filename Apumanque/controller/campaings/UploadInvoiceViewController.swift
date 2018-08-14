@@ -119,7 +119,7 @@ class UploadInvoiceViewController: ViewController, UINavigationControllerDelegat
             if Session.currentUser?.rut == nil {
                 
                 let alert = UIAlertController(title: "Para participar en la promoción, debes registrar tu RUT", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-                let finish = UIAlertAction(title: "Salir sin resgistrar RUT", style: .default, handler: { action in
+                let finish = UIAlertAction(title: "Salir sin registrar RUT", style: .default, handler: { action in
                     self.tabBarController?.selectedIndex = 0
                 })
                 let uploadOther = UIAlertAction(title: "Registrar RUT", style: .default, handler: { action in

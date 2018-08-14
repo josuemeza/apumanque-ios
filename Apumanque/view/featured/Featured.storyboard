@@ -290,6 +290,13 @@
                                             <constraint firstAttribute="height" constant="416" id="AV0-Eo-bmq"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ht-Rz-ygf" customClass="GradientHigherView" customModule="Apumanque" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="BHe-5L-fwt"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPg-X2-h36">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
@@ -564,12 +571,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="3Ht-Rz-ygf" firstAttribute="leading" secondItem="23N-78-yze" secondAttribute="leading" id="00c-gu-slD"/>
                                     <constraint firstItem="fl2-Of-MV7" firstAttribute="height" secondItem="g2W-BN-fYG" secondAttribute="height" id="BNa-2u-TBv"/>
                                     <constraint firstAttribute="bottom" secondItem="bPg-X2-h36" secondAttribute="bottom" id="ClG-Lq-4sw"/>
                                     <constraint firstItem="g2W-BN-fYG" firstAttribute="leading" secondItem="23N-78-yze" secondAttribute="leading" id="EUr-nz-ecf"/>
                                     <constraint firstItem="g2W-BN-fYG" firstAttribute="top" secondItem="23N-78-yze" secondAttribute="top" id="Ezf-mS-kEB"/>
                                     <constraint firstItem="bPg-X2-h36" firstAttribute="leading" secondItem="23N-78-yze" secondAttribute="leading" id="Qxw-DT-dKe"/>
+                                    <constraint firstItem="3Ht-Rz-ygf" firstAttribute="top" secondItem="23N-78-yze" secondAttribute="top" id="Yso-Nf-bz1"/>
                                     <constraint firstAttribute="trailing" secondItem="bPg-X2-h36" secondAttribute="trailing" id="asf-Ou-Xjs"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Ht-Rz-ygf" secondAttribute="trailing" id="cwO-PC-Gkj"/>
                                     <constraint firstAttribute="trailing" secondItem="g2W-BN-fYG" secondAttribute="trailing" id="dfV-nO-nuF"/>
                                     <constraint firstItem="bPg-X2-h36" firstAttribute="top" secondItem="23N-78-yze" secondAttribute="top" id="dth-Az-leZ"/>
                                 </constraints>
